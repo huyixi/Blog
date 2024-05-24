@@ -2,6 +2,7 @@ baseURL = 'https://blog.huyixi.com/'
 languageCode = 'en'
 title = "huyixi's Blog"
 theme = 'plain'
+description = "A blog by developer and designer huyixi, covering Technology, Design, Life, and Music."
 
 [languages]
 [languages.en]
