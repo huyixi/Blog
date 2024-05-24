@@ -1,0 +1,19 @@
+name = 'plain'
+license = 'MIT'
+licenselink = 'https://github.com/owner/repo/LICENSE'
+description = ''
+
+# The home page of the theme, where the source can be found
+homepage = 'https://huyixi.com'
+
+# If you have a running demo of the theme
+demosite = 'https://blog.huyixi.com'
+
+# Taxonomy terms
+tags = ['blog', 'light', 'mini']
+features = ['some', 'awesome', 'features']
+
+# If the theme has a single author
+[author]
+name = 'huyixi'
+homepage = 'https://huyixi.com'

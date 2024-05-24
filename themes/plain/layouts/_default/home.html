@@ -1,0 +1,24 @@
+{{ define "main" }}
+<h1 class="home-h1">
+  {{i18n "site.title"}}
+</h1>
+{{ partial "toggle-language.html" . }}
+<ul>
+  {{ range .Site.RegularPages }}
+  <li>
+    <a href="{{ .RelPermalink }}">
+      {{ .LinkTitle }}
+    </a>
+    {{ with .Resources.GetMatch "cover.*" }}
+    <div>
+      <picture>
+        <source srcset="{{ .RelPermalink }}" type="image/webp" />
+        <source srcset="{{ .RelPermalink }}" type="image/jpeg" />
+        <img src='{{ .RelPermalink }}" alt="{{ $.Params.featureAlt | default $.Params.thumbnailAlt | default "" }}'
+          loading="lazy" />
+      </picture>
+    </div>
+    {{ end }}
+    {{ end }}
+</ul>
+{{ end }}

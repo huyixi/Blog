@@ -1,0 +1,6 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ .Permalink }}index.xml">
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}

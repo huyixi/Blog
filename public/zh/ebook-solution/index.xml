@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ebook-Solutions on huyixi&#39;s Blog</title>
+    <link>http://localhost:1314/ebook-solution/</link>
+    <description>Recent content in Ebook-Solutions on huyixi&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 21 May 2023 08:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1314/ebook-solution/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的电子书阅读不完全解决方案</title>
+      <link>http://localhost:1314/ebook-solution/ebook-solution/</link>
+      <pubDate>Sun, 21 May 2023 08:00:00 +0800</pubDate>
+      <guid>http://localhost:1314/ebook-solution/ebook-solution/</guid>
+      <description>个人用法 2024-05-23&#xA;由于本文成文较早，所以有一些内容已经过时，以下是最近个人的一些用法，仅供参考。现在是我自己用的比较舒服的几个方式。&#xA;获取电子书&#xA;互联网直接下载：Zlib + Anna 自制电子书：Web2Book RSS 订阅：QiReader 看到的好文章：保存到 Instapaper 后推送到 Kindle 传输电子书&#xA;Send to Kindle 软件 一些文件内容较大的通过 Caliber 传输 非 Epub 格式的文件，例如 AZW3 或者 MOBI 甚至是 PDF，通过 Convertio 进行格式转换后传输。 开始阅读吧！&#xA;上面所介绍的这些方法以下都会有相关介绍，所以可以继续阅读，当然要辨别一些目前可能无法使用的方法。&#xA;获取电子书 以下不包含从电子书商城购买下载的内容.下面的内容可能涉及到侵权等,如果资金允许,建议从正规渠道购买下载.&#xA;从互联网获取电子书 Z-Library 该组织将自己描述为“世界上最大的电子书图书馆”，以及“世界上最大的科学文章商店”.并作为一个由捐赠维持的非营利组织运营。但是 2022 年 11 月，该网站的域名被美国司法部查封..在 Z-Library 的用户群中,中国用户遥遥领先于其他国家(来自 Z-Library 博客 Worldwide Statistics: How Students and Educators Use Z-Library 中的数据).&#xA;如何访问 Z-Library 通过域名访问&#xA;Web:https://singlelogin.re&#xA;TOR:http://loginzlib2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion&#xA;I2P:http://zlib24th6ptyb4ibzn3tj2cndqafs6rhm4ed4gruxztaaco35lka.b32.i2p&#xA;通过域名访问里面的部分内容可能无法查看,如博客,书单等页面.这些内容可以通过使用个人域名访问&#xA;以上域名随时可能被回收,如果无法访问可以使用电子邮件获取,或者从从官方发布的最新域名中获取.官方频道&#xA;通过电子邮件获取个人 zlib 域名后，通过个人域名访问&#xA;你可以使用任意邮箱,发送任意内容到 blackbox@zlib.se,你将在 3-5 分钟内收到你 Z-Library 个人的域名。如果没有收到邮件,前往被拦截的邮件中查看.</description>
+    </item>
+  </channel>
+</rss>

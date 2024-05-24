@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Windows 装机指南 | huyixi&#39;s Blog</title>
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://localhost:1313/the-use-of-windows-computer/the-use-of-windows-computer/index.xml">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+
+
+</head>
+
+<body>
+  <main>
+    
+<h1>Windows 装机指南</h1>
+
+
+
+
+<blockquote>
+<p>由于本文内容较长，且个人博客不附带目录导航。更推荐在我的 wiki 网站进行阅读，这是本文的<a href="https://huyixi.wiki/Windows">链接</a>。可以通过点击目录进行快速导航跳转。
+前情提要：根据本人的多次装机历史记录而成，基本满足本人 Windows 装机需求。</p>
+</blockquote>
+<h2 id="系统安装">系统安装</h2>
+<h3 id="系统镜像下载网站">系统镜像下载网站</h3>
+<ul>
+<li>itellyou：<a href="https://msdn.itellyou.cn">https://msdn.itellyou.cn</a></li>
+<li>itellyou 新网站（主要下载系统镜像）：<a href="https://next.itellyou.cn/">https://next.itellyou.cn/</a></li>
+</ul>
+<h3 id="制作系统启动盘">制作系统启动盘</h3>
+<p>需要提前准备一个 16G 以上的 U 盘作为启动盘</p>
+<ul>
+<li>
+<p>rufus（Windows）官网地址：<a href="https://rufus.ie/en/">https://rufus.ie/en/</a></p>
+</li>
+<li>
+<p>UNetbootin（多平台）：<a href="https://unetbootin.github.io/">https://unetbootin.github.io/</a></p>
+</li>
+</ul>
+<h3 id="进入-bios-界面将-u-盘设置为启动盘">进入 BIOS 界面将 U 盘设置为启动盘</h3>
+<p>一些笔记本侧边有 Reset 插口，使用卡针插入即可进入 BIOS 界面</p>
+<h3 id="激活系统">激活系统</h3>
+<p>Windows 系统激活参考教程：www.kms.pub</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>slmgr -ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D（该激活码为 Windows10 企业版激活码，不同系统版本使用不同的激活码，除本行外下面的命令都一样）
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>slmgr -skms kms.03k.org
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>slmgr -ato
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>slmgr -dlv
+</span></span></code></pre></div><h4 id="windows-激活密钥">Windows 激活密钥</h4>
+<h5 id="通用批量许可证密钥-gvlk">通用批量许可证密钥 (GVLK)</h5>
+<p>在下表中，可找到 Windows 每个版本的 GVLK。 LTSC 是长期服务渠道，而 LTSB 是 Long-Term Servicing Branch 。</p>
+<h5 id="windows-serverltsc-版本">Windows Server（LTSC 版本）</h5>
+<h6 id="windows-server-2022">Windows Server 2022</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows Server 2022 Datacenter</td>
+<td style="text-align:left">WX4NM-KYWYW-QJJR4-XV3QB-6VM33</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2022 Standard</td>
+<td style="text-align:left">VDYBN-27WPP-V4HQT-9VMD4-VMK7H</td>
+</tr>
+</tbody>
+</table>
+<h6 id="windows-server-2019">Windows Server 2019</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows Server 2019 Datacenter</td>
+<td style="text-align:left">WMDGN-G9PQG-XVVXX-R3X43-63DFG</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2019 Standard</td>
+<td style="text-align:left">N69G4-B89J2-4G8F4-WWYCC-J464C</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2019 Essentials</td>
+<td style="text-align:left">WVDHN-86M7X-466P6-VHXV7-YY726</td>
+</tr>
+</tbody>
+</table>
+<h6 id="windows-server-2016">Windows Server 2016</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows Server 2016 Datacenter</td>
+<td style="text-align:left">CB7KF-BWN84-R7R2Y-793K2-8XDDG</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2016 Standard</td>
+<td style="text-align:left">WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2016 Essentials</td>
+<td style="text-align:left">JCKRF-N37P4-C2D82-9YXRT-4M63B</td>
+</tr>
+</tbody>
+</table>
+<h5 id="windows-server半年频道版本">Windows Server（半年频道版本）</h5>
+<h6 id="windows-server版本-20h2200419091903-和-1809">Windows Server，版本 20H2、2004、1909、1903 和 1809</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows Server Datacenter</td>
+<td style="text-align:left">6NMRW-2C8FM-D24W7-TQWMY-CWH2D</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server Standard</td>
+<td style="text-align:left">N2KJX-J94YW-TQVFB-DG9YT-724CC</td>
+</tr>
+</tbody>
+</table>
+<h5 id="windows-11-和-windows-10半年频道版本">Windows 11 和 Windows 10（半年频道版本）</h5>
+<p>有关受支持的版本和服务终止日期的信息，请参阅 <a href="https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet">Windows 生命周期情况说明书</a>。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows 11 专业版 Windows 10 专业版</td>
+<td style="text-align:left">W269N-WFGWX-YVC9B-4J6C9-T83GX</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 11 专业版 N Windows 10 专业版 N</td>
+<td style="text-align:left">MH37W-N47XK-V7XM9-C7227-GCQG9</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 11 专业工作站版 Windows 10 专业工作站版</td>
+<td style="text-align:left">NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 11 专业工作站版 N Windows 10 专业工作站版 N</td>
+<td style="text-align:left">9FNHH-K3HBT-3W4TD-6383H-6XYWF</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 11 专业教育版 Windows 10 专业教育版</td>
+<td style="text-align:left">6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 11 专业教育版 N Windows 10 专业教育版 N</td>
+<td style="text-align:left">YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 11 教育版 Windows 10 教育版</td>
+<td style="text-align:left">NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 11 教育版 N Windows 10 教育版 N</td>
+<td style="text-align:left">2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 11 企业版 Windows 10 企业版</td>
+<td style="text-align:left">NPPR9-FWDCX-D2C8J-H872K-2YT43</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 11 企业版 N Windows 10 企业版 N</td>
+<td style="text-align:left">DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 11 企业版 G Windows 10 企业版 G</td>
+<td style="text-align:left">YYVX9-NTFWV-6MDM3-9PT4T-4M68B</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 11 企业版 G N Windows 10 企业版 G N</td>
+<td style="text-align:left">44RPN-FTY23-9VTTB-MP9BX-T84FV</td>
+</tr>
+</tbody>
+</table>
+<h5 id="windows-10ltscltsb-版本">Windows 10（LTSC/LTSB 版本）</h5>
+<h6 id="windows-10-ltsc-2021-和-2019">Windows 10 LTSC 2021 和 2019</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows 10 企业版 LTSC 2021 Windows 10 企业版 LTSC 2019</td>
+<td style="text-align:left">M7XTQ-FN8P6-TTKYV-9D4CC-J462D</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 10 企业版 N LTSC 2021 Windows 10 企业版 N LTSC 2019</td>
+<td style="text-align:left">92NFX-8DJQP-P6BBQ-THF9C-7CG2H</td>
+</tr>
+</tbody>
+</table>
+<h6 id="windows-10-ltsb-2016">Windows 10 LTSB 2016</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows 10 企业版 LTSB 2016</td>
+<td style="text-align:left">DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 10 企业版 N LTSB 2016</td>
+<td style="text-align:left">QFFDN-GRT3P-VKWWX-X7T3R-8B639</td>
+</tr>
+</tbody>
+</table>
+<h6 id="windows-10-ltsb-2015">Windows 10 LTSB 2015</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows 10 企业版 2015 LTSB</td>
+<td style="text-align:left">WNMTR-4C88C-JK8YV-HQ7T2-76DF9</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 10 企业版 2015 LTSB N</td>
+<td style="text-align:left">2F77B-TNFGY-69QQF-B8YKP-D69TJ</td>
+</tr>
+</tbody>
+</table>
+<h5 id="早期版本的-windows-server">早期版本的 Windows Server</h5>
+<h6 id="windows-server-版本-1803">Windows Server 版本 1803</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows Server Datacenter</td>
+<td style="text-align:left">2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server Standard</td>
+<td style="text-align:left">PTXN8-JFHJM-4WC78-MPCBR-9W4KR</td>
+</tr>
+</tbody>
+</table>
+<h6 id="windows-server-版本-1709">Windows Server 版本 1709</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows Server Datacenter</td>
+<td style="text-align:left">6Y6KB-N82V8-D8CQV-23MJW-BWTG6</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server Standard</td>
+<td style="text-align:left">DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4</td>
+</tr>
+</tbody>
+</table>
+<h6 id="windows-server-2012-r2">Windows Server 2012 R2</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows Server 2012 R2 Standard</td>
+<td style="text-align:left">D2N9P-3P6X9-2R39C-7RTCD-MDVJX</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2012 R2 Datacenter</td>
+<td style="text-align:left">W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2012 R2 Essentials</td>
+<td style="text-align:left">KNC87-3J2TX-XB4WP-VCPJV-M4FWM</td>
+</tr>
+</tbody>
+</table>
+<h6 id="windows-server-2012">Windows Server 2012</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows Server 2012</td>
+<td style="text-align:left">BN3D2-R7TKB-3YPBD-8DRP2-27GG4</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2012 N</td>
+<td style="text-align:left">8N2M2-HWPGY-7PGT9-HGDD8-GVGGY</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2012 单语言版</td>
+<td style="text-align:left">2WN2H-YGCQR-KFX6K-CD6TF-84YXQ</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2012 特定国家/地区版</td>
+<td style="text-align:left">4K36P-JN4VD-GDC6V-KDT89-DYFKP</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2012 Standard</td>
+<td style="text-align:left">XC9B7-NBPP2-83J2H-RHMBY-92BT4</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2012 MultiPoint 标准版</td>
+<td style="text-align:left">HM7DN-YVMH3-46JC3-XYTG7-CYQJJ</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2012 MultiPoint 高级版</td>
+<td style="text-align:left">XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2012 Datacenter</td>
+<td style="text-align:left">48HP8-DN98B-MYWDG-T2DCC-8W83P</td>
+</tr>
+</tbody>
+</table>
+<h6 id="windows-server-2008-r2">Windows Server 2008 R2</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows Server 2008 R2 Web 版</td>
+<td style="text-align:left">6TPJF-RBVHG-WBW2R-86QPH-6RTM4</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2008 R2 HPC 版</td>
+<td style="text-align:left">TT8MH-CG224-D3D7Q-498W2-9QCTX</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2008 R2 标准版</td>
+<td style="text-align:left">YC6KT-GKW9T-YTKYR-T4X34-R7VHC</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2008 R2 企业版</td>
+<td style="text-align:left">489J6-VHDMP-X63PK-3K798-CPX3Y</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2008 R2 Datacenter</td>
+<td style="text-align:left">74YFP-3QFB3-KQT8W-PMXWJ-7M648</td>
+</tr>
+<tr>
+<td style="text-align:left">面向基于 Itanium 系统的 Windows Server 2008 R2</td>
+<td style="text-align:left">GT63C-RJFQ3-4GMB6-BRFB9-CB83V</td>
+</tr>
+</tbody>
+</table>
+<h6 id="windows-2008-server">Windows 2008 Server</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows Web Server 2008</td>
+<td style="text-align:left">WYR28-R7TFJ-3X2YQ-YCY4H-M249D</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2008 标准版</td>
+<td style="text-align:left">TM24T-X9RMF-VWXK6-X8JC9-BFGM2</td>
+</tr>
+<tr>
+<td style="text-align:left">不带 Hyper-V 的 Windows Server 2008 标准版</td>
+<td style="text-align:left">W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2008 企业版</td>
+<td style="text-align:left">YQGMW-MPWTJ-34KDK-48M3W-X4Q6V</td>
+</tr>
+<tr>
+<td style="text-align:left">不带 Hyper-V 的 Windows Server 2008 企业版</td>
+<td style="text-align:left">39BXF-X8Q23-P2WWT-38T2F-G3FPG</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2008 HPC</td>
+<td style="text-align:left">RCTX3-KWVHP-BR6TB-RB6DM-6X7HP</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows Server 2008 Datacenter</td>
+<td style="text-align:left">7M67G-PC374-GR742-YH8V4-TCBY3</td>
+</tr>
+<tr>
+<td style="text-align:left">不带 Hyper-V 的 Windows Server 2008 数据中心版</td>
+<td style="text-align:left">22XQ2-VRXRG-P8D42-K34TD-G3QQC</td>
+</tr>
+<tr>
+<td style="text-align:left">面向基于 Itanium 系统的 Windows Server 2008</td>
+<td style="text-align:left">4DWFP-JF3DJ-B7DTH-78FJB-PDRHK</td>
+</tr>
+</tbody>
+</table>
+<h4 id="早期版本的-windows">早期版本的 Windows</h4>
+<h5 id="windows-81">Windows 8.1</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows 8.1 专业版</td>
+<td style="text-align:left">GCRJD-8NW9H-F2CDX-CCM8D-9D6T9</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 8.1 专业版 N</td>
+<td style="text-align:left">HMCNV-VVBFX-7HMBH-CTY9B-B4FXY</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 8.1 企业版</td>
+<td style="text-align:left">MHF9N-XY6XB-WVXMC-BTDCT-MKKG7</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 8.1 企业版 N</td>
+<td style="text-align:left">TT4HM-HN7YT-62K67-RGRQJ-JFFXW</td>
+</tr>
+</tbody>
+</table>
+<h6 id="windows-8">Windows 8</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows 8 专业版</td>
+<td style="text-align:left">NG4HW-VH26C-733KW-K6F98-J8CK4</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 8 专业版 N</td>
+<td style="text-align:left">XCVCF-2NXM9-723PB-MHCB7-2RYQQ</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 8 企业版</td>
+<td style="text-align:left">32JNW-9KQ84-P47T8-D8GGY-CWCK7</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 8 企业版 N</td>
+<td style="text-align:left">JMNMF-RHW7P-DMY6X-RF3DR-X2BQT</td>
+</tr>
+</tbody>
+</table>
+<h6 id="windows-7">Windows 7</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作系统版本</th>
+<th style="text-align:left">KMS 客户端产品密钥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows 7 专业版</td>
+<td style="text-align:left">FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 7 专业版 N</td>
+<td style="text-align:left">MRPKT-YTG23-K7D7T-X2JMM-QY7MG</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 7 专业版 E</td>
+<td style="text-align:left">W82YF-2Q76Y-63HXB-FGJG9-GF7QX</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 7 企业版</td>
+<td style="text-align:left">33PXH-7Y6KF-2VJC9-XBBR8-HVTHH</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 7 企业版 N</td>
+<td style="text-align:left">YDRBP-3D83W-TY26F-D46B2-XCKRJ</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows 7 企业版 E</td>
+<td style="text-align:left">C29WB-22CC8-VJ326-GHFJW-H9DH4</td>
+</tr>
+</tbody>
+</table>
+<h4 id="推荐使用-windows10-企业版-ltsc">推荐使用 Windows10 企业版 LTSC</h4>
+<p>参考链接：<a href="https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys">https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys</a></p>
+<h3 id="检测系统">检测系统</h3>
+<p>如果是全新的电脑系统安装完毕后安装 <strong>AIDA</strong> 或者 <strong>图吧工具箱</strong> 测试系统是否能正常运行</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>AIDA64 Extreme：至尊版
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>FUUJ1-E3YDB-HTDTK-2D894-4BVAQ
+</span></span><span style="display:flex;"><span>4U12U-SDWD6-8WDNH-HDAM4-W3MZW
+</span></span><span style="display:flex;"><span>F5R3D-XUPD6-4TD9B-2D2L4-354AX
+</span></span><span style="display:flex;"><span>3H39D-ZFQD6-1ED96-UD274-RD44G
+</span></span><span style="display:flex;"><span>4U12U-SDWD6-8WDNH-HDAM4-W3MZW
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>AIDA64 Engineer：工程版
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>YHDZ3-91UD6-ZUDN3-QDSS4-RXPDC
+</span></span><span style="display:flex;"><span>FNU14-63KD6-XSD9N-VDV14-4VRN1
+</span></span><span style="display:flex;"><span>4X1DF-KDTD6-9EDNY-DDGD4-W7N4Q
+</span></span><span style="display:flex;"><span>F9U44-B3ID6-THD98-6DV44-4Z6U2
+</span></span><span style="display:flex;"><span>4T1HF-WDPD6-3FD99-3DGH4-WGFPJ
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>AIDA64 Business：商业版
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DCYPF-G4UD6-7DDNF-KDGS4-HXPVI
+</span></span><span style="display:flex;"><span>1U4S4-2Y3D6-55D9E-PD5Z4-CF5C9
+</span></span><span style="display:flex;"><span>RRFGY-PUQD6-KFD9Z-1DP74-3DKWB
+</span></span><span style="display:flex;"><span>USUB4-4FAD6-UTD9Q-2D8H4-42DZA
+</span></span><span style="display:flex;"><span>3QRDD-KF6D6-J6D9V-IDPU4-3MJ45
+</span></span></code></pre></div><h4 id="dll-缺失">dll 缺失</h4>
+<p>下载缺失的 dll 文件后<a href="https://www.dll-files.com">https://www.dll-files.com</a> ，放置到 C:/System/Windows32/</p>
+<h4 id="win11-下应用程序无法正确启动0xc000007b解决方法">Win11 下“应用程序无法正确启动(0xc000007b)”解决方法</h4>
+<p><a href="https://www.howtogeek.com/874113/how-to-fix-the-0xc000007b-error-on-windows/">链接</a></p>
+<h2 id="windows-系统设置">Windows 系统设置</h2>
+<h3 id="磁盘分区">磁盘分区</h3>
+<ol>
+<li><code>win + R</code> 调出运行窗口</li>
+<li>在窗口中输入 <code>diskmgmt.msc</code> 调出磁盘管理界面</li>
+<li>根据自己的需要建立分区</li>
+</ol>
+<h3 id="关闭用户账户控制提醒">关闭用户账户控制提醒</h3>
+<p>防止每次安装软件或者修改系统设置时候弹出提醒窗口</p>
+<ol>
+<li>Win + R 打开运行</li>
+<li>在输入窗口输入 <code>msconfig</code> 调出 系统配置 System Configuration Utility</li>
+<li>点击上方的工具菜单 -&gt; 找到 更改 UAC 用户账户控制 设置 -&gt; 启动设置</li>
+<li>将通知杆往下拉,修改为从不通知,点击确定</li>
+</ol>
+<h3 id="关闭系统版本的自动检查与更新">关闭系统版本的自动检查与更新</h3>
+<ol>
+<li><code>win + R</code> 调出运行窗口,输入 <code>gpedit.msc</code> Group Policy Editor 调出组策略编辑器</li>
+<li>本地计算机策略 - 计算机配置 - 管理模板 - Windows 组件 - Windows 更新 - 指定 Intranet Microsoft 更新位置服务 - 双击打开</li>
+<li>可以看到默认的配置是已启用,修改 <code>设置检测更新的 Intranet 更新服务</code> 以及下方的 <code>设置 Intranet 统计服务器</code> 将两者的输入框都修改为 <code>127.0.0.1</code></li>
+<li>点击应用即可</li>
+<li>验证:打开系统更新界面查看是否已经禁用</li>
+</ol>
+<h3 id="修改桌面存储桌面文件的文件夹下载文档等文件夹的存储位置">修改桌面（存储桌面文件的文件夹）、下载、文档等文件夹的存储位置</h3>
+<ol>
+<li>该文件夹一般存储在 C://Users/{{ username }} 下</li>
+<li>修改存储位置：右键 -&gt; 属性 -&gt; 位置 -&gt; 修改文件存储位置 -&gt; 移动</li>
+</ol>
+<h3 id="添加开机启动项">添加开机启动项</h3>
+<ol>
+<li>打开 <code>:\Users\:\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</code> 文件夹（上述的 <code>:user</code> 为你当前使用的系统的用户名），或者使用 Win + R 打开 Windows 系统的运行窗口，键入 <code>shell:startup</code> 点击确定，打开启动文件夹</li>
+<li>将需要启动的应用的快捷方式添加到该文件夹</li>
+</ol>
+<h3 id="修改应用程序的默认安装位置">修改应用程序的默认安装位置</h3>
+<p>⚠️ 修改该设置后无法自动修改快捷方式的指向位置，目前我暂未找到解决方案</p>
+<p>修改该设置后应用程序的默认安装位置将从默认位置即 C:/Program Files 或 C:/Program Files (x86) 移动到你所设定的位置</p>
+<p>在我的硬盘驱动器上创建一个文件夹名称 Program Files (x86)：D
+然后而不是去 &lsquo;&lsquo;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion&rsquo;&rsquo;
+我必须去这里&raquo;&lsquo;HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion&rsquo;&rsquo;
+然后修改 &lsquo;&lsquo;ProgramFilesDir (x86)&rsquo;&rsquo; 和 &lsquo;&lsquo;ProgramFilesDir&rsquo;&rsquo; 的数值</p>
+<h4 id="修改-cuser-文件夹的存储位置">修改 C:/User 文件夹的存储位置</h4>
+<p>⚠️ 该操作有风险,操作前注意备份自己的数据!</p>
+<ol>
+<li>
+<p>创建一个 relocate.xml 文件,文件内容如下,并根据下列提示修改文件内容</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000080">&lt;unattend</span> <span style="color:#008080">xmlns=</span><span style="color:#d14">&#34;urn:schemas-microsoft-com:unattend&#34;</span><span style="color:#000080">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000080">&lt;settings</span> <span style="color:#008080">pass=</span><span style="color:#d14">&#34;oobeSystem&#34;</span><span style="color:#000080">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000080">&lt;component</span> <span style="color:#008080">name=</span><span style="color:#d14">&#34;Microsoft-Windows-Shell-Setup&#34;</span> <span style="color:#008080">processorArchitecture=</span><span style="color:#d14">&#34;amd64&#34;</span> <span style="color:#008080">publicKeyToken=</span><span style="color:#d14">&#34;31bf3856ad364e35&#34;</span> <span style="color:#008080">language=</span><span style="color:#d14">&#34;neutral&#34;</span> <span style="color:#008080">versionScope=</span><span style="color:#d14">&#34;nonSxS&#34;</span> <span style="color:#008080">xmlns:wcm=</span><span style="color:#d14">&#34;http://schemas.microsoft.com/WMIConfig/2002/State&#34;</span> <span style="color:#008080">xmlns:xsi=</span><span style="color:#d14">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span style="color:#000080">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000080">&lt;FolderLocations&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000080">&lt;ProfilesDirectory&gt;</span>D:\Users<span style="color:#000080">&lt;/ProfilesDirectory&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000080">&lt;/FolderLocations&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000080">&lt;/component&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000080">&lt;/settings&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000080">&lt;/unattend&gt;</span>
+</span></span></code></pre></div><p>⚠️ 如果你的操作系统是 32 位则将 <code>processorArchitecture=&quot;amd64&quot;</code> 更改为 <code>processorArchitecture=&quot;x86</code>.如果是 64 位则无需更改</p>
+<p>⚠️ 修改 <code>&lt;ProfilesDirectory&gt;D:\Users&lt;/ProfilesDirectory&gt;</code> 中 <code>D:\Users</code> 的值为你想要保存文件夹的位置</p>
+</li>
+<li>
+<p>登陆到你的电脑管理员账户</p>
+<p>从 Windows 设置 - 账户 - 账户信息/家庭和其他用户 查看当前的账户权限</p>
+<p>如果为管理员账户会显示管理员字样</p>
+</li>
+<li>
+<p>使用管理员权限打开 cmd 并进行以下操作</p>
+<p>输入 net user Administrator /active:yes 并回车 激活系统管理员账户</p>
+</li>
+<li>
+<p>注销当前账户:</p>
+<p>开始菜单 - {{你的用户名}} -注销</p>
+</li>
+<li>
+<p>登陆 Administrator 管理员账户</p>
+</li>
+<li>
+<p>停用系统除了 Administrator 管理员账户以外的所有账户:</p>
+<p>使用管理员模式打开 CMD - 输入 <code>net user 你的账户名 /active:no</code>,将 <code>你的账户名</code> 修改为你系统所使用的账户名,有几个账户名执行几次改命令</p>
+<p>执行完命令后从 <code>Windows 设置</code> - <code>账户</code> - <code>家庭和其他用户</code> 中查看是否完全停用</p>
+</li>
+<li>
+<p>CMD 切换到 sysprep 文件夹</p>
+<p>该文件夹的绝对路径为 <code>C:\Windows\System32\Sysprep</code></p>
+</li>
+<li>
+<p>执行 cmd 命令</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sysprep /oobe /reboot /unattend:D:<span style="color:#d14">\r</span>elocate.xml
+</span></span></code></pre></div><p>其中 unattend 命令后的内容为第一步所保存的 xml 文件的绝对路径,根据自己的存储位置修改即可</p>
+</li>
+<li>
+<p>系统将自动重启并创建新的用户,根据系统提示进行操作即可</p>
+<p>需要提醒的是,新创建的账户名称不能与之前的账户名称相同,你可以随意设置一个,之后再进行更改</p>
+</li>
+<li>
+<p>进入系统后查看 Users 文件夹是否已经移动到你所设置的位置</p>
+<p>此时已经成功迁移 Users 文件夹</p>
+</li>
+<li>
+<p>激活在第 6 步停用的账户</p>
+<p><code>net user {{你的账户名}} /active:yes</code> 与之前相同,有多少个账户就执行多少次命令</p>
+</li>
+<li>
+<p>注销临时账户,登陆你自己的管理员账户(不是 Administrator )</p>
+</li>
+<li>
+<p>在 Windows 设置 中删除你在第 9 步所设置的临时账户</p>
+<p>参考教程 <a href="https://www.tenforums.com/tutorials/1964-move-users-folder-location-windows-10-a.html">https://www.tenforums.com/tutorials/1964-move-users-folder-location-windows-10-a.html</a></p>
+</li>
+</ol>
+<h3 id="删除文件资源管理器中左侧菜单栏的此电脑下的-3d-对象等文件夹">删除文件资源管理器中左侧菜单栏的此电脑下的 3D 对象等文件夹</h3>
+<p>1.打开注册表编辑器（键盘 Win+R 中输入 regedit 并回车）</p>
+<p>2.定位到：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace**</p>
+<p>3.右键删除<strong>DelegateFolders</strong>以上的注册表项，刷新资源管理器后就生效了。</p>
+<p>下载：{088e3905-0323-4b02-9826-5d99428e115f}</p>
+<p>图片：{24ad3ad4-a569-4530-98e1-ab02f9417aa8}</p>
+<p>音乐：{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}</p>
+<p>桌面：{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}</p>
+<p>文档：{d3162b92-9365-467a-956b-92703aca08af}</p>
+<p>视频：{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}</p>
+<p>3D 对象：{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}</p>
+<h3 id="隐藏桌面上的回收站我的电脑等图标">隐藏桌面上的回收站、我的电脑等图标</h3>
+<ol>
+<li>桌面空白处右键 - 个性化</li>
+<li>打开设置主页 - 选择主题 - 右侧边栏 - 相关的设置 - 桌面图标设置</li>
+<li>根据需要隐藏桌面图标的勾选状态并点击应用</li>
+</ol>
+<h3 id="默认展开资源管理器中文件夹">默认展开资源管理器中文件夹</h3>
+<ol>
+<li>打开资源管理器</li>
+<li>左上方菜单栏 查看</li>
+<li>打开查看菜单栏 - 点击选项打开文件夹选项</li>
+<li>查看 - 导航窗格下的展开到打开的文件夹</li>
+</ol>
+<h3 id="修改文件的显示路径为绝对路径">修改文件的显示路径为绝对路径</h3>
+<ol>
+<li>打开资源管理器</li>
+<li>左上方菜单栏 查看</li>
+<li>打开查看菜单栏 - 点击选项打开文件夹选项</li>
+<li>在标题栏中显示完整路径</li>
+</ol>
+<h3 id="关闭-windows-安全中心">关闭 Windows 安全中心</h3>
+<ol>
+<li><code>win + R</code> 打开 运行窗口 输入 gpedit.msc 打开组策略编辑器</li>
+<li>本地计算机策略 - 计算机配置 - 管理模板 - Windows 组件 - Microsoft Defender 防病毒 - 双击 - 右侧找到 - 关闭 Microsoft Defender 防病毒</li>
+</ol>
+<h3 id="关闭诊断和反馈">关闭诊断和反馈</h3>
+<p>打开 <code>Windows设置</code> 面板 - 隐私 - 诊断和反馈 -勾选必需诊断数据 &amp; 反馈频率修改为 从不</p>
+<h3 id="关闭活动历史记录">关闭活动历史记录</h3>
+<p>打开 <code>Windows设置</code> 面板 - 隐私 - 活动历史记录 - 取消勾选 在此设备上存储我的活动历史记录 向 Microsoft 发送我的活动历史记录</p>
+<h3 id="如何优化-windows-的性能">如何优化 Windows 的性能</h3>
+<p><a href="https://www.tenforums.com/tutorials/26120-optimize-performance-windows-10-a.html">https://www.tenforums.com/tutorials/26120-optimize-performance-windows-10-a.html</a></p>
+<h2 id="软件推荐">软件推荐</h2>
+<h3 id="输入法">输入法</h3>
+<h4 id="输入法方案推荐">输入法方案推荐</h4>
+<p>进行中文输入推荐使用双拼输入法，熟练使用后可以极大提高输入效率</p>
+<p>双拼输入法有多种方案，根据需要进行选择，我自己使用过 <strong>自然码双拼</strong> 与 <strong>小鹤双拼</strong> 。熟练使用后两者的输入速度没有很大差距。目前使用小鹤双拼的原因是 iOS 上自带的输入法不支持自然码双拼。</p>
+<p>注意选择输入方案的时候尽量不要选择使用标点符号当作输入按键的方案（如搜狗双拼等），否则在手机上显示键盘与平时有差异。</p>
+<p>学习双拼第一周可以背一下键位表，忘记的键位尽量先回想，回想不起来再去看键位图。</p>
+<p>一周过后基本可以熟练使用双拼，一个月后基本已经变成肌肉记忆，不用再去想键位分布就可马上打出来。</p>
+<h4 id="rime-输入法">Rime 输入法</h4>
+<p>首选的开源输入法。但是配置较为繁琐，且软件是繁体中文，设置起来相对不是很舒服。软件的配置可以使用 github 上一些配置好的直接导入即可。可以根据需要自己去研究官方的配置文件</p>
+<p>官网地址：<a href="https://rime.im/">https://rime.im/</a></p>
+<p>Rime 是跨平台的輸入法軟件，Rime 輸入方案可通用於以下發行版：</p>
+<ul>
+<li>【中州韻】 ibus-rime → Linux</li>
+<li>【小狼毫】 Weasel → Windows</li>
+<li>【鼠鬚管】 Squirrel → Mac OS X</li>
+</ul>
+<p>Rime 的各种配置，均是由 .yaml 文件所定义。 yaml 是一种标记语言。 .yaml 文件实际上是文本文档。可使用记事本、或 Emeditor 等进行编辑</p>
+<h5 id="文件夹">文件夹</h5>
+<p><a href="https://github.com/rime/home/wiki/UserData"><strong>用户资料文件夹</strong></a></p>
+<p>只修改用户文件夹，修改系统文件夹后更新软件会自动重新下载，所以修改也没用</p>
+<p>可以在程序图标上右键，点击用户文件夹打开</p>
+<ul>
+<li>【中州韻】 <code>~/.config/ibus/rime/</code> （0.9.1 以下版本爲 <code>~/.ibus/rime/</code>；fcitx5 为 <code>~/.local/share/fcitx5/rime/</code>）</li>
+<li>【小狼毫】 <code>%APPDATA%\Rime</code></li>
+<li>【鼠鬚管】 <code>~/Library/Rime/</code></li>
+</ul>
+<h5 id="内容">内容</h5>
+<p>用家下載或定製的文件：</p>
+<ul>
+<li><code>&lt;输入方案代号&gt;.schema.yaml</code> - 用户下载或自定义的<em>输入方案</em>。</li>
+<li><code>&lt;韵书代号&gt;.dict.yaml</code> - 用户下载或自定义的 <em>词典</em>。</li>
+<li><code>&lt;词典名称代号&gt;.txt</code> - 文本格式的词典，如预设词典表、用戶 <em>自定义词组</em>。</li>
+<li><code>&lt;配置代号&gt;.custom.yaml</code> - 应用于配置文件 <code>&lt;配置代号&gt;.schema.yaml</code> 或 <code>&lt;配置代号&gt;.yaml</code> 的 <em>补丁</em>。</li>
+<li><code>opencc/*</code> - <a href="https://github.com/BYVoid/OpenCC">OpenCC</a> 字形转换配置及字典文件。</li>
+</ul>
+<p>输入法程序记录的使用习惯等信息</p>
+<ul>
+<li><code>&lt;输入法语言代号&gt;.userdb/</code> - 输入法程序为保存用户的输入习惯而创建的 <em>用户词典</em>。</li>
+<li><code>installation.yaml</code> - 安装信息。输入法程序在首次运行及升级后写入安装、升级时间、程序版本等。</li>
+<li><code>user.yaml</code> - 用户状态信息。包括在 <em>方案选单</em> 选取的输入方案、输入法选项状态如「中／西」「简／繁」等。</li>
+</ul>
+<p>部署时生成的文件：</p>
+<ul>
+<li><code>build/*</code> - 快取文件。为使输入法高效运行，在部署过程中将配置、词典等编译为机读格式。</li>
+<li><code>trash/*</code> - 失效的文件。因 Rime 升級而不再使用的文件会自动移入这个文件夾。用户确认不再需要后可以删除。</li>
+</ul>
+<p>一套输入方案，通常包含「方案定义」和「词典」文件。</p>
+<p>方案定义，命名为 <code>&lt;方案定义&gt;.schema.yaml</code>，是一份包含输入方案配置信息的 YAML 文档。</p>
+<h5 id="共享文件夹">共享文件夹</h5>
+<p>存放由本机多个用户共享的文件，通常由输入法安装程序写入。</p>
+<p>Rime 输入法在查找一项资源的時候，会优先访问 <a href="https://github.com/rime/home/wiki/UserData">用户文件夹</a> 中的文件。 用户文件不存在时，再到共享文件夾中寻找。</p>
+<p>之前使用其他输入法的同学可以使用深蓝词库转换输出原输入法导出的词库</p>
+<p>深蓝词库下载地址：<a href="https://github.com/studyzy/imewlconverter/releases">https://github.com/studyzy/imewlconverter/releases</a></p>
+<h4 id="系统自带的输入法">系统自带的输入法</h4>
+<p>如果觉得 Rime 的配置太繁琐可以使用系统自带的输入法</p>
+<p>Mac 与 Windows （微软拼音）都有自带的输入法，安卓手机上可以使用 GBoard。</p>
+<h5 id="添加小鹤双拼到微软拼音输入法">添加小鹤双拼到微软拼音输入法</h5>
+<ol>
+<li>
+<p>win + R，输入 regedit，打开注册表</p>
+</li>
+<li>
+<p>找到 <code>计算机\HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS</code> 项</p>
+</li>
+<li>
+<p>新建一个名为 UserDefinedDoublePinyinScheme0 的字符串值，值为 <code>小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt</code></p>
+</li>
+<li>
+<p>打开控制面板&ndash;微软拼音输入法设置，把 小鹤双拼 设置为双拼的默认选择即可。</p>
+</li>
+</ol>
+<p>避免使用一些会搜集个人信息的输入法软件。</p>
+<h3 id="浏览器">浏览器</h3>
+<ul>
+<li>
+<p>Google Chrome（市场占有率最高的浏览器）</p>
+</li>
+<li>
+<p>Firefox（开源软件）</p>
+</li>
+<li>
+<p>Safari（MacOS 优化较好）</p>
+</li>
+<li>
+<p>Microsoft Edge</p>
+</li>
+</ul>
+<h3 id="科学上网">科学上网</h3>
+<ul>
+<li>
+<p>Clash（ PC 端全平台，Mac 上是 ClashX）</p>
+<p>网址：<a href="https://github.com/Dreamacro/clash.git">https://github.com/Dreamacro/clash.git</a></p>
+</li>
+<li>
+<p>Shadowrocket（ iOS 外区应用商店可购买下载）</p>
+</li>
+</ul>
+<h3 id="办公软件">办公软件</h3>
+<h4 id="office-全家桶">Office 全家桶</h4>
+<p>Windows 平台安装</p>
+<ol>
+<li>
+<p>下载安装镜像</p>
+<ul>
+<li><a href="https://msdn.itelleyou.com">https://msdn.itelleyou.com</a></li>
+<li>需要下载 VL 版本的 Office</li>
+</ul>
+</li>
+<li>
+<p>根据提示安装软件</p>
+</li>
+<li>
+<p>打开管理员模式下的命令行</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>跳转到软件的安装文件夹
+</span></span><span style="display:flex;"><span>32 位执行如下命令:
+</span></span><span style="display:flex;"><span>cd &#34;C:\Program Files (x86)\Microsoft Office\Office16&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>64 位执行如下命令:
+</span></span><span style="display:flex;"><span>cd &#34;C:\Program Files\Microsoft Office\Office16
+</span></span></code></pre></div></li>
+<li>
+<p>进入文件夹后执行以下两个命令，期间电脑需要联网</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>cscript ospp.vbs /sethst:win.kms.pub
+</span></span><span style="display:flex;"><span>cscript ospp.vbs /act
+</span></span></code></pre></div><p>如果提示看到 successful 的字样，那么就是激活成功了，重新打开 office 就好。</p>
+</li>
+</ol>
+<p>参考教程：www.kms.pub</p>
+<h3 id="虚拟机">虚拟机</h3>
+<h4 id="vmware-workstation-pro">VMware Workstation Pro</h4>
+<p>序列码</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>VM 16.1.1 build-17801498:
+</span></span><span style="display:flex;"><span>ZF3R0-FHED2-M80TY-8QYGC-NPKYF
+</span></span><span style="display:flex;"><span>YF390-0HF8P-M81RQ-2DXQE-M2UT6
+</span></span><span style="display:flex;"><span>ZF71R-DMX85-08DQY-8YMNC-PPHV8
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>VM 16.2.0 build-18760230:
+</span></span><span style="display:flex;"><span>ZF3R0-FHED2-M80TY-8QYGC-NPKYF
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>VM 17
+</span></span><span style="display:flex;"><span>JU090-6039P-08409-8J0QH-2YR7F
+</span></span></code></pre></div><h5 id="在-vmware-虚拟机上安装-macos">在 VMware 虚拟机上安装 MacOS</h5>
+<p>MacOS 系统在虚拟机上使用并不稳定，不推荐在虚拟机上安装使用，如果有需要可以按照下面的步骤进行安装</p>
+<ol>
+<li>
+<p>解锁 VMware</p>
+<p>VMware 不支持直接安装 MacOS ，所以需要先对 VMware 进行解锁。</p>
+<p>使用 unlocker 对 VMware 打补丁解锁，如果不打补丁，安装系统是无法选择 MacOS 的选项的。</p>
+<ul>
+<li>下载补丁文件：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone git@github.com:BDisp/unlocker.git
+</span></span></code></pre></div><ul>
+<li>
+<p>在安装补丁前，打开任务管理器关掉所有 VMware 程序</p>
+</li>
+<li>
+<p>打开 unlocker 文件架，找到 win-install.cmd 文件，右键以管理员身份运行。</p>
+</li>
+<li>
+<p>打开 安装虚拟机的文件夹，找到后缀为 <code>.vmx</code> 的 文件。例如： <code>macOS 10.14.vmx</code></p>
+</li>
+<li>
+<p>在该文件的最后一行添加以下代码，并保存文件</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smc.version <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>重新打开 VMware 虚拟机软件</p>
+<p>安装虚拟机，导入镜像，系统等。</p>
+</li>
+<li>
+<p>系统设置</p>
+<ul>
+<li>进入系统后先进入磁盘管理器，抹掉 VMware 开头的磁盘，并重命名为自己想要的名字。</li>
+<li>根据引导正常进入系统。</li>
+</ul>
+</li>
+<li>
+<p>进入系统后安装 VMware tools</p>
+<p>如果提示无法安装或者未找到 VMware tools</p>
+<p>进入这个网址，找到最新的 darwin.iso 并下载</p>
+<p><a href="http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/">http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/</a></p>
+<ul>
+<li>关闭 Mac 虚拟机</li>
+<li>设置 - CD/DVD（sata） - 连接 - 使用 iso 镜像，导入下载的 darwin.iso</li>
+<li>重启虚拟机</li>
+</ul>
+</li>
+</ol>
+<h3 id="文本编辑器">文本编辑器</h3>
+<ul>
+<li>Notepad++</li>
+<li>Vim</li>
+<li>Typora（md 文件编辑器）</li>
+</ul>
+<h3 id="idea">IDEA</h3>
+<ul>
+<li>VSCode</li>
+<li>JetBrains 全家桶</li>
+</ul>
+<h3 id="流媒体编辑">流媒体编辑</h3>
+<ul>
+<li>
+<p>Adobe 全家桶</p>
+<p><a href="https://weibo.com/vposy">@Vposy</a> 在新浪微博上更新他的破解版，可以根据需要下载</p>
+<p>网址：<a href="https://weibo.com/vposy">https://weibo.com/vposy</a></p>
+<p>百度网盘下载链接：<a href="https://pan.baidu.com/s/1Z4_iJNcq7koRt3vN7KxB3w?pwd=6g8x#list/path=%2F">https://pan.baidu.com/s/1Z4_iJNcq7koRt3vN7KxB3w?pwd=6g8x#list/path=%2F</a></p>
+<p>百度网盘密码为：6g8x。默认解压缩密码为：@vposy</p>
+<p>链接可能会失效，如果失效可去其主页获取</p>
+</li>
+</ul>
+<h3 id="密码管理器">密码管理器</h3>
+<p>只需要记住一个主密码甚至不需要记住密码，不用再记住每个应用或者网站的密码了！</p>
+<ul>
+<li>Bitwarden（开源全平台，基础功能免费够用）</li>
+<li>1Password</li>
+</ul>
+<h3 id="笔记软件">笔记软件</h3>
+<ul>
+<li>flomo （全平台，需分类无压力的笔记软件，作者也是 Notion 软件的作者）</li>
+</ul>
+<h3 id="待办事项">待办事项</h3>
+<ul>
+<li>Microsoft Todo （免费，全平台，使用帐号进行平台同步，但有时候同步会失败）</li>
+</ul>
+<h3 id="通讯软件">通讯软件</h3>
+<ul>
+<li>
+<p>Telegram（功能强大，不只是通讯软件，但是此软件只能进行私聊的加密）</p>
+<p>使用技巧可参考这篇文章：<a href="https://tingtalk.me/telegram/">https://tingtalk.me/telegram/</a></p>
+</li>
+<li>
+<p>Singal（全开源，更强大的加密通讯软件）</p>
+</li>
+<li>
+<p>Tim （ QQ 的替代品，更为简洁，但是 Tim 与 QQ 曾经被报道过收集用户资料）</p>
+</li>
+</ul>
+<h3 id="rss-信息获取">RSS 信息获取</h3>
+<h4 id="软件">软件</h4>
+<ul>
+<li>Reeder 5（Apple 全平台，交互更优雅，可以在软件内直接浏览内容）</li>
+<li>NetNewsWire（开源全平台）</li>
+</ul>
+<h4 id="rss-源">RSS 源</h4>
+<ul>
+<li>RSS Hub（可以给各种网站生成 RSS）：<a href="https://docs.rsshub.app/">https://docs.rsshub.app/</a></li>
+<li>中文博客列表推荐：<a href="https://github.com/timqian/chinese-independent-blogs.git">https://github.com/timqian/chinese-independent-blogs.git</a></li>
+</ul>
+<h3 id="邮箱客户端">邮箱客户端</h3>
+<ul>
+<li>Spark（Apple 全平台，交互更优雅）</li>
+<li>Thunderbird（全平台，Mozilla 社区的作品）：<a href="https://www.thunderbird.net/">https://www.thunderbird.net/</a></li>
+</ul>
+<h3 id="翻译软件">翻译软件</h3>
+<ul>
+<li>DeepL</li>
+<li>欧陆词典</li>
+<li>谷歌网页翻译：translate.google.com （可以翻译文件）</li>
+</ul>
+<h3 id="图书管理器">图书管理器</h3>
+<ul>
+<li>Calibre</li>
+</ul>
+<h3 id="分布式网盘同步软件">分布式网盘同步软件</h3>
+<ul>
+<li>BT Sync / Resilio Sync 适用于广播式同步，一人发，多人收</li>
+<li>rsync 跨硬盘备份工具，适用于一个人多台机器</li>
+</ul>
+<p>网址： &lt;www.getsync.com&gt;</p>
+<h3 id="视频播放器">视频播放器</h3>
+<ul>
+<li>VLC media player（开源全平台）</li>
+</ul>
+<h3 id="图片查看器">图片查看器</h3>
+<ul>
+<li>ImageGlass</li>
+</ul>
+<h3 id="在线音乐播放器">在线音乐播放器</h3>
+<ul>
+<li>Spotify</li>
+</ul>
+<h3 id="pdf-阅读器">PDF 阅读器</h3>
+<ul>
+<li>SumatraPDF(Windows)</li>
+</ul>
+<h3 id="电脑文件搜索">电脑文件搜索</h3>
+<ul>
+<li>Alfred（MacOS，不只是文件搜索）</li>
+<li>PowerToys（Windows）</li>
+<li>Listra（Windows）</li>
+<li>everything（Windows）</li>
+</ul>
+<h3 id="解压缩软件">解压缩软件</h3>
+<ul>
+<li>7-zip</li>
+</ul>
+<h3 id="磁盘空间分析">磁盘空间分析</h3>
+<ul>
+<li>WizTree：<a href="https://diskanalyzer.com/">https://diskanalyzer.com/</a></li>
+<li>SpaceSniffer</li>
+</ul>
+<h3 id="屏幕截图">屏幕截图</h3>
+<ul>
+<li>Snipaste（全平台）</li>
+</ul>
+<h3 id="百度云加速">百度云加速</h3>
+<p>pandownload（下载大文件可能会碰到下载一半无法下载的问题）：www.pandownload.net</p>
+<h3 id="软件设置">软件设置</h3>
+<p>如何设置谷歌的国别重定向</p>
+<p>Google 搜索通常会根据“发起搜索的 IP 地址”来进行“国别重定向”。
+比如：内地的网友不翻墙直接进行 Google 搜索，会被重定向到 Google 的香港站点；
+比如：通过翻墙到美国访问 Google 搜索，可能会被重定美国的 Google
+　要想禁止国别重定向，可以点击如下网址，然后 Google 会在你本地保存一个 cookie 设置，下次再访问，就不会被重定向了。
+<a href="https://www.google.com/ncr">http://www.google.com/ncr</a>（No Country Redirect）</p>
+<h3 id="网盘">网盘</h3>
+<p>重要的资料必须在自己手上有备份。</p>
+<p>任何网盘都有信息泄漏的风险，想要资料不被泄漏就不要使用网盘，只使用本地硬盘存储！</p>
+<ul>
+<li>
+<p>Google Driver（推荐）</p>
+</li>
+<li>
+<p>百度网盘（网上分享的大部分文件资料都在百度网盘上，不得不用的软件）</p>
+</li>
+</ul>
+<p>如果在网盘上上传图片等信息，网盘会压缩图片，如果只有网盘上一个备份，之后下载的图片不会是原来的清晰度。</p>
+<p>另外大部分人都有过网盘资料被删除的经历，服务提供商可以查看你的网盘文件并且决定是否删除。可以上传一些 H 图片或者视频到网盘上过几天看看还能否访问。但是网盘在我们的生活中又不可或缺。</p>
+<h4 id="解决方法">解决方法</h4>
+<p>网盘 + 加密盘</p>
+<p>使用加密软件加密你的数据之后再上传到网盘上。此方法可以避免文件被删或者压缩</p>
+<h4 id="加密软件veracrypt">加密软件：VeraCrypt</h4>
+<p>下载地址：<a href="https://veracrypt.fr/en/Home.html">https://veracrypt.fr/en/Home.html</a></p>
+<h2 id="快捷键">快捷键</h2>
+<p>Windows 系统快捷键</p>
+<p>MacOS 系统快捷键</p>
+<h2 id="使用技巧">使用技巧</h2>
+<h3 id="寻找最近的电脑文件">寻找最近的电脑文件</h3>
+<ol>
+<li>Win + R 打开运行窗口</li>
+<li>输入 recent 并确定</li>
+<li>点击修改日期,寻找变动过的文件</li>
+</ol>
+<h3 id="隐藏文件或文件夹">隐藏文件或文件夹</h3>
+<ul>
+<li>不易寻找的方法
+<ol>
+<li>在文件或文件夹目录上打开运行窗口</li>
+<li>输入 <code>attrib +s +h {filename}</code> ，其中将 {filename} 改为需要隐藏的文件或者文件名</li>
+<li>取消隐藏：重新在该目录上打开运行窗口输入同样的命令</li>
+</ol>
+</li>
+<li>常规方法
+<ol>
+<li>文件或文件夹右键，属性</li>
+<li>打开属性窗口，选择 －＞ 常规 －＞ 属性 －＞ 隐藏 －&gt; 确定</li>
+<li>取消隐藏：文件夹菜单栏－＞查看－＞隐藏的项目</li>
+</ol>
+</li>
+</ul>
+<h3 id="隐私与安全">隐私与安全</h3>
+<p>棱镜粉碎网站: <a href="https://prism-break.org/">https://prism-break.org/</a></p>
+<p>如果你很在意安全性，就【不要】基于移动设备（手机、平板）进行各种【敏感操作】</p>
+<h3 id="操作系统的选择">操作系统的选择</h3>
+<p>Linux &gt; MacOS &gt; Windows</p>
+<h3 id="浏览器的设置">浏览器的设置</h3>
+<p>使用 <strong>Startpage</strong> 或者 <strong>DuckDuckGo</strong> 代替谷歌或其他搜索引擎</p>
+<h4 id="设置为-https">设置为 HTTPS?</h4>
+<blockquote>
+<p>互联网技术人员一直都知道 HTTP 是不安全的，给用户带来很多风险。由于 HTTP 流量是未加密的，任何通过 HTTP 发送的数据都可以被任何有权访问网络的人读取和修改。正如斯诺登 NSA 监控文件所揭示的那样，政府机构也可以在不通知用户或网站管理员的情况下收集和搜索 HTTP 流量。鉴于这些风险，EFF 认为每个网站都应该尽快在所有页面上<a href="https://www.eff.org/encrypt-the-web">支持 HTTPS 。</a></p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Chrome</strong>
+设置&gt;隐私和安全&gt;安全&gt;<em>滚动到底部</em>&gt;<em>切换</em>“始终使用安全连接”</p>
+</li>
+<li>
+<p><strong>火狐</strong>
+设置&gt;隐私和安全&gt;<em>滚动到底</em>部&gt;<em>启用</em>仅 HTTPS 模式</p>
+</li>
+</ul>
+<h3 id="tor-洋葱浏览器">TOR 洋葱浏览器</h3>
+<p>“TOR”传说中的暗网，是老牌的翻墙工具，并且是“开源项目”。它的主要用途是“隐匿身份”，翻墙只是顺带的附加用途。</p>
+<p>官方网站是 <a href="https://www.torproject.org/">https://www.torproject.org/</a>
+（必须翻墙才能访问,注意进入的网址。直接搜索得到的是蜜罐网站,无法翻墙）</p>
+<h4 id="如何判断自己的浏览器是否在走-tor-的线路">如何判断自己的浏览器是否在走 Tor 的线路？</h4>
+<p>Tor 官网提供了一个测试界面，网址是 <a href="https://check.torproject.org/">https://check.torproject.org/</a> 猛击该超链接，会打开一个界面。
+　　如果你的浏览器已经在使用 Tor 的线路，会出现一个【绿色】洋葱头，以及一行绿色的洋文提示。
+　　如果你的浏览器没有走 Tor 的线路，会出现一个【带红色打叉】的洋葱头，同时还有一行红色的洋文警告。</p>
+<h2 id="隐私安全观念普及">隐私安全观念普及</h2>
+<h3 id="effelectronic-frontier-foundation">EFF(ELECTRONIC FRONTIER FOUNDATION)</h3>
+<p>捍卫数字隐私、言论自由和创新的领先非营利组织。</p>
+<p>网址: &lt;www.eff.org&gt;</p>
+<h2 id="实用的网站">实用的网站</h2>
+<p>&lt;www.52pj.com：分享一些安全技术，破解软件等&gt;</p>
+<h3 id="参考链接">参考链接</h3>
+<p>Win10 使用技巧论坛：www.tenforums.com</p>
+<p>StackOverFlow 旗下的电脑使用论坛：www.superuser.com</p>
+<p>庭说的装机指南：<a href="https://tingtalk.me/windows/">https://tingtalk.me/windows/</a></p>
+
+<p>
+  published: 2023-04-24,
+  last updated: 2023-10-26
+</p>
+
+  </main>
+  <footer>
+  <p>
+    <a href="/">Home</a>&nbsp;/
+    <a href="mailto:hi@huyixi.com">Mail</a>&nbsp;/
+    <a href="weekly.huyixi.com">Walk Weekly</a>&nbsp;/
+    <a href="http://localhost:1313/index.xml">RSS</a>
+  </p>
+  <p class="footer-copr">
+    <a href="https://huyixi.com">huyixi</a>&nbsp;&copy;&nbsp;2022-2024
+  </p>
+</footer>
+
+</body>
+
+</html>

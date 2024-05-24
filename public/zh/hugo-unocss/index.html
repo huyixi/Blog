@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>在 hugo 中使用 UnoCSS | huyixi&#39;s Blog</title>
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://localhost:1314/hugo-unocss/index.xml">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+
+
+</head>
+
+<body>
+  <main>
+    
+<h1>在 hugo 中使用 UnoCSS</h1>
+
+
+
+
+<p>这个网站使用了 hugo 静态网站生成器，CSS 方面使用 UnoCSS。以下记录了如何在 hugo 中使用 UnoCSS。</p>
+<h2 id="修改主题文件的-css-样式">修改主题文件的 CSS 样式</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>{{- $cssbundle := resources.Match &#34;css/*.css&#34; | resources.Concat &#34;css/main.css&#34; -}}
+</span></span><span style="display:flex;"><span>{{- if hugo.IsProduction }}
+</span></span><span style="display:flex;"><span>{{ $cssbundle = $cssbundle | minify | fingerprint }} {{ end -}}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#000080">link</span> <span style="color:#008080">rel</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;stylesheet&#34;</span> <span style="color:#008080">href</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{ $cssbundle.RelPermalink }}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">{{</span> <span style="color:#008080">if</span> <span style="color:#008080">hugo</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#008080">IsProduction</span> <span style="color:#a61717;background-color:#e3d2d2">}}</span> <span style="color:#008080">integrity</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{ $cssbundle.Data.Integrity }}&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">{{</span> <span style="color:#008080">end</span> <span style="color:#a61717;background-color:#e3d2d2">}}</span> /&gt;
+</span></span></code></pre></div><p>注意：
+代码将会获取你的 <code>assets/css</code> 文件夹中的所有 CSS 文件。如果你喜欢将 CSS 文件放置在其他文件夹中，则需要修改第一行代码。另外，生成的 main.css 文件是存储在 hugo 内存中的，所以无法查看到。</p>
+<h2 id="安装-unocss-依赖">安装 UnoCSS 依赖</h2>
+<p>首先如果你没有 package.json 这个文件的话需要先生成。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pnpm init
+</span></span></code></pre></div><p>之后安装 UnoCSS 相关依赖，注意这里安装你需要的即可。具体可以查看 UnoCSS 文档。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pnpm install --save-dev @unocss/cli @unocss/preset-typography @unocss/preset-uno @unocss/preset-wind
+</span></span></code></pre></div><h2 id="创建-unoconfigts-并导入预设">创建 <code>uno.config.ts</code> 并导入预设</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> { defineConfig, presetUno } <span style="color:#000;font-weight:bold">from</span> <span style="color:#d14">&#34;unocss&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">export</span> <span style="color:#000;font-weight:bold">default</span> defineConfig({
+</span></span><span style="display:flex;"><span>  presets<span style="color:#000;font-weight:bold">:</span> [presetUno()],
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="添加运行脚本到-packagejson">添加运行脚本到 package.json</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#d14">&#34;scripts&#34;</span><span style="color:#a61717;background-color:#e3d2d2">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;uno-dev&#34;</span>: <span style="color:#d14">&#34;unocss \&#34;layouts/**/**/*.html\&#34; --watch -o ./assets/css/uno.css&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;uno-build&#34;</span>: <span style="color:#d14">&#34;unocss \&#34;layouts/**/**/*.html\&#34; -o ./assets/css/uno.css&#34;</span>
+</span></span><span style="display:flex;"><span>  }<span style="color:#a61717;background-color:#e3d2d2">,</span>
+</span></span></code></pre></div><p>之后运行 <code>pnpm run uno-dev</code>， UnoCSS 应该就可以正常使用了。</p>
+<p>另外：
+如果想一行命令同时运行 <code>hugo server</code> 和 <code>unocss</code> 的话可以使用 <code>concurrently</code> 插件。在 <code>package.json</code> 脚本中添加</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#d14">&#34;dev&#34;</span>: <span style="color:#d14">&#34;concurrently \&#34;pnpm:dev\&#34; \&#34;pnpm:uno-dev\&#34;&#34;</span>
+</span></span></code></pre></div><p>之后，运行 <code>npm run dev</code> 便可使用一条命令在一个窗口中运行这两个命令了。</p>
+<h2 id="最后">最后</h2>
+<p>整个导入的过程其实还是踩了不少坑。例如：</p>
+<ol>
+<li>获取 CSS 文件的时候，参考链接中是将 CSS 文件放置在 <code>css/uno/main.css</code> 路径下，但是使用 <code>resources.Match &quot;css/*.css&quot;</code> 是无法获取到这个文件的。所以如果你也喜欢将它放置在子目录下，需要将这行代码修改成：<code>resources.Match &quot;css/**/*.css&quot;</code>。但是如果只修改成 <code>resources.Match &quot;css/**/*.css&quot;</code>，Hugo 又只会获取 CSS 所有子文件夹中的 CSS 文件，CSS 文件夹下的 CSS 文件是无法获取到的（这里虽然使用了 <code>**</code> 通配符，但是是没有作用的）。</li>
+<li>参考链接中使用的版本较低，<code>unocss/preset-typography</code> 现在需要使用 <code>@unocss/preset-typography</code> 来安装。</li>
+<li>参考链接中也没有 <code>scripts</code>，这还是在作者提供的 <code>hugo + UnoCSS</code> 模板中找到的。不过这一步由于之前使用 TailwindCSS 的时候在这里踩过坑，所以还算顺利。</li>
+</ol>
+<p><a href="https://github.com/unocss/unocss/discussions/555">参考链接</a></p>
+
+<p>
+  发布于： 2024-01-06，
+  最后更新于： 2024-01-06
+</p>
+
+  </main>
+  <footer>
+  <p>
+    <a href="/">首页</a>&nbsp;/
+    <a href="mailto:hi@huyixi.com">发邮件</a>&nbsp;/
+    <a href="weekly.huyixi.com">散步周刊</a>&nbsp;/
+    <a href="http://localhost:1314/index.xml">RSS 订阅</a>
+  </p>
+  <p class="footer-copr">
+    <a href="https://huyixi.com">huyixi</a>&nbsp;&copy;&nbsp;2022-2024
+  </p>
+</footer>
+
+</body>
+
+</html>
