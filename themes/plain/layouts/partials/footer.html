@@ -1,9 +1,18 @@
 <footer>
   <p>
     {{ range .Site.Menus.main }}
-    <a href="{{ .URL }}">{{ i18n .Name }}</a>&nbsp;/
+    <a href="{{ .URL }}">{{ .Name }}</a>&nbsp;/
     {{ end }}
   </p>
+
+  {{ if eq .Site.Language.Lang "zh" }}
+  <p>
+    {{ range site.Menus.zh_main }}
+    <a href="{{ .URL }}">{{ .Name }}</a>&nbsp;/
+    {{ end }}
+  </p>
+  {{ end }}
+
   <p class="footer-copr">
     <a href="https://huyixi.com">huyixi</a>&nbsp;&copy;&nbsp;2022-{{ now.Year }}
   </p>

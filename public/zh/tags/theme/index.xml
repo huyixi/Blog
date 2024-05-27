@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Theme on huyixi&#39;s Blog</title>
-    <link>https://blog.huyixi.com/zh/tags/theme/</link>
+    <link>http://localhost:1313/zh/tags/theme/</link>
     <description>Recent content in Theme on huyixi&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 14 Feb 2024 15:00:29 +0800</lastBuildDate>
-    <atom:link href="https://blog.huyixi.com/zh/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/zh/tags/theme/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Only Black: 极简黑 Chrome 主题</title>
-      <link>https://blog.huyixi.com/zh/only-black/</link>
+      <link>http://localhost:1313/zh/only-black/</link>
       <pubDate>Wed, 14 Feb 2024 15:00:29 +0800</pubDate>
-      <guid>https://blog.huyixi.com/zh/only-black/</guid>
+      <guid>http://localhost:1313/zh/only-black/</guid>
       <description>我的第一个 Chrome 主题。已经通过谷歌商店审核。&#xA;灵感来自于 Tw93。颜色模仿自苹果官方文档颜色。&#xA;欢迎试用：链接&#xA;首次上传审核于：2024-02-13。通过审核并发布于：2024-02-14</description>
     </item>
   </channel>

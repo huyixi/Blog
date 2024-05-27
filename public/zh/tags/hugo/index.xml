@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on huyixi&#39;s Blog</title>
-    <link>https://blog.huyixi.com/zh/tags/hugo/</link>
+    <link>http://localhost:1313/zh/tags/hugo/</link>
     <description>Recent content in Hugo on huyixi&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 06 Jan 2024 17:28:47 +0800</lastBuildDate>
-    <atom:link href="https://blog.huyixi.com/zh/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/zh/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 hugo 中使用 UnoCSS</title>
-      <link>https://blog.huyixi.com/zh/hugo-unocss/</link>
+      <link>http://localhost:1313/zh/hugo-unocss/</link>
       <pubDate>Sat, 06 Jan 2024 17:28:47 +0800</pubDate>
-      <guid>https://blog.huyixi.com/zh/hugo-unocss/</guid>
+      <guid>http://localhost:1313/zh/hugo-unocss/</guid>
       <description>这个网站使用了 hugo 静态网站生成器，CSS 方面使用 UnoCSS。以下记录了如何在 hugo 中使用 UnoCSS。&#xA;修改主题文件的 CSS 样式 {{- $cssbundle := resources.Match &amp;#34;css/*.css&amp;#34; | resources.Concat &amp;#34;css/main.css&amp;#34; -}} {{- if hugo.IsProduction }} {{ $cssbundle = $cssbundle | minify | fingerprint }} {{ end -}} &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;{{ $cssbundle.RelPermalink }}&amp;#34; {{ if hugo.IsProduction }} integrity=&amp;#34;{{ $cssbundle.Data.Integrity }}&amp;#34; {{ end }} /&amp;gt; 注意： 代码将会获取你的 assets/css 文件夹中的所有 CSS 文件。如果你喜欢将 CSS 文件放置在其他文件夹中，则需要修改第一行代码。另外，生成的 main.css 文件是存储在 hugo 内存中的，所以无法查看到。&#xA;安装 UnoCSS 依赖 首先如果你没有 package.json 这个文件的话需要先生成。</description>
     </item>
   </channel>

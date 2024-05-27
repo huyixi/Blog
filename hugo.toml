@@ -3,15 +3,6 @@ title = "huyixi's Blog"
 theme = 'plain'
 description = "A blog by developer and designer huyixi, covering Technology, Design, Life, and Music."
 
-[languages]
-[languages.en]
-languageName = 'English'
-weight = 1
-
-[languages.zh]
-languageName = '简体中文'
-weight = 2
-
 [permalinks]
 post = "/:title/"
 
@@ -19,33 +10,94 @@ post = "/:title/"
 [markup.highlight]
 style = "github"
 
-[menu]
 [[menu.main]]
 identifier = "home"
-name = "site.home"
+name = "Home"
 url = "/"
 weight = 1
 
 [[menu.main]]
 identifier = "mail"
-name = "site.mail"
+name = "Mail"
 url = "mailto:hi@huyixi.com"
 weight = 2
 
 [[menu.main]]
 identifier = "weekly"
-name = "site.weekly"
+name = "Weekly"
 url = "https://weekly.huyixi.com"
 weight = 3
 
 [[menu.main]]
 identifier = "RSS"
-name = "site.RSS"
+name = "RSS"
 url = "/index.xml"
 weight = 4
 
-[[menu.main]]
-identifier = "about"
-name = "site.about"
+[languages]
+[languages.en]
+languageName = "English"
+weight = 1
+[languages.en.menus]
+[[languages.en.menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+
+[[languages.en.menu.main]]
+identifier = "mail"
+name = "Mail"
+url = "mailto:hi@huyixi.com"
+weight = 2
+
+[[languages.en.menu.main]]
+identifier = "weekly"
+name = "Weekly"
+url = "https://weekly.huyixi.com"
+weight = 3
+
+[[languages.en.menu.main]]
+identifier = "RSS"
+name = "RSS"
+url = "/index.xml"
+weight = 4
+
+[[languages.en.menu.main]]
+name = "About"
 url = "/about"
+weight = 5
+
+[languages.zh]
+languageName = "简体中文"
+weight = 2
+[languages.zh.menus]
+
+[[languages.zh.menu.main]]
+identifier = "home"
+name = "首页"
+url = "/"
+weight = 1
+
+[[languages.zh.menu.main]]
+identifier = "mail"
+name = "邮件"
+url = "mailto:hi@huyixi.com"
+weight = 2
+
+[[languages.zh.menu.main]]
+identifier = "weekly"
+name = "周报"
+url = "https://weekly.huyixi.com"
+weight = 3
+
+[[languages.zh.menu.main]]
+identifier = "RSS"
+name = "RSS订阅"
+url = "/index.xml"
+weight = 4
+
+[[languages.zh.menu.main]]
+name = "About"
+url = "/about/"
 weight = 5
