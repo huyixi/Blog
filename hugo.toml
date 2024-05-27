@@ -2,8 +2,6 @@ baseURL = 'https://blog.huyixi.com/'
 title = "huyixi's Blog"
 theme = 'plain'
 description = "A blog by developer and designer huyixi, covering Technology, Design, Life, and Music."
-defaultContentLanguage = 'en'
-defaultContentLanguageInSubdir = true
 
 [languages]
 [languages.en]

@@ -7,7 +7,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="http://localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -20,7 +20,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/only-black/"
+                href="http://localhost:1313/only-black/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -33,7 +33,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="http://localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -46,7 +46,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/theme/"
+                href="http://localhost:1313/tags/theme/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -59,7 +59,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/minilist-blog/"
+                href="http://localhost:1313/minilist-blog/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -72,7 +72,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/hugo/"
+                href="http://localhost:1313/tags/hugo/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -85,7 +85,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/unocss/"
+                href="http://localhost:1313/tags/unocss/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -98,7 +98,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/hugo-unocss/"
+                href="http://localhost:1313/hugo-unocss/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -111,7 +111,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/plugin/"
+                href="http://localhost:1313/tags/plugin/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -124,7 +124,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/raycast/"
+                href="http://localhost:1313/tags/raycast/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -137,7 +137,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/get-time/"
+                href="http://localhost:1313/get-time/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -159,7 +159,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/windows/"
+                href="http://localhost:1313/tags/windows/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -172,7 +172,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/the-use-of-windows-computer/"
+                href="http://localhost:1313/the-use-of-windows-computer/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -184,7 +184,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/about/"
+                href="http://localhost:1313/about/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -196,7 +196,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"

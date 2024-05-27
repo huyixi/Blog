@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Using UnoCSS in Hugo">
+<title>Using UnoCSS in Hugo | huyixi&#39;s Blog</title>
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://localhost:1313/hugo-unocss/index.xml">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+</head>
+
+<body>
+  <main>
+    
+<h1>Using UnoCSS in Hugo</h1>
+
+
+
+
+<p>This website uses the Hugo static site generator and UnoCSS for CSS. Below is a record of how to use UnoCSS in Hugo.</p>
+<h2 id="modifying-the-theme-files-css-styles">Modifying the Theme File&rsquo;s CSS Styles</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>{{- $cssbundle := resources.Match &#34;css/*.css&#34; | resources.Concat &#34;css/main.css&#34; -}}
+</span></span><span style="display:flex;"><span>{{- if hugo.IsProduction }}
+</span></span><span style="display:flex;"><span>{{ $cssbundle = $cssbundle | minify | fingerprint }} {{ end -}}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#000080">link</span> <span style="color:#008080">rel</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;stylesheet&#34;</span> <span style="color:#008080">href</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{ $cssbundle.RelPermalink }}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">{{</span> <span style="color:#008080">if</span> <span style="color:#008080">hugo</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#008080">IsProduction</span> <span style="color:#a61717;background-color:#e3d2d2">}}</span> <span style="color:#008080">integrity</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{ $cssbundle.Data.Integrity }}&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">{{</span> <span style="color:#008080">end</span> <span style="color:#a61717;background-color:#e3d2d2">}}</span> /&gt;
+</span></span><span style="display:flex;"><span>Note:
+</span></span><span style="display:flex;"><span>This code will retrieve all CSS files from your assets/css folder. If you prefer to place CSS files in other folders, you need to modify the first line of code. Additionally, the generated main.css file is stored in Hugo’s memory, so it cannot be viewed directly.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## Installing UnoCSS Dependencies
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>First, if you don’t have a package.json file, you need to generate one.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>```bash
+</span></span><span style="display:flex;"><span>pnpm init
+</span></span></code></pre></div><p>Then install the necessary UnoCSS dependencies. Install only what you need. You can refer to the UnoCSS documentation for details.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pnpm install --save-dev @unocss/cli @unocss/preset-typography @unocss/preset-uno @unocss/preset-wind
+</span></span></code></pre></div><h2 id="creating-unoconfigts-and-importing-presets">Creating uno.config.ts and Importing Presets</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">import</span> { defineConfig, presetUno } <span style="color:#000;font-weight:bold">from</span> <span style="color:#d14">&#34;unocss&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">export</span> <span style="color:#000;font-weight:bold">default</span> defineConfig({
+</span></span><span style="display:flex;"><span>  presets<span style="color:#000;font-weight:bold">:</span> [presetUno()],
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="adding-run-scripts-to-packagejson">Adding Run Scripts to package.json</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#d14">&#34;scripts&#34;</span><span style="color:#a61717;background-color:#e3d2d2">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;uno-dev&#34;</span>: <span style="color:#d14">&#34;unocss \&#34;layouts/**/**/*.html\&#34; --watch -o ./assets/css/uno.css&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;uno-build&#34;</span>: <span style="color:#d14">&#34;unocss \&#34;layouts/**/**/*.html\&#34; -o ./assets/css/uno.css&#34;</span>
+</span></span><span style="display:flex;"><span>  }<span style="color:#a61717;background-color:#e3d2d2">,</span>
+</span></span></code></pre></div><p>Afterwards, run pnpm run uno-dev, and UnoCSS should work properly.</p>
+<p>Additionally:
+If you want to run hugo server and unocss with a single command, you can use the concurrently plugin. Add the following to the scripts section in package.json:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#d14">&#34;dev&#34;</span><span style="color:#a61717;background-color:#e3d2d2">:</span> <span style="color:#d14">&#34;concurrently \&#34;pnpm:dev\&#34; \&#34;pnpm:uno-dev\&#34;&#34;</span>
+</span></span></code></pre></div><p>Then, you can run both commands in one window with npm run dev.</p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>There were quite a few pitfalls during the integration process, such as:
+1.When retrieving CSS files, the reference link placed CSS files in the css/uno/main.css path, but using resources.Match &ldquo;css/<em>.css&rdquo; couldn’t retrieve this file. So, if you also prefer to place it in a subdirectory, you need to modify this line to resources.Match &ldquo;css/**/</em>.css&rdquo;. However, if you only change it to resources.Match &ldquo;css/**/*.css&rdquo;, Hugo will only retrieve CSS files from all subfolders, and CSS files in the root CSS folder won’t be retrieved (even though the ** wildcard is used, it doesn’t work here).
+2.The reference link used an older version, and now you need to use @unocss/preset-typography instead of unocss/preset-typography for installation.
+3.The reference link also didn’t include scripts; this was found in the author’s provided hugo + UnoCSS template. However, this step went smoothly since I had encountered a similar issue when using TailwindCSS before.</p>
+<p>Then run pnpm run dev to start both Hugo and UnoCSS.</p>
+
+<p>
+  published: 2024-01-06,
+  last updated: 2024-01-06
+</p>
+
+  </main>
+  <footer>
+  <p>
+    
+    <a href="/">Home</a>&nbsp;/
+    
+    <a href="mailto:hi@huyixi.com">Mail</a>&nbsp;/
+    
+    <a href="https://weekly.huyixi.com">Walk Weekly</a>&nbsp;/
+    
+    <a href="/index.xml">RSS</a>&nbsp;/
+    
+    <a href="/about">About</a>&nbsp;/
+    
+  </p>
+  <p class="footer-copr">
+    <a href="https://huyixi.com">huyixi</a>&nbsp;&copy;&nbsp;2022-2024
+  </p>
+</footer>
+
+</body>
+
+</html>
