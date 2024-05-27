@@ -1,9 +1,7 @@
 <p>
-  {{ range .AllTranslations }}
-  {{ if ne .Lang $.Site.Language.Lang }}
+  {{ range .Translations }}
   <a href="{{ .Permalink }}">
-    {{i18n "site.language"}}
+    {{ if eq .Lang "en" }}English{{ else if eq .Lang "zh" }}简体中文{{ end }}
   </a>
-  {{ end }}
   {{ end }}
 </p>
