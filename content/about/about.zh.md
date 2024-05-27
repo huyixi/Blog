@@ -14,7 +14,7 @@ url: "/about/"
 
 我以前做过的博客站点：
 
-- [Blue](https://blue.huyixi.com/zh)：第二版博客站点，使用 hugo 搭建。很喜欢里面的一些设计。比如首页的侧边栏布局；Like 页面的书籍翻页效果；文章页的目录导航等等。
+- [Blue](https://blue.huyixi.com/zh/)：第二版博客站点，使用 hugo 搭建。很喜欢里面的一些设计。比如首页的侧边栏布局；Like 页面的书籍翻页效果；文章页的目录导航等等。
 - [White](https://white.huyixi.com)：第三版博客站点
   第一版的博客站点代码已经消失了。
 

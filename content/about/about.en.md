@@ -14,7 +14,7 @@ I also have two other websites:
 
 Blogs I Have Previously Created:
 
-- [Blue](https://blue.huyixi.com): The second version of my blog, built with Hugo. I really like some of the designs in this version, such as the sidebar layout on the homepage, the book page-turning effect on the Like page, and the table of contents navigation on the article pages.
+- [Blue](https://blue.huyixi.com/zh/): The second version of my blog, built with Hugo. I really like some of the designs in this version, such as the sidebar layout on the homepage, the book page-turning effect on the Like page, and the table of contents navigation on the article pages.
 - [White](https://white.huyixi.com): The third version of my blog.
   The code for the first version of the blog has already been lost.
 
