@@ -1,3 +1,13 @@
+{{/* <p>
+  {{ range .AllTranslations }}
+  {{ if ne .Lang $.Site.Language.Lang }}
+  <a href="{{ .Permalink }}">
+    {{i18n "site.language"}}
+  </a>
+  {{ end }}
+  {{ end }}
+</p> */}}
+
 <p>
   {{ range .Translations }}
   <a href="{{ .Permalink }}">
