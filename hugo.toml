@@ -21,3 +21,34 @@ post = "/:title/"
 [markup]
 [markup.highlight]
 style = "github"
+
+[menu]
+[[menu.main]]
+identifier = "home"
+name = "site.home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "mail"
+name = "site.mail"
+url = "mailto:hi@huyixi.com"
+weight = 2
+
+[[menu.main]]
+identifier = "weekly"
+name = "site.weekly"
+url = "https://weekly.huyixi.com"
+weight = 3
+
+[[menu.main]]
+identifier = "RSS"
+name = "site.RSS"
+url = "/index.xml"
+weight = 4
+
+[[menu.main]]
+identifier = "about"
+name = "site.about"
+url = "/about"
+weight = 5

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on huyixi&#39;s Blog</title>
+    <link>http://localhost:1314/about/</link>
+    <description>Recent content in Abouts on huyixi&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <atom:link href="http://localhost:1314/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于</title>
+      <link>http://localhost:1314/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/about/</guid>
+      <description>👋 哈喽, 欢迎来到胡一希的个人博客。&#xA;我还有另外两个网站：&#xA;huyixi.com 是我的个人品牌网站。 huyixi.wiki 是我的个人知识库，我利用这个网站来减轻我大脑的记忆负担。 散步周刊 是我的个人周刊，我会在这里分享我每周的一些好玩的事情。 Now（正在开发）我会在这里更新我现在正在做的事情。 我以前做过的博客站点：&#xA;Blue：第二版博客站点，使用 hugo 搭建。很喜欢里面的一些设计。比如首页的侧边栏布局；Like 页面的书籍翻页效果；文章页的目录导航等等。 White：第三版博客站点 第一版的博客站点代码已经消失了。 欢迎与我联系&#xA;📮 Email: hi@huyixi.com&#xA;🧑‍💻 我的 GitHub&#xA;📰 通过 RSS 订阅这个博客</description>
+    </item>
+  </channel>
+</rss>

@@ -43,5 +43,12 @@
       <guid>http://localhost:1313/the-use-of-windows-computer/</guid>
       <description>Due to the length of this article and the lack of a table of contents in my personal blog, I recommend reading it on my wiki site. Here is the link. You can quickly navigate using the table of contents on that site. Background: This guide is based on my extensive experience with multiple Windows installations, designed to meet my Windows installation needs.</description>
     </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>👋 Hello, welcome to huyixi&amp;rsquo;s personal blog.&#xA;I also have two other websites:&#xA;huyixi.com is my personal brand website. huyixi.wiki is my personal knowledge base, where I use this site to lighten the memory load on my brain. 散步周刊 is my personal weekly newsletter where I share some fun things each week. Now (under development) is where I will update what I am currently working on. Blogs I Have Previously Created:</description>
+    </item>
   </channel>
 </rss>

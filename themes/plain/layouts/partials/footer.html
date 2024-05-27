@@ -1,9 +1,8 @@
 <footer>
   <p>
-    <a href="/">{{i18n "site.home"}}</a>&nbsp;/
-    <a href="mailto:hi@huyixi.com">{{i18n "site.mail"}}</a>&nbsp;/
-    <a href="weekly.huyixi.com">{{i18n "site.weekly"}}</a>&nbsp;/
-    <a href="{{ .Site.BaseURL }}index.xml">{{i18n "site.RSS"}}</a>
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}">{{ i18n .Name }}</a>&nbsp;/
+    {{ end }}
   </p>
   <p class="footer-copr">
     <a href="https://huyixi.com">huyixi</a>&nbsp;&copy;&nbsp;2022-{{ now.Year }}

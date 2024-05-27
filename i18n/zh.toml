@@ -1,6 +1,6 @@
 [site]
 title = "胡一希的博客"
-language = "English🇬🇧"
+language = "English"
 published = "发布于："
 lastMod = "更新于："
 comma = "，"
@@ -8,3 +8,4 @@ home = "首页"
 RSS = "RSS 订阅"
 mail = "发邮件"
 weekly = "散步周刊"
+about = "关于"
