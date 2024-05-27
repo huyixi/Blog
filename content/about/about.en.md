@@ -1,6 +1,7 @@
 ---
 title: "About"
 url: "/about/"
+date: 2024-05-27T19:19:00+08:00
 ---
 
 👋 Hello, welcome to huyixi's personal blog.
