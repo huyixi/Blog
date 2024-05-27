@@ -99,5 +99,5 @@ weight = 4
 
 [[languages.zh.menu.main]]
 name = "About"
-url = "/about/"
+url = "/zh/about/"
 weight = 5
