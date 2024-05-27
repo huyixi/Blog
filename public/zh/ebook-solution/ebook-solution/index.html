@@ -2,12 +2,12 @@
 <html lang="zh"
   dir="ltr">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <meta name="description" content="我的电子书阅读不完全解决方案">
 <title>我的电子书阅读不完全解决方案 | huyixi&#39;s Blog</title>
-<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://localhost:1314/ebook-solution/ebook-solution/index.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://localhost:1313/zh/ebook-solution/ebook-solution/index.xml">
 
     <link rel="stylesheet" href="/css/main.css">
 
@@ -53,8 +53,8 @@
 <h3 id="从互联网获取电子书">从互联网获取电子书</h3>
 <h4 id="z-library">Z-Library</h4>
 <p>该组织将自己描述为“世界上最大的电子书图书馆”，以及“世界上最大的科学文章商店”.并作为一个由捐赠维持的非营利组织运营。但是 2022 年 11 月，该网站的域名被美国司法部查封..在 Z-Library 的用户群中,中国用户遥遥领先于其他国家(来自 Z-Library 博客 Worldwide Statistics: How Students and Educators Use Z-Library 中的数据).</p>
-<p><img src="./index.assets/image-20230525165638917.png" alt="image-20230525165638917"></p>
-<p><img src="./index.assets/image-20230525165722912.png" alt="image-20230525165722912"></p>
+<p><img alt="image-20230525165638917" src="./index.assets/image-20230525165638917.png"></p>
+<p><img alt="image-20230525165722912" src="./index.assets/image-20230525165722912.png"></p>
 <h5 id="如何访问-z-library">如何访问 Z-Library</h5>
 <ul>
 <li>
@@ -80,7 +80,7 @@
 <p><a href="https://chrome.google.com/webstore/detail/webtoepub/akiljllkbielkidmammnifcnibaigelm">WebToEpub Chrome 下载地址</a></p>
 <p><a href="https://dteviot.github.io/Projects/webToEpub_DefaultParser.html">文档教程</a></p>
 <p>示例：</p>
-<p><img src="./index.assets/image-20230531003150820.png" alt="image-20230531003150820"></p>
+<p><img alt="image-20230531003150820" src="./index.assets/image-20230531003150820.png"></p>
 <h5 id="ktool">KTool</h5>
 <p>将链接输入 KTool 中生成并推送到 Kindle 中。但是导入链接一次最多导入 30 个，且生成的电子书只能以 30 个链接为一本，链接增加则会分成几本书。</p>
 <p>用到的软件：<a href="https://sigil-ebook.com/sigil/">Sigil</a>。Github 上 star 最多的电子书制作软件。当然也可以自己下载使用其他软件。</p>
@@ -88,7 +88,7 @@
 <p>在没有发现这一个浏览器插件之前，我写了一个脚本来获取文章的内容。相对于浏览器插件的操作，程序部署，可能相对较为繁琐。但是我所编写的程序采用多线程进行爬取文章，爬取速度相比浏览器插件获取要快很多。如果你需要获取的文章内容较多的话，可以尝试使用。</p>
 <h5 id="获取文章链接目前该功能已经全部集成到下面的软件中">获取文章链接（目前该功能已经全部集成到下面的软件中）</h5>
 <p>我写了个 sh 脚本通过解析 dom 来获取文档链接。<a href="https://github.com/huyixi/Tools.git">脚本仓库</a></p>
-<p><img src="./index.assets/image-20230526154024000.png" alt="image-20230526154024000"></p>
+<p><img alt="image-20230526154024000" src="./index.assets/image-20230526154024000.png"></p>
 <h5 id="web2book">Web2Book</h5>
 <p>通过文章爬虫来所有文章链接中的所有文章内容，并将其写入指定的文件中，以便后续制作成电子书。<a href="https://github.com/huyixi/web2book">Github 仓库</a></p>
 <p>该爬虫可以进行多线程的文章爬取，并输出为一个 epub 文件。并且爬取过程中也会同步保存网页中的图片，。另外如果你遇到不需要的元素，也可以通过 css 选择器进行移除。</p>
@@ -97,18 +97,18 @@
 <p>如果你有一些保存下来的 HTML 文件，也可以直接使用 Sigil 制作电子书。</p>
 <p>1.导入 html 文件</p>
 <p>导入过程可能遇到错误。</p>
-<p><img src="./index.assets/image-20230527153743849.png" alt="image-20230527153743849"></p>
+<p><img alt="image-20230527153743849" src="./index.assets/image-20230527153743849.png"></p>
 <p>如果错误较少，可以采用手动更改的方式修改错误。如果错误太多了，可以使用下面的方法 percollate 来自做电子书。</p>
 <p>2.生成目录</p>
 <p>生成目录方便快速导航到指定页面</p>
-<p><img src="./index.assets/image-20230526162847714.png" alt="image-20230526162847714"></p>
-<p><img src="./index.assets/image-20230526162916570.png" alt="image-20230526162916570"></p>
+<p><img alt="image-20230526162847714" src="./index.assets/image-20230526162847714.png"></p>
+<p><img alt="image-20230526162916570" src="./index.assets/image-20230526162916570.png"></p>
 <p>3.编辑元数据</p>
 <p>在这里编辑图书标题，作者名等等</p>
-<p><img src="./index.assets/image-20230526163454332.png" alt="image-20230526163454332"></p>
+<p><img alt="image-20230526163454332" src="./index.assets/image-20230526163454332.png"></p>
 <p>4.添加封面</p>
 <p>添加封面，以便 Kindle Library 显示略缩图。</p>
-<p><img src="./index.assets/image-20230526170841377.png" alt="image-20230526170841377"></p>
+<p><img alt="image-20230526170841377" src="./index.assets/image-20230526170841377.png"></p>
 <h6 id="percollate">percollate</h6>
 <p><a href="https://github.com/danburzo/percollate">percollate</a>. A command-line tool to turn web pages into readable PDF, EPUB, HTML, or Markdown docs.</p>
 <p>根据官方文档进行安装</p>
@@ -122,7 +122,7 @@
 <h3 id="calibre-传输">Calibre 传输</h3>
 <p>使用 <a href="https://github.com/huyixi/Calibre-Library">Calibre</a> 电子书管理软件，这也是我传输电子书的最常用的方案。</p>
 <p>首先将你要导入 kindle 的书籍脱落这个软件中。将 kindle 与电脑进行连接。点击你要传输的书籍，上方菜单栏会出现 **发送到设备 **按钮。点击这个按钮，就可以直接将电子书导入到 kindle 中，另外如果你的电子书的格式，不是 kindle 所需要的 mobi 格式。软件还会自动转换格式。使用这个软件，不仅可以方便你对电子书进行管理，并且也避免了电子书格式转换的问题。（当然部分格式是无法转化成 mobi 格式的）</p>
-<p><img src="./index.assets/image-20230531010807637.png" alt="image-20230531010807637"></p>
+<p><img alt="image-20230531010807637" src="./index.assets/image-20230531010807637.png"></p>
 <h3 id="ktool-传输">KTool 传输</h3>
 <p><a href="ktool.io">Kool 官网</a></p>
 <p>也是很好用的一款软件，但是需要付费。作者从五岁起就开始戴眼镜，并且右眼是瞎的，所以他很注意保护自己的眼睛。他构建了这一个工具，将要阅读的材料都推送到 kindle 上面，以保护自己用眼。这是他在 Hacker News 上面的一篇<a href="https://news.ycombinator.com/item?id=32637996">文章</a>，可以去看看。</p>
@@ -136,9 +136,9 @@
 <p><a href="https://www.amazon.com/sendtokindle">https://www.amazon.com/sendtokindle</a></p>
 <h3 id="插件传输">插件传输</h3>
 <p>使用 Send to Kindle 官方插件或者 Ktool 插件进行传输。</p>
-<p><img src="./index.assets/image-20230531012005961.png" alt="image-20230531012005961"></p>
+<p><img alt="image-20230531012005961" src="./index.assets/image-20230531012005961.png"></p>
 <p>插件界面</p>
-<p><img src="./index.assets/image-20230531011959627.png" alt="image-20230531011959627"></p>
+<p><img alt="image-20230531011959627" src="./index.assets/image-20230531011959627.png"></p>
 <h3 id="推送网页微信公众号文章目前中国区已经下架">推送网页/微信公众号文章（目前中国区已经下架）</h3>
 <p>使用 Send to Kindle 推送。</p>
 <p>只用浏览器打开网页或者微信公众号文章，点击分享到你的 Kindle 软件上便可推送成功。</p>
@@ -147,11 +147,11 @@
 <p>使用 Instapaper 稍后读结合软件自带 Send to Kindle</p>
 <p>使用浏览器扩展，或者直接分享文章链接到软件中。</p>
 <p>浏览器扩展：在指定的你要推送的网页，点击图标</p>
-<p><img src="./index.assets/image-20230531010409114.png" alt="image-20230531010409114"></p>
+<p><img alt="image-20230531010409114" src="./index.assets/image-20230531010409114.png"></p>
 <p>既可保存到你的稍后读软件中。</p>
-<p><img src="./index.assets/image-20230531010352266.png" alt="image-20230531010352266"></p>
+<p><img alt="image-20230531010352266" src="./index.assets/image-20230531010352266.png"></p>
 <p>之后之后打开软件里的 Setting -&gt; Kindle -&gt; Send Articles Now 便可推送到 Kindle 上</p>
-<p><img src="./index.assets/image-20230531010627567.png" alt="image-20230531010627567"></p>
+<p><img alt="image-20230531010627567" src="./index.assets/image-20230531010627567.png"></p>
 <h3 id="推送-rss">推送 RSS</h3>
 <h4 id="免费方案">免费方案</h4>
 <h5 id="kindleearhttpsgithubcomcdhighkindleear"><a href="https://github.com/cdhigh/KindleEar">KindleEar</a></h5>
@@ -159,12 +159,12 @@
 <h5 id="自动化平台">自动化平台</h5>
 <p>例如：<a href="https://ifttt.com/">IFTTT</a>，zapier 等</p>
 <p>缺点：如果使用免费的方案能推送的 Feed 只有一条</p>
-<p><img src="./index.assets/image-20230531005141288.png" alt="image-20230531005141288"></p>
+<p><img alt="image-20230531005141288" src="./index.assets/image-20230531005141288.png"></p>
 <h4 id="付费方案">付费方案</h4>
 <p>付费方案的好处就是没有难度，比较适合不那么喜欢折腾的人。互联网上有许多，很好的推送平台，可以进行自行进行搜索使用。例如：<a href="https://www.qireader.com/">Qi Reader</a></p>
 <p>，<a href="https://newslettertokindle.com/">Newsletter to Kindle</a></p>
 <p>Newsletter to Kindle 的付费价格：</p>
-<p><img src="./index.assets/image-20230531005833118.png" alt="image-20230531005833118"></p>
+<p><img alt="image-20230531005833118" src="./index.assets/image-20230531005833118.png"></p>
 <h2 id="管理电子书">管理电子书</h2>
 <h3 id="calibre">Calibre</h3>
 <p>基本上是最好用的一个管理电子书的软件，即使你没有使用 Kindle，也可以通过这个软件来管理你的电子书。软件的基本操作也很都简单直观。</p>

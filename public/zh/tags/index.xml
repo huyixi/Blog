@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on huyixi&#39;s Blog</title>
-    <link>http://localhost:1314/tags/</link>
+    <link>http://localhost:1313/zh/tags/</link>
     <description>Recent content in Tags on huyixi&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 14 Feb 2024 15:00:29 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1314/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Theme</title>
-      <link>http://localhost:1314/tags/theme/</link>
+      <link>http://localhost:1313/zh/tags/theme/</link>
       <pubDate>Wed, 14 Feb 2024 15:00:29 +0800</pubDate>
-      <guid>http://localhost:1314/tags/theme/</guid>
+      <guid>http://localhost:1313/zh/tags/theme/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>http://localhost:1314/tags/hugo/</link>
+      <link>http://localhost:1313/zh/tags/hugo/</link>
       <pubDate>Sat, 06 Jan 2024 17:28:47 +0800</pubDate>
-      <guid>http://localhost:1314/tags/hugo/</guid>
+      <guid>http://localhost:1313/zh/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>UnoCSS</title>
-      <link>http://localhost:1314/tags/unocss/</link>
+      <link>http://localhost:1313/zh/tags/unocss/</link>
       <pubDate>Sat, 06 Jan 2024 17:28:47 +0800</pubDate>
-      <guid>http://localhost:1314/tags/unocss/</guid>
+      <guid>http://localhost:1313/zh/tags/unocss/</guid>
       <description></description>
     </item>
     <item>
       <title>Plugin</title>
-      <link>http://localhost:1314/tags/plugin/</link>
+      <link>http://localhost:1313/zh/tags/plugin/</link>
       <pubDate>Sun, 22 Oct 2023 23:01:03 +0800</pubDate>
-      <guid>http://localhost:1314/tags/plugin/</guid>
+      <guid>http://localhost:1313/zh/tags/plugin/</guid>
       <description></description>
     </item>
     <item>
       <title>Raycast</title>
-      <link>http://localhost:1314/tags/raycast/</link>
+      <link>http://localhost:1313/zh/tags/raycast/</link>
       <pubDate>Sun, 22 Oct 2023 23:01:03 +0800</pubDate>
-      <guid>http://localhost:1314/tags/raycast/</guid>
+      <guid>http://localhost:1313/zh/tags/raycast/</guid>
       <description></description>
     </item>
     <item>
       <title>Kindle</title>
-      <link>http://localhost:1314/tags/kindle/</link>
+      <link>http://localhost:1313/zh/tags/kindle/</link>
       <pubDate>Sun, 21 May 2023 08:00:00 +0800</pubDate>
-      <guid>http://localhost:1314/tags/kindle/</guid>
+      <guid>http://localhost:1313/zh/tags/kindle/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows</title>
-      <link>http://localhost:1314/tags/windows/</link>
+      <link>http://localhost:1313/zh/tags/windows/</link>
       <pubDate>Mon, 24 Apr 2023 02:49:00 +0800</pubDate>
-      <guid>http://localhost:1314/tags/windows/</guid>
+      <guid>http://localhost:1313/zh/tags/windows/</guid>
       <description></description>
     </item>
   </channel>

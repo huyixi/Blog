@@ -1,7 +1,6 @@
 name = 'plain'
 license = 'MIT'
 licenselink = 'https://github.com/owner/repo/LICENSE'
-description = ''
 
 # The home page of the theme, where the source can be found
 homepage = 'https://huyixi.com'

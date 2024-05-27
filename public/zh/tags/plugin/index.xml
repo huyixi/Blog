@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Plugin on huyixi&#39;s Blog</title>
-    <link>http://localhost:1314/tags/plugin/</link>
+    <link>http://localhost:1313/zh/tags/plugin/</link>
     <description>Recent content in Plugin on huyixi&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 22 Oct 2023 23:01:03 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1314/tags/plugin/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/zh/tags/plugin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Raycast 插件：Get Time</title>
-      <link>http://localhost:1314/get-time/</link>
+      <link>http://localhost:1313/zh/get-time/</link>
       <pubDate>Sun, 22 Oct 2023 23:01:03 +0800</pubDate>
-      <guid>http://localhost:1314/get-time/</guid>
+      <guid>http://localhost:1313/zh/get-time/</guid>
       <description>上周在空闲时间做了一个 Sidebar Project。一个 Raycast 插件，可以获取指定格式的时间。&#xA;因为自己在写博客日志的时候，需要获取到一个比较精确的时间（方便以后回忆当时的自己）。因为使用的是苹果自带的输入法，所以不能像 搜狗或者其他国产输入法那样只输入 sj 就可以获取到当前时间。并且查看设置项发现也无法进行这种设置。于是写了这样一个 Raycast 小插件来获取。&#xA;后续发现自己正在使用 Rime 输入法，其实可以通过 Rime 的 lua 插件来输入，体验会更流畅。&#xA;仓库地址：https://github.com/huyixi/get-time.git</description>
     </item>
   </channel>

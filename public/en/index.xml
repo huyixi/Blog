@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>huyixi&#39;s Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:1313/en/</link>
     <description>Recent content on huyixi&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 14 Feb 2024 15:00:29 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Only Black: Minimist Black Chrome Theme</title>
-      <link>http://localhost:1313/only-black/</link>
+      <link>http://localhost:1313/en/only-black/</link>
       <pubDate>Wed, 14 Feb 2024 15:00:29 +0800</pubDate>
-      <guid>http://localhost:1313/only-black/</guid>
+      <guid>http://localhost:1313/en/only-black/</guid>
       <description>My first Chrome theme has been approved by the Google Store.&#xA;Inspired by Tw93, the colors are modeled after Apple&amp;rsquo;s official documentation colors.&#xA;Feel free to try it out: Link&#xA;First submitted for review on: 2024-02-13. Approved and published on: 2024-02-14</description>
     </item>
     <item>
       <title>Minilist Blog</title>
-      <link>http://localhost:1313/minilist-blog/</link>
+      <link>http://localhost:1313/en/minilist-blog/</link>
       <pubDate>Sun, 07 Jan 2024 01:23:06 +0800</pubDate>
-      <guid>http://localhost:1313/minilist-blog/</guid>
+      <guid>http://localhost:1313/en/minilist-blog/</guid>
       <description>Sun Jan 7 01:44, 2024&#xA;Hello huyixi.org.&#xA;My new minilist blog. Imitation: egoist</description>
     </item>
     <item>
       <title>Using UnoCSS in Hugo</title>
-      <link>http://localhost:1313/hugo-unocss/</link>
+      <link>http://localhost:1313/en/hugo-unocss/</link>
       <pubDate>Sat, 06 Jan 2024 17:28:47 +0800</pubDate>
-      <guid>http://localhost:1313/hugo-unocss/</guid>
+      <guid>http://localhost:1313/en/hugo-unocss/</guid>
       <description>This website uses the Hugo static site generator and UnoCSS for CSS. Below is a record of how to use UnoCSS in Hugo.&#xA;Modifying the Theme File&amp;rsquo;s CSS Styles {{- $cssbundle := resources.Match &amp;#34;css/*.css&amp;#34; | resources.Concat &amp;#34;css/main.css&amp;#34; -}} {{- if hugo.IsProduction }} {{ $cssbundle = $cssbundle | minify | fingerprint }} {{ end -}} &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;{{ $cssbundle.RelPermalink }}&amp;#34; {{ if hugo.IsProduction }} integrity=&amp;#34;{{ $cssbundle.Data.Integrity }}&amp;#34; {{ end }} /&amp;gt; Note: This code will retrieve all CSS files from your assets/css folder.</description>
     </item>
     <item>
       <title>Raycast Plugin: Get Time</title>
-      <link>http://localhost:1313/get-time/</link>
+      <link>http://localhost:1313/en/get-time/</link>
       <pubDate>Sun, 22 Oct 2023 23:01:03 +0800</pubDate>
-      <guid>http://localhost:1313/get-time/</guid>
+      <guid>http://localhost:1313/en/get-time/</guid>
       <description>Last week, during some spare time, I worked on a Sidebar Project: a Raycast plugin that allows you to get the current time in a specified format.&#xA;When writing blog entries, I often need to get a precise timestamp (to help recall my thoughts later). However, since I use Apple’s built-in input method, I can’t simply type sj to get the current time like with Sogou or other Chinese input methods.</description>
     </item>
     <item>
       <title>Windows Installation Guide</title>
-      <link>http://localhost:1313/the-use-of-windows-computer/</link>
+      <link>http://localhost:1313/en/the-use-of-windows-computer/</link>
       <pubDate>Mon, 24 Apr 2023 02:49:00 +0800</pubDate>
-      <guid>http://localhost:1313/the-use-of-windows-computer/</guid>
+      <guid>http://localhost:1313/en/the-use-of-windows-computer/</guid>
       <description>Due to the length of this article and the lack of a table of contents in my personal blog, I recommend reading it on my wiki site. Here is the link. You can quickly navigate using the table of contents on that site. Background: This guide is based on my extensive experience with multiple Windows installations, designed to meet my Windows installation needs.</description>
     </item>
     <item>
