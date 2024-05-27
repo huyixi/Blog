@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Raycast on huyixi&#39;s Blog</title>
-    <link>http://localhost:1313/tags/raycast/</link>
+    <link>https://blog.huyixi.com/tags/raycast/</link>
     <description>Recent content in Raycast on huyixi&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 22 Oct 2023 23:01:03 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/raycast/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.huyixi.com/tags/raycast/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Raycast Plugin: Get Time</title>
-      <link>http://localhost:1313/get-time/</link>
+      <link>https://blog.huyixi.com/get-time/</link>
       <pubDate>Sun, 22 Oct 2023 23:01:03 +0800</pubDate>
-      <guid>http://localhost:1313/get-time/</guid>
+      <guid>https://blog.huyixi.com/get-time/</guid>
       <description>Last week, during some spare time, I worked on a Sidebar Project: a Raycast plugin that allows you to get the current time in a specified format.&#xA;When writing blog entries, I often need to get a precise timestamp (to help recall my thoughts later). However, since I use Apple’s built-in input method, I can’t simply type sj to get the current time like with Sogou or other Chinese input methods.</description>
     </item>
   </channel>

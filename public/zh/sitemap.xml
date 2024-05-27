@@ -2,218 +2,218 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/zh/</loc>
+    <loc>https://blog.huyixi.com/zh/</loc>
     <lastmod>2024-02-14T15:00:29+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
+                href="https://blog.huyixi.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/"
+                href="https://blog.huyixi.com/zh/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/only-black/</loc>
+    <loc>https://blog.huyixi.com/zh/only-black/</loc>
     <lastmod>2024-02-14T15:00:29+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/only-black/"
+                href="https://blog.huyixi.com/only-black/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/only-black/"
+                href="https://blog.huyixi.com/zh/only-black/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/tags/</loc>
+    <loc>https://blog.huyixi.com/zh/tags/</loc>
     <lastmod>2024-02-14T15:00:29+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/"
+                href="https://blog.huyixi.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/tags/"
+                href="https://blog.huyixi.com/zh/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/tags/theme/</loc>
+    <loc>https://blog.huyixi.com/zh/tags/theme/</loc>
     <lastmod>2024-02-14T15:00:29+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/theme/"
+                href="https://blog.huyixi.com/tags/theme/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/tags/theme/"
+                href="https://blog.huyixi.com/zh/tags/theme/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/minilist-blog/</loc>
+    <loc>https://blog.huyixi.com/zh/minilist-blog/</loc>
     <lastmod>2024-01-07T01:23:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/minilist-blog/"
+                href="https://blog.huyixi.com/minilist-blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/minilist-blog/"
+                href="https://blog.huyixi.com/zh/minilist-blog/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/tags/hugo/</loc>
+    <loc>https://blog.huyixi.com/zh/tags/hugo/</loc>
     <lastmod>2024-01-06T17:28:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/hugo/"
+                href="https://blog.huyixi.com/tags/hugo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/tags/hugo/"
+                href="https://blog.huyixi.com/zh/tags/hugo/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/tags/unocss/</loc>
+    <loc>https://blog.huyixi.com/zh/tags/unocss/</loc>
     <lastmod>2024-01-06T17:28:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/unocss/"
+                href="https://blog.huyixi.com/tags/unocss/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/tags/unocss/"
+                href="https://blog.huyixi.com/zh/tags/unocss/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/hugo-unocss/</loc>
+    <loc>https://blog.huyixi.com/zh/hugo-unocss/</loc>
     <lastmod>2024-01-06T17:28:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/hugo-unocss/"
+                href="https://blog.huyixi.com/hugo-unocss/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/hugo-unocss/"
+                href="https://blog.huyixi.com/zh/hugo-unocss/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/tags/plugin/</loc>
+    <loc>https://blog.huyixi.com/zh/tags/plugin/</loc>
     <lastmod>2023-10-22T23:01:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/plugin/"
+                href="https://blog.huyixi.com/tags/plugin/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/tags/plugin/"
+                href="https://blog.huyixi.com/zh/tags/plugin/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/tags/raycast/</loc>
+    <loc>https://blog.huyixi.com/zh/tags/raycast/</loc>
     <lastmod>2023-10-22T23:01:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/raycast/"
+                href="https://blog.huyixi.com/tags/raycast/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/tags/raycast/"
+                href="https://blog.huyixi.com/zh/tags/raycast/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/get-time/</loc>
+    <loc>https://blog.huyixi.com/zh/get-time/</loc>
     <lastmod>2023-10-22T23:01:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/get-time/"
+                href="https://blog.huyixi.com/get-time/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/get-time/"
+                href="https://blog.huyixi.com/zh/get-time/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/ebook-solution/</loc>
+    <loc>https://blog.huyixi.com/zh/ebook-solution/</loc>
     <lastmod>2023-05-21T08:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/tags/kindle/</loc>
+    <loc>https://blog.huyixi.com/zh/tags/kindle/</loc>
     <lastmod>2023-05-21T08:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/ebook-solution/ebook-solution/</loc>
+    <loc>https://blog.huyixi.com/zh/ebook-solution/ebook-solution/</loc>
     <lastmod>2023-05-21T08:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/tags/windows/</loc>
+    <loc>https://blog.huyixi.com/zh/tags/windows/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/windows/"
+                href="https://blog.huyixi.com/tags/windows/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/tags/windows/"
+                href="https://blog.huyixi.com/zh/tags/windows/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/the-use-of-windows-computer/</loc>
+    <loc>https://blog.huyixi.com/zh/the-use-of-windows-computer/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/the-use-of-windows-computer/"
+                href="https://blog.huyixi.com/the-use-of-windows-computer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/the-use-of-windows-computer/"
+                href="https://blog.huyixi.com/zh/the-use-of-windows-computer/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/about/</loc>
+    <loc>https://blog.huyixi.com/zh/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/about/"
+                href="https://blog.huyixi.com/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/about/"
+                href="https://blog.huyixi.com/zh/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/categories/</loc>
+    <loc>https://blog.huyixi.com/zh/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/categories/"
+                href="https://blog.huyixi.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/categories/"
+                href="https://blog.huyixi.com/zh/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://blog.huyixi.com/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/about/"
+                href="https://blog.huyixi.com/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/about/"
+                href="https://blog.huyixi.com/about/"
                 />
   </url>
 </urlset>
