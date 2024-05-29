@@ -1,10 +1,11 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
 {{ $dateHuman := .Date.Format "2006-01-02" }}
 {{ $lastMod := or .Params.lastmod .Date }}
 {{ $lastModHuman := $lastMod.Format "2006-01-02" }}
-
-{{ .Content }}
+<article>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</article>
 <p>
   {{ i18n "site.published" }} {{ $dateHuman }}{{ i18n "site.comma" }}
   {{ i18n "site.lastMod" }} {{ $lastModHuman }}

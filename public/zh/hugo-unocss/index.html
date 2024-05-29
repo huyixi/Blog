@@ -21,8 +21,8 @@
 
 
 
-
-<p>这个网站使用了 hugo 静态网站生成器，CSS 方面使用 UnoCSS。以下记录了如何在 hugo 中使用 UnoCSS。</p>
+<article>
+  <p>这个网站使用了 hugo 静态网站生成器，CSS 方面使用 UnoCSS。以下记录了如何在 hugo 中使用 UnoCSS。</p>
 <h2 id="修改主题文件的-css-样式">修改主题文件的 CSS 样式</h2>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>{{- $cssbundle := resources.Match &#34;css/*.css&#34; | resources.Concat &#34;css/main.css&#34; -}}
 </span></span><span style="display:flex;"><span>{{- if hugo.IsProduction }}
@@ -61,6 +61,7 @@
 </ol>
 <p><a href="https://github.com/unocss/unocss/discussions/555">参考链接</a></p>
 
+</article>
 <p>
   发布于： 2024-01-06，
   更新于： 2024-01-06

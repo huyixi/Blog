@@ -21,8 +21,8 @@
 
 
 
-
-<p>This website uses the Hugo static site generator and UnoCSS for CSS. Below is a record of how to use UnoCSS in Hugo.</p>
+<article>
+  <p>This website uses the Hugo static site generator and UnoCSS for CSS. Below is a record of how to use UnoCSS in Hugo.</p>
 <h2 id="modifying-the-theme-files-css-styles">Modifying the Theme File&rsquo;s CSS Styles</h2>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>{{- $cssbundle := resources.Match &#34;css/*.css&#34; | resources.Concat &#34;css/main.css&#34; -}}
 </span></span><span style="display:flex;"><span>{{- if hugo.IsProduction }}
@@ -63,6 +63,7 @@ If you want to run hugo server and unocss with a single command, you can use the
 3.The reference link also didn’t include scripts; this was found in the author’s provided hugo + UnoCSS template. However, this step went smoothly since I had encountered a similar issue when using TailwindCSS before.</p>
 <p>Then run pnpm run dev to start both Hugo and UnoCSS.</p>
 
+</article>
 <p>
   published: 2024-01-06,
   last updated: 2024-01-06
