@@ -280,3 +280,8 @@ footer {
 .highlight code span {
   text-wrap: wrap;
 }
+
+.footer-time {
+  margin: 0;
+  opacity: 0.8;
+}

@@ -6,8 +6,12 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 </article>
-<p>
-  {{ i18n "site.published" }} {{ $dateHuman }}{{ i18n "site.comma" }}
+<p class="footer-time">
+  {{ i18n "site.published" }} {{ $dateHuman }}
+</p>
+{{ if ne $dateHuman $lastModHuman }}
+<p class="footer-time">
   {{ i18n "site.lastMod" }} {{ $lastModHuman }}
 </p>
+{{ end }}
 {{ end }}

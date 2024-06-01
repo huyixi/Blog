@@ -1,8 +1,8 @@
 [site]
 title = "huyixi's Blog"
 language = "简体中文"
-published = "published:"
-lastMod = "last updated:"
+published = "Published:"
+lastMod = "Last updated:"
 comma = ","
 home = "Home"
 RSS = "RSS"
