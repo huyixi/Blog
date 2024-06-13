@@ -9,3 +9,8 @@ RSS = "RSS 订阅"
 mail = "发邮件"
 weekly = "散步周刊"
 about = "关于"
+
+[404]
+title = "404"
+desc = ""
+return = "回到首页"

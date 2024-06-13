@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h1>{{i18n "404.title"}}</h1>
+<p>{{i18n "404.desc"}}</p>
+<p>
+  <a href="{{ .Site.Home.RelPermalink }}">
+    {{i18n "404.return"}}
+  </a>
+</p>
+{{ end }}

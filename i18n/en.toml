@@ -9,3 +9,8 @@ RSS = "RSS"
 mail = "Mail"
 weekly = "Walk Weekly"
 about = "About"
+
+[404]
+title = "404 Not Found"
+desc = "The Page you requested cannot be found."
+return = "Return to the homepage"
