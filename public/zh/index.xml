@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>huyixi&#39;s Blog</title>
-    <link>http://localhost:1313/zh/</link>
+    <link>https://blog.huyixi.com/zh/</link>
     <description>Recent content on huyixi&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Mon, 27 May 2024 19:19:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/zh/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.huyixi.com/zh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于</title>
-      <link>http://localhost:1313/zh/about/</link>
+      <link>https://blog.huyixi.com/zh/about/</link>
       <pubDate>Mon, 27 May 2024 19:19:00 +0800</pubDate>
-      <guid>http://localhost:1313/zh/about/</guid>
+      <guid>https://blog.huyixi.com/zh/about/</guid>
       <description>👋 哈喽, 欢迎来到胡一希的个人博客。&#xA;我还有另外两个网站：&#xA;huyixi.com 是我的个人品牌网站。 huyixi.wiki 是我的个人知识库，我利用这个网站来减轻我大脑的记忆负担。 散步周刊 是我的个人周刊，我会在这里分享我每周的一些好玩的事情。 Now（正在开发）我会在这里更新我现在正在做的事情。 我以前做过的博客站点：&#xA;Blue：第二版博客站点，使用 hugo 搭建。很喜欢里面的一些设计。比如首页的侧边栏布局；Like 页面的书籍翻页效果；文章页的目录导航等等。 White：第三版博客站点 第一版的博客站点代码已经消失了。 欢迎与我联系&#xA;📮 Email: hi@huyixi.com&#xA;🧑‍💻 我的 GitHub&#xA;📰 通过 RSS 订阅这个博客</description>
     </item>
     <item>
       <title>Only Black: 极简黑 Chrome 主题</title>
-      <link>http://localhost:1313/zh/only-black/</link>
+      <link>https://blog.huyixi.com/zh/only-black/</link>
       <pubDate>Wed, 14 Feb 2024 15:00:29 +0800</pubDate>
-      <guid>http://localhost:1313/zh/only-black/</guid>
+      <guid>https://blog.huyixi.com/zh/only-black/</guid>
       <description>我的第一个 Chrome 主题。已经通过谷歌商店审核。&#xA;灵感来自于 Tw93。颜色模仿自苹果官方文档颜色。&#xA;欢迎试用：链接&#xA;首次上传审核于：2024-02-13。通过审核并发布于：2024-02-14</description>
     </item>
     <item>
       <title>Minilist Blog</title>
-      <link>http://localhost:1313/zh/minilist-blog/</link>
+      <link>https://blog.huyixi.com/zh/minilist-blog/</link>
       <pubDate>Sun, 07 Jan 2024 01:23:06 +0800</pubDate>
-      <guid>http://localhost:1313/zh/minilist-blog/</guid>
+      <guid>https://blog.huyixi.com/zh/minilist-blog/</guid>
       <description>2024 年 1 月 7 日星期日 01：44 你好，我的全新极简博客。 主题模仿：egoist</description>
     </item>
     <item>
       <title>在 hugo 中使用 UnoCSS</title>
-      <link>http://localhost:1313/zh/hugo-unocss/</link>
+      <link>https://blog.huyixi.com/zh/hugo-unocss/</link>
       <pubDate>Sat, 06 Jan 2024 17:28:47 +0800</pubDate>
-      <guid>http://localhost:1313/zh/hugo-unocss/</guid>
+      <guid>https://blog.huyixi.com/zh/hugo-unocss/</guid>
       <description>这个网站使用了 hugo 静态网站生成器，CSS 方面使用 UnoCSS。以下记录了如何在 hugo 中使用 UnoCSS。&#xA;修改主题文件的 CSS 样式 {{- $cssbundle := resources.Match &amp;#34;css/*.css&amp;#34; | resources.Concat &amp;#34;css/main.css&amp;#34; -}} {{- if hugo.IsProduction }} {{ $cssbundle = $cssbundle | minify | fingerprint }} {{ end -}} &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;{{ $cssbundle.RelPermalink }}&amp;#34; {{ if hugo.IsProduction }} integrity=&amp;#34;{{ $cssbundle.Data.Integrity }}&amp;#34; {{ end }} /&amp;gt; 注意： 代码将会获取你的 assets/css 文件夹中的所有 CSS 文件。如果你喜欢将 CSS 文件放置在其他文件夹中，则需要修改第一行代码。另外，生成的 main.css 文件是存储在 hugo 内存中的，所以无法查看到。&#xA;安装 UnoCSS 依赖 首先如果你没有 package.json 这个文件的话需要先生成。</description>
     </item>
     <item>
       <title>Raycast 插件：Get Time</title>
-      <link>http://localhost:1313/zh/get-time/</link>
+      <link>https://blog.huyixi.com/zh/get-time/</link>
       <pubDate>Sun, 22 Oct 2023 23:01:03 +0800</pubDate>
-      <guid>http://localhost:1313/zh/get-time/</guid>
+      <guid>https://blog.huyixi.com/zh/get-time/</guid>
       <description>上周在空闲时间做了一个 Sidebar Project。一个 Raycast 插件，可以获取指定格式的时间。&#xA;因为自己在写博客日志的时候，需要获取到一个比较精确的时间（方便以后回忆当时的自己）。因为使用的是苹果自带的输入法，所以不能像 搜狗或者其他国产输入法那样只输入 sj 就可以获取到当前时间。并且查看设置项发现也无法进行这种设置。于是写了这样一个 Raycast 小插件来获取。&#xA;后续发现自己正在使用 Rime 输入法，其实可以通过 Rime 的 lua 插件来输入，体验会更流畅。&#xA;仓库地址：https://github.com/huyixi/get-time.git</description>
     </item>
     <item>
       <title>我的电子书阅读不完全解决方案</title>
-      <link>http://localhost:1313/zh/ebook-solution/ebook-solution/</link>
+      <link>https://blog.huyixi.com/zh/ebook-solution/ebook-solution/</link>
       <pubDate>Sun, 21 May 2023 08:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/zh/ebook-solution/ebook-solution/</guid>
+      <guid>https://blog.huyixi.com/zh/ebook-solution/ebook-solution/</guid>
       <description>个人用法 2024-05-23&#xA;由于本文成文较早，所以有一些内容已经过时，以下是最近个人的一些用法，仅供参考。现在是我自己用的比较舒服的几个方式。&#xA;获取电子书&#xA;互联网直接下载：Zlib + Anna 自制电子书：Web2Book RSS 订阅：QiReader 看到的好文章：保存到 Instapaper 后推送到 Kindle 传输电子书&#xA;Send to Kindle 软件 一些文件内容较大的通过 Caliber 传输 非 Epub 格式的文件，例如 AZW3 或者 MOBI 甚至是 PDF，通过 Convertio 进行格式转换后传输。 开始阅读吧！&#xA;上面所介绍的这些方法以下都会有相关介绍，所以可以继续阅读，当然要辨别一些目前可能无法使用的方法。&#xA;获取电子书 以下不包含从电子书商城购买下载的内容.下面的内容可能涉及到侵权等,如果资金允许,建议从正规渠道购买下载.&#xA;从互联网获取电子书 Z-Library 该组织将自己描述为“世界上最大的电子书图书馆”，以及“世界上最大的科学文章商店”.并作为一个由捐赠维持的非营利组织运营。但是 2022 年 11 月，该网站的域名被美国司法部查封..在 Z-Library 的用户群中,中国用户遥遥领先于其他国家(来自 Z-Library 博客 Worldwide Statistics: How Students and Educators Use Z-Library 中的数据).&#xA;如何访问 Z-Library 通过域名访问&#xA;Web:https://singlelogin.re&#xA;TOR:http://loginzlib2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion&#xA;I2P:http://zlib24th6ptyb4ibzn3tj2cndqafs6rhm4ed4gruxztaaco35lka.b32.i2p&#xA;通过域名访问里面的部分内容可能无法查看,如博客,书单等页面.这些内容可以通过使用个人域名访问&#xA;以上域名随时可能被回收,如果无法访问可以使用电子邮件获取,或者从从官方发布的最新域名中获取.官方频道&#xA;通过电子邮件获取个人 zlib 域名后，通过个人域名访问&#xA;你可以使用任意邮箱,发送任意内容到 blackbox@zlib.se,你将在 3-5 分钟内收到你 Z-Library 个人的域名。如果没有收到邮件,前往被拦截的邮件中查看.</description>
     </item>
     <item>
       <title>Windows 装机指南</title>
-      <link>http://localhost:1313/zh/the-use-of-windows-computer/</link>
+      <link>https://blog.huyixi.com/zh/the-use-of-windows-computer/</link>
       <pubDate>Mon, 24 Apr 2023 02:49:00 +0800</pubDate>
-      <guid>http://localhost:1313/zh/the-use-of-windows-computer/</guid>
+      <guid>https://blog.huyixi.com/zh/the-use-of-windows-computer/</guid>
       <description>由于本文内容较长，且个人博客不附带目录导航。更推荐在我的 wiki 网站进行阅读，这是本文的链接。可以通过点击目录进行快速导航跳转。 前情提要：根据本人的多次装机历史记录而成，基本满足本人 Windows 装机需求。&#xA;系统安装 系统镜像下载网站 itellyou：https://msdn.itellyou.cn itellyou 新网站（主要下载系统镜像）：https://next.itellyou.cn/ 制作系统启动盘 需要提前准备一个 16G 以上的 U 盘作为启动盘&#xA;rufus（Windows）官网地址：https://rufus.ie/en/&#xA;UNetbootin（多平台）：https://unetbootin.github.io/&#xA;进入 BIOS 界面将 U 盘设置为启动盘 一些笔记本侧边有 Reset 插口，使用卡针插入即可进入 BIOS 界面&#xA;激活系统 Windows 系统激活参考教程：www.kms.pub&#xA;slmgr -ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D（该激活码为 Windows10 企业版激活码，不同系统版本使用不同的激活码，除本行外下面的命令都一样） slmgr -skms kms.03k.org slmgr -ato slmgr -dlv Windows 激活密钥 通用批量许可证密钥 (GVLK) 在下表中，可找到 Windows 每个版本的 GVLK。 LTSC 是长期服务渠道，而 LTSB 是 Long-Term Servicing Branch 。&#xA;Windows Server（LTSC 版本） Windows Server 2022 操作系统版本 KMS 客户端产品密钥 Windows Server 2022 Datacenter WX4NM-KYWYW-QJJR4-XV3QB-6VM33 Windows Server 2022 Standard VDYBN-27WPP-V4HQT-9VMD4-VMK7H Windows Server 2019 操作系统版本 KMS 客户端产品密钥 Windows Server 2019 Datacenter WMDGN-G9PQG-XVVXX-R3X43-63DFG Windows Server 2019 Standard N69G4-B89J2-4G8F4-WWYCC-J464C Windows Server 2019 Essentials WVDHN-86M7X-466P6-VHXV7-YY726 Windows Server 2016 操作系统版本 KMS 客户端产品密钥 Windows Server 2016 Datacenter CB7KF-BWN84-R7R2Y-793K2-8XDDG Windows Server 2016 Standard WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY Windows Server 2016 Essentials JCKRF-N37P4-C2D82-9YXRT-4M63B Windows Server（半年频道版本） Windows Server，版本 20H2、2004、1909、1903 和 1809 操作系统版本 KMS 客户端产品密钥 Windows Server Datacenter 6NMRW-2C8FM-D24W7-TQWMY-CWH2D Windows Server Standard N2KJX-J94YW-TQVFB-DG9YT-724CC Windows 11 和 Windows 10（半年频道版本） 有关受支持的版本和服务终止日期的信息，请参阅 Windows 生命周期情况说明书。</description>
     </item>
   </channel>
