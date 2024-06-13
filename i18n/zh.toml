@@ -11,6 +11,6 @@ weekly = "散步周刊"
 about = "关于"
 
 [404]
-title = "404"
-desc = ""
+title = "404 Not Found"
+desc = "没有发现你要找的页面"
 return = "回到首页"
