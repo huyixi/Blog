@@ -1,7 +1,7 @@
 +++
 title = 'Lizhi Tokyo Memories'
 date = 2024-06-18T00:14:24+08:00
-draft = true
+draft = false
 +++
 It's been many days since I returned from Japan, and I still often think back to the night of Li Zhi's concert on May 2nd. Before and after the performance, I had many thoughts and feelings. I'm afraid I'll forget them over time, so I'm writing them down.
 
