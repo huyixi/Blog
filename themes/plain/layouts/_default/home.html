@@ -12,10 +12,10 @@
     {{ with .Resources.GetMatch "cover.*" }}
     <div>
       <picture>
-        <source srcset="{{ .RelPermalink }}" type="image/webp" />
+        <source srcset="{{ .RelPermalink }}?format=webp" type="image/webp" />
         <source srcset="{{ .RelPermalink }}" type="image/jpeg" />
-        <img src='{{ .RelPermalink }}" alt="{{ $.Params.featureAlt | default $.Params.thumbnailAlt | default "" }}'
-          loading="lazy" />
+        <img src="{{ .RelPermalink }}" srcset="{{ .RelPermalink }} 640w, {{ .RelPermalink }} 1280w"
+          sizes="(max-width: 640px) 100vw, 640px" loading="lazy" style="max-height: 200px; width: auto; height: auto;">
       </picture>
     </div>
     {{ end }}
