@@ -100,6 +100,6 @@ url = "/index.xml"
 weight = 4
 
 [[languages.zh.menu.main]]
-name = "About"
+name = "关于"
 url = "/zh/about/"
 weight = 5
