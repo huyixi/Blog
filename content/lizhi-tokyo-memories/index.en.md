@@ -3,6 +3,7 @@ title = 'Lizhi Tokyo Memories'
 date = 2024-06-18T00:14:24+08:00
 draft = false
 +++
+
 It's been many days since I returned from Japan, and I still often think back to the night of Li Zhi's concert on May 2nd. Before and after the performance, I had many thoughts and feelings. I'm afraid I'll forget them over time, so I'm writing them down.
 
 I can't remember where I first saw the news about Li Zhi's tour in Japan. I just remember that at that time, Twitter was full of friends talking about going to see the concert. I was very excited because I hadn't been a fan of Li Zhi for long, and unfortunately, after I started liking him, he was banned from performing in China. So, for many years, seeing Li Zhi's live performance became a small wish of mine.
@@ -56,7 +57,9 @@ If you ask what I miss most about this trip, it's not Li Zhi's concert or Japan,
 The next day, staying near Sensoji Temple, I randomly walked into an izakaya. I ordered some yakitori and a small mug of draft beer. Then I found myself sitting next to a guy from Taiwan. He said some things during our conversation that shocked me:
 
 > In Taiwan, you can retire after working in the same company for 20 years.
+
 > "Life is more important than work, so although my boss doesn't like me, I still often go out" (of course, this guy seemed quite capable; he said he worked at TSMC, but I couldn't verify if it was true)
+
 > "Taiwan and Japan have visa exemptions, so he comes to Japan several times a year."
 
 That same night, I met another interesting group of people: a girl who took a gap year to travel the world and speaks excellent English; a French guy who bought drinks for all of us; a family from a country whose name I couldn't recall; and another guy from Taiwan who tried to match me with a girl from Shandong. It was a truly unforgettable night.
@@ -106,6 +109,7 @@ For an ordinary person, life in Tokyo should be very good: clean environment, co
 ## Information About Japanese Visas
 
 If you also want to travel to Japan, here is some information you might find useful:
+
 - Different Japanese embassies are responsible for different areas' visa processing. You can check this [interface](https://www.cn.emb-japan.go.jp/itpr_zh/aboutus.html#kankatsu) for details.
 - The issuance time for embassy visas is four working days from the day the visa information is sent to the embassy. Most travel agencies' estimated times are longer.
 - You can check the list of specified universities for Japanese student visas [here](https://www.shenyang.cn.emb-japan.go.jp/cn/visa/zhongguojiaoyudaxue1243.pdf) or the notification about student visas for specific universities [here](https://www.shenyang.cn.emb-japan.go.jp/itpr_zh/cn160930_kankouvisakansoka.html). Most undergraduate institutions are included.
