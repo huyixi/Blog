@@ -52,6 +52,11 @@ The project is currently under review in the Google Store.
 
 Once the review is approved, a download link for the extension will be provided.
 
+## Pitfalls Encountered
+
+- **Incomplete Documentation Review**: Initially, I didn't thoroughly go through the Chrome Extension developer documentation. As a result, the use of badge and sidepanel APIs was added later in the development process.
+- **Overemphasis on Clean Code and Project Structure**: In pursuit of clean code and a well-organized project structure, I spent a significant amount of time stuck on certain aspects.
+
 ## Roadmap
 
 - Resizable text in the outline
