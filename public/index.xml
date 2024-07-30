@@ -6,8 +6,15 @@
     <description>Recent content on huyixi&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Jun 2024 00:14:24 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jul 2024 15:46:06 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WebTOC Browser Extension Development Journey</title>
+      <link>http://localhost:1313/webtoc/</link>
+      <pubDate>Tue, 30 Jul 2024 15:46:06 +0800</pubDate>
+      <guid>http://localhost:1313/webtoc/</guid>
+      <description>This is a browser extension that can fetch the outline of the current web page.&#xA;The initial idea for this extension came from the book How to Read a Book, which mentions using a book&amp;rsquo;s table of contents and outline to quickly grasp its content.&#xA;When browsing online, it&amp;rsquo;s common to encounter websites without a quick navigation outline. For example, on my blog site, I believe a good blog post should be engaging and narrative, rather than having a clear, structured hierarchy like Wikimedia.</description>
+    </item>
     <item>
       <title>Lizhi Tokyo Memories</title>
       <link>http://localhost:1313/lizhi-tokyo-memories/</link>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="WebTOC Browser Extension Development Journey">
+<title>WebTOC Browser Extension Development Journey | huyixi&#39;s Blog</title>
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://localhost:1313/webtoc/index.xml">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+</head>
+
+<body>
+  <main>
+    
+
+
+
+<article>
+  <h1>WebTOC Browser Extension Development Journey</h1>
+  <p>This is a browser extension that can fetch the outline of the current web page.</p>
+<p>The initial idea for this extension came from the book <em>How to Read a Book</em>, which mentions using a book&rsquo;s table of contents and outline to quickly grasp its content.</p>
+<p>When browsing online, it&rsquo;s common to encounter websites without a quick navigation outline. For example, on my blog site, I believe a good blog post should be engaging and narrative, rather than having a clear, structured hierarchy like Wikimedia. So, I removed the table of contents from my blog.</p>
+<p>However, there are times when we want to quickly assess whether an article is worth reading further or locate a solution without delving into the details. A browser extension that fetches the outline of any web page would be an excellent solution.</p>
+<p>Initially, I designed a floating window for the current page. Users could freely move and resize this window, ensuring that the outline doesn&rsquo;t obstruct the web content, thus maintaining a good reading experience.</p>
+<p><img alt="image-20240730153439315" src="https://raw.githubusercontent.com/huyixi/Pics/main/uPic/image-20240730153439315.png"></p>
+<p>Here&rsquo;s a screenshot of the first MVP.</p>
+<p><img alt="image-20240730153720721" src="https://raw.githubusercontent.com/huyixi/Pics/main/uPic/image-20240730153720721.png"></p>
+<p><img alt="image-20240730153641546" src="https://raw.githubusercontent.com/huyixi/Pics/main/uPic/image-20240730153658676.png"></p>
+<p>The control bar at the top was initially inspired by the MacOS system, featuring a close button. Later, the close button was moved to the badge.</p>
+<p>This is a demo of the control bar during the development phase, hosted on CodePen: <a href="https://codepen.io/huyixi/pen/OJeVyYE">https://codepen.io/huyixi/pen/OJeVyYE</a>.</p>
+<p>Additionally, the extension&rsquo;s background was optimized. It adapts to the background color of the current web page, ensuring a better visual experience. The approach involves extracting the page&rsquo;s RGB color, converting it to HSL, and then reducing the lightness (L). The background lightness is decreased by 4%, and the control bar by another 4%, resulting in a more pleasant color scheme.</p>
+<p>At this point, the extension was nearly complete and met my needs.</p>
+<p>However, while browsing at home over the weekend, I came across a <a href="https://x.com/galala_eth/status/1816277009707983071">tweet</a> from a user named galala_eth:</p>
+<p><img alt="835shots_so" src="https://raw.githubusercontent.com/huyixi/Pics/main/uPic/835shots_so.png"></p>
+<p>The tweet mentioned a tool called Uniswap, which piqued my curiosity. I checked it out and found that the first pinned tweet described their browser extension, which now displays content in a sidebar.</p>
+<p><img alt="656shots_so" src="https://raw.githubusercontent.com/huyixi/Pics/main/uPic/656shots_so.png"></p>
+<p><img alt="183shots_so" src="https://raw.githubusercontent.com/huyixi/Pics/main/uPic/183shots_so.png"></p>
+<p>It was the first wallet extension to use this method. It struck me as a great display method, prompting me to scrap the previous code and start over.</p>
+<p><img alt="SCR-20240730-keqi" src="https://raw.githubusercontent.com/huyixi/Pics/main/uPic/SCR-20240730-keqi.png"></p>
+<p>This is the current display effect. The screenshot is taken from <a href="https://www.norvig.com/">Peter Norvig</a>&rsquo;s famous article <a href="https://www.norvig.com/21-days.html"><em>Teach Yourself Programming in Ten Years</em></a>, with some distracting elements removed.</p>
+<p>The project is currently under review in the Google Store.</p>
+<p><img alt="image-20240730152626771" src="https://raw.githubusercontent.com/huyixi/Pics/main/uPic/image-20240730152626771.png"></p>
+<p>Once the review is approved, a download link for the extension will be provided.</p>
+<h2 id="roadmap">Roadmap</h2>
+<ul>
+<li>Resizable text in the outline</li>
+<li>Highlighting the current title</li>
+<li>Using the current webpage&rsquo;s link colors</li>
+</ul>
+
+</article>
+<p class="footer-time">
+  Published: 2024-07-30
+</p>
+
+
+  </main>
+  <footer>
+  <p>
+    
+    <a href="/">Home</a>&nbsp;/
+    
+    <a href="mailto:hi@huyixi.com">Mail</a>&nbsp;/
+    
+    <a href="https://weekly.huyixi.com">Weekly</a>&nbsp;/
+    
+    <a href="/index.xml">RSS</a>&nbsp;/
+    
+    <a href="/about">About</a>&nbsp;/
+    
+  </p>
+
+  
+
+  <p class="footer-copr">
+    <a href="https://huyixi.com">huyixi</a>&nbsp;&copy;&nbsp;2022-2024
+  </p>
+</footer>
+
+</body>
+
+</html>
