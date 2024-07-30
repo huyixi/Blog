@@ -7,7 +7,7 @@
   {{ .Content }}
 </article>
 <p class="footer-time">
-  {{ i18n "site.published" }} {{ $dateHuman }}
+  {{ i18n "site.published" }}{{ $dateHuman }}
 </p>
 {{ if ne $dateHuman $lastModHuman }}
 <p class="footer-time">
