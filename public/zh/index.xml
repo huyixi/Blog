@@ -1,75 +1,1379 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>huyixi&#39;s Blog</title>
     <link>http://localhost:1313/zh/</link>
     <description>Recent content on huyixi&#39;s Blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 30 Jul 2024 15:46:06 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/zh/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="http://localhost:1313/zh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>WebTOC 浏览器扩展的开发历程</title>
       <link>http://localhost:1313/zh/webtoc/</link>
       <pubDate>Tue, 30 Jul 2024 15:46:06 +0800</pubDate>
+      
       <guid>http://localhost:1313/zh/webtoc/</guid>
-      <description>这是一个可以获取当前页面的目录的浏览器扩展。&#xA;最初有实现这个扩展的想法来自《如何阅读一本书》。书中提到使用书籍的目录与大纲来快速了解一本书。&#xA;在网上冲浪的时候，很可能有一些网站并没有提供进行快速浏览导航的大纲。例如我自己的博客站点：我认为一篇好的博文应该是引人入胜、娓娓道来的，而不是像 Wikimedia 那样结构层次分明。所有我将文章的目录导航从自己的博客站点中移除。&#xA;但是有的时候我们又想通过目录来快速判断一篇文章是否值得继续阅读或者快速定位到解决方案，而不想了解事件前因后果。&#xA;如果能有一个浏览器扩展可以获取所有网页的的文章目录就能很好的解决这个问题。&#xA;最开始我的设计是在当前网页添加上一个悬浮窗口，用户可以自由移动放缩悬浮窗，让目录的悬浮窗不遮挡到网页内容。确保良好的阅读体验。&#xA;这是第一个 MVP 的截图。&#xA;上方的 Control Bar 模仿原本是模仿 MacOS 系统，有一个关闭的按钮。后续将关闭按钮转移到 Badge 上。&#xA;这是开发过程中的 Control Bar 的一个 demo，放在 codepen 上。地址：https://codepen.io/huyixi/pen/OJeVyYE&#xA;另外针对扩展的背景进行优化。在不同背景的网页上，扩展的背景颜色也会随之改变，确保一个更好的视觉体验。&#xA;这里的处理方案是提取当前页面颜色的 rgb，转换成 hsl 颜色值后。对 L 进行降低，整体的背景降低 4%，control bar 再降低 4%，整个的颜色看起来就比较舒服。&#xA;到这里，基本上这个扩展就算完成了，已经可以满足我的需要了。&#xA;但是周末在家刷到另维的一条推特：&#xA;文中提到一个工具：Uniswap，好奇打开看了一下。&#xA;发现 pin 住的第一条推特就在介绍自己的浏览器扩展现在采用侧边栏的方式进行展示。&#xA;并且是第一个这么做的钱包扩展。&#xA;突然想到，这或许是一个很不错的展示方式。于是推倒之前的代码，全部重来。&#xA;这是目前的展示效果。&#xA;截图采用了 Peter Norvig 的一篇著名文章《Teach Yourself Programming in Ten Years》。&#xA;但是对这个网页中的一些干扰元素进行删除。&#xA;目前项目已经在谷歌商店审核。&#xA;审核成功后，会添加上扩展的下载链接。&#xA;路线图 目录文字的放缩 高亮当前标题 使用当前网页的链接颜色 </description>
+      <description>&lt;p&gt;这是一个可以获取当前页面的目录的浏览器扩展。&lt;/p&gt;
+&lt;p&gt;最初有实现这个扩展的想法来自《如何阅读一本书》。书中提到使用书籍的目录与大纲来快速了解一本书。&lt;/p&gt;
+&lt;p&gt;在网上冲浪的时候，很可能有一些网站并没有提供进行快速浏览导航的大纲。例如我自己的博客站点：我认为一篇好的博文应该是引人入胜、娓娓道来的，而不是像 Wikimedia 那样结构层次分明。所有我将文章的目录导航从自己的博客站点中移除。&lt;/p&gt;
+&lt;p&gt;但是有的时候我们又想通过目录来快速判断一篇文章是否值得继续阅读或者快速定位到解决方案，而不想了解事件前因后果。&lt;/p&gt;
+&lt;p&gt;如果能有一个浏览器扩展可以获取所有网页的的文章目录就能很好的解决这个问题。&lt;/p&gt;
+&lt;p&gt;最开始我的设计是在当前网页添加上一个悬浮窗口，用户可以自由移动放缩悬浮窗，让目录的悬浮窗不遮挡到网页内容。确保良好的阅读体验。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20240730153439315&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/image-20240730153439315.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这是第一个 MVP 的截图。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20240730153720721&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/image-20240730153720721.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20240730153641546&#34; src=&#34;http://localhost:1313/Users/huyixi/Library/Application%20Support/typora-user-images/image-20240730153658676.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上方的 Control Bar 模仿原本是模仿 MacOS 系统，有一个关闭的按钮。后续将关闭按钮转移到 Badge 上。&lt;/p&gt;
+&lt;p&gt;这是开发过程中的 Control Bar 的一个 demo，放在 codepen 上。地址：https://codepen.io/huyixi/pen/OJeVyYE&lt;/p&gt;
+&lt;p&gt;另外针对扩展的背景进行优化。在不同背景的网页上，扩展的背景颜色也会随之改变，确保一个更好的视觉体验。&lt;/p&gt;
+&lt;p&gt;这里的处理方案是提取当前页面颜色的 rgb，转换成 hsl 颜色值后。对 L 进行降低，整体的背景降低 4%，control bar 再降低 4%，整个的颜色看起来就比较舒服。&lt;/p&gt;
+&lt;p&gt;到这里，基本上这个扩展就算完成了，已经可以满足我的需要了。&lt;/p&gt;
+&lt;p&gt;但是周末在家刷到另维的一条&lt;a href=&#34;https://x.com/galala_eth/status/1816277009707983071&#34;&gt;推特&lt;/a&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;835shots_so&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/835shots_so.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;文中提到一个工具：Uniswap，好奇打开看了一下。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;656shots_so&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/656shots_so.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;发现 pin 住的第一条推特就在介绍自己的浏览器扩展现在采用侧边栏的方式进行展示。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;183shots_so&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/183shots_so.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;并且是第一个这么做的钱包扩展。&lt;/p&gt;
+&lt;p&gt;突然想到，这或许是一个很不错的展示方式。于是推倒之前的代码，全部重来。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;SCR-20240730-keqi&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/SCR-20240730-keqi.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这是目前的展示效果。&lt;/p&gt;
+&lt;p&gt;截图采用了 &lt;a href=&#34;https://www.norvig.com/&#34;&gt;Peter Norvig&lt;/a&gt; 的一篇著名文章&lt;a href=&#34;https://www.norvig.com/21-days.html&#34;&gt;《Teach Yourself Programming in Ten Years》&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;但是对这个网页中的一些干扰元素进行删除。&lt;/p&gt;
+&lt;p&gt;目前项目已经在谷歌商店审核。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20240730152626771&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/image-20240730152626771.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;审核成功后，会添加上扩展的下载链接。&lt;/p&gt;
+&lt;h2 id=&#34;踩坑点&#34;&gt;踩坑点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;没有完整浏览 Chrome Extension 的开发者文档，badge 与 sidepanel API 的使用都是后续添加上的。&lt;/li&gt;
+&lt;li&gt;过渡追求代码与项目的整洁，导致一些点上卡了很长时间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;路线图&#34;&gt;路线图&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;目录文字的放缩&lt;/li&gt;
+&lt;li&gt;高亮当前标题&lt;/li&gt;
+&lt;li&gt;使用当前网页的链接颜色&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
+    
     <item>
       <title>关于李志，关于东京的记忆</title>
       <link>http://localhost:1313/zh/lizhi-tokyo-memories/</link>
       <pubDate>Tue, 18 Jun 2024 00:14:24 +0800</pubDate>
+      
       <guid>http://localhost:1313/zh/lizhi-tokyo-memories/</guid>
-      <description>从日本回来已经许多天了，还是常常回想起 5 月 2 日李志演出的那个夜晚。演出前后，有很多感慨，我怕时间太久我会遗忘，所以用文字来记录下来。&#xA;已经忘记是在哪里看到李志要在日本办巡演的消息，只记得那段时间 Twitter 上到处都是推友们要去看演出的消息。我也十分激动，因为我听 B 哥的时间并不长，而很不巧的是，当我喜欢上他之后，他已经被禁止参加中国的演出了。所以这么多年，去现场看 B 哥的演出也成了我的一个小小心愿。&#xA;由于记错开票时间，开票当天，我下午浏览官网才发现已经开票。还好东京场次的票还未售罄，于是马上下单，付款。下单之后我就陷入了迷茫：票我是买到了，可是演出是在东京，我怎么看？我根本就没有去过日本，我身边去日本的人也不多，根本没有人可以参考借鉴的经验。虽然我经常出去玩，但是也都是在中国大陆地区，出去最远的地方可能就是香港了。我根本不知道出国的具体流程。所以之后几天我甚至将票挂上闲鱼，计划转让出手。我本以为这么多年 B 哥没演出，票应该是一票难求。但是没想到，闲鱼上根本无人问津。一些卖家甚至将票降到 200 块钱，我是无法忍受这么大的亏损的，所以又尝试准备去日本。&#xA;准备 在进行准备日本之行前，还有一件事情需要搞定：我的父母。买票之前，我并没有跟父母做过任何沟通，平时也完全没有关于出国的交流，所以是否能得到他们的许可，我心里完全没底。虽然很经常自己一个人在国内玩，但是出国人生地不熟，语言也不通，连我自己都心理没底，更何况我的父母。而且这不仅是我的第一次出国，还是计划不结伴自己独自一个人去。令我感到非常意外的是，我父母居然答应下来了。经过父母的同意之后就是开始准备各种材料了。&#xA;前几年高考完和同学本来计划去香港玩。但是由于当时香港的一些风波，社会比较动荡，旅游比较危险，所以当时行程被我们取消掉，但是却和同学将港澳通行证和护照办了下来。这也让我这次出行多了更多的可能性。因为开票时间和演出时间并没有相隔太久，而我居住的城市相关部门办理这些证件流程十分繁琐，时间线会拉的特别长。如果我没有护照，在办理签证前还需要搞定护照。但是现在因为护照已经有了，所以只要去办理签证就好了。&#xA;因为是第一次办理，也是第一次出国，并不知道签证之类的办理流程，所以查阅了很多的资料。日本在中国的几个大使馆的网站基本都被我翻遍了。旅行社说我这是敏感地区，需要一些资金作为资产证明。后来尝试其他旅行社，了解到更多关于签证办理的信息后发现，日本大使馆有一份关于本科学生签证办理的政策，刚好我的本科院校也在其中。之后就是提交各种资料进行签证的办理。&#xA;关于李志 在去东京前，我没有做什么旅游攻略，但是却观看了大量的关于李志的一些影片。比如「叁叁肆」巡演纪录片，逼哥夜话等等。&#xA;在中国巡演路上会因为各种莫名其妙的原因取消演出，比如莫名其妙的演员证（看纪录片后面好像是给有关部门塞钱解决），各种乱七八糟的奇奇怪怪的原因。&#xA;看着 B 哥戴着帽子出来，我一度有些恍惚。仿佛看到了 18 年音乐节上的 B 哥的影子。还没回过神，他就把帽子扔向观众，也将我从回忆中拉出。&#xA;这是一种无法言说的感觉，来到这里的人一定都是被相似的东西吸引。&#xA;那些站立的、坐着的、回首的、相拥的，尽管表面静止，或许内心早已波澜壮阔。台上，李志和他的乐队演奏着他们的音乐；台下，观众脑海里闪过的是各自的人生经历。同样的歌曲，对于不同的人却有不同的感受。&#xA;这场演出，不知道哭过几回，总是不知不觉就泪流满面。来日本一趟，真的是太过不易；等一场李志的演出，也是相当难得。台上李志眼角含泪在唱，现场我们也是默默流泪。&#xA;我们是不同的个体，但在这里，我们是同频的人。&#xA;站在周围的人，都讲着同样的一种语言。观众大多都是从中国内地特地飞来，填满东京这场 8000 人的场地。相信有不少人也同我一样，都是第一次来日本。这一场演出着实给日本当地贡献了不少的 GDP。&#xA;不过也正是由于观演门槛的提高，才有幸让我抢到一张演出门票。&#xA;我对日本没有什么好感，但也远远谈不上厌恶。我没有看日漫，不看日剧，也不听日语歌，对日本也没有什么很特殊的情结，并没有什么非去不可的理由。由于过去的爱国教育的影响，所以当我走在街上看到街上悬挂着的的日本国旗，我的内心还是有点紧张，还会回想起小时候电视上播放的那些抗日战争片。如果不是这场演出，或许我多年以后才会来到这片土地。&#xA;尽管已经尽量在节省，但是这一趟，花费着实不低。真的是那句歌词唱的：「为你我用了半年的积蓄，漂洋过海来看你」。如果相同的演出在大陆，或许我可以看上七八场。 这场演出中陈岍的口琴，周亮的贝斯，真的是太过惊艳了。这本是两个并不是主角的乐器，但是他们却将它们玩成了主角。&#xA;一个在胸前纹着中国地图，一个专辑名是「我爱南京」，一个在每场演出散场后，都会向观众鞠躬，并说我们来自南京的人。他可能比大多数人都更热爱这片土地，但是可笑的是，他却无法在这片土地上唱歌。我想起有人问过奥运会的安全总工程师：你为什么不走？他们内心似乎都有一种想唤醒国人的正义，但是这个时代却不允许他们这样的人存在。&#xA;我们所有人都在说保持理智，相信未来。但是我心里却十分悲观，演出前也是抱着可能是我最后一场看李志演出的心情来看的。但是五年了，至少有了一场巡演，总算有了一点点希望，不是吗。&#xA;这本是一场应该开在中国大陆的巡演，我们本来可以不用花这么多钱跑去日本看这场演出。但是很无奈，我们却只能在这里相见。&#xA;这场演出在我心中，并没有李志的跨年演唱会那么出彩。演出结束后，我就在思考，好像我喜欢的不是李志，也不是他的歌。更多的可能是他身上的那种代表着反抗的摇滚精神亦或是认真，专注，勤奋的工作态度。&#xA;希望这样的演出并不是看一场少一场，希望有天我能抢不到李志的票。&#xA;我们都在盼望南京跨年，我们都在盼望叁叁肆巡演能到自己的家乡。&#xA;也常常回想起 19 年第一次参加音乐节的画面，一群人散场后不约而同地唱起「港岛妹妹」。&#xA;这么多年过去了你看&#xA;我遇到的一些人 我很幸运。&#xA;如果要问这趟旅程，什么最令我怀念。不是李志的演出，也不是日本。而是我在旅程中遇到的这些人。&#xA;第二天住在浅草寺附近，我随机漫步走进了一家居酒屋。点了些烧鸟，一小扎生啤。然后发现身边坐着一个台湾的哥们。跟他交流的过程中有一些让我很震惊的话：&#xA;在台湾同一家公司工作 20 年后是可以退休的。&#xA;「人生比工作更重要，所以虽然上司不太喜欢我，但是我还是经常出来」（当然这个老哥还是比较有实力的，说是在台积电工作，但是我并不能确认这个信息是否真实）&#xA;「台湾日本是免签的，所以他一年会来几次日本玩」。&#xA;同样在这个夜晚，我还碰到了另一群很有意思的人：有 Gap 一年全球旅游并且英语超好的一个妹妹；有请我们一群人喝酒的法国大哥；也有一个我叫不出名字的国家的一家子一起出来玩；还有个台湾的哥们极力撮合我和另一个山东的妹妹。真的是一个很难忘的夜晚。&#xA;我不知道为什么，每次旅行出去，我总能碰到一些在我计划之外的人或事，而这些事在我看来远比这趟旅程更值得我怀念。&#xA;我曾在很多地方听说过「人生不是轨道，而是旷野」这句话。但直到那一夜，看过这么多人不同的人生之后，我才真正明白这句话到底意味着什么。没考上好的大学人生不会就完蛋的，没找到好工作人生也不会完蛋。每个人都有每个人自己的活法，每个人都有自己的生活方式。&#xA;有些感受，可能我这些简单而又匮乏的语言远远不能描述。只有亲身经历过后，才会被深深震撼。&#xA;关于日本 由于旅程的时间并不多，前后加起来就只有 9 天。并且中间一天 5 月 2 日我要在东京看演出，所以这次日本之行我并没有安排大阪奈良的行程，只计划在东京周边深度游玩。这里有一些我感觉比我所呆过的一些城市不一样的地方（主要是中国的东南以及中部的城市）。</description>
+      <description>&lt;p&gt;从日本回来已经许多天了，还是常常回想起 5 月 2 日李志演出的那个夜晚。演出前后，有很多感慨，我怕时间太久我会遗忘，所以用文字来记录下来。&lt;/p&gt;
+&lt;p&gt;已经忘记是在哪里看到李志要在日本办巡演的消息，只记得那段时间 Twitter 上到处都是推友们要去看演出的消息。我也十分激动，因为我听 B 哥的时间并不长，而很不巧的是，当我喜欢上他之后，他已经被禁止参加中国的演出了。所以这么多年，去现场看 B 哥的演出也成了我的一个小小心愿。&lt;/p&gt;
+&lt;p&gt;由于记错开票时间，开票当天，我下午浏览官网才发现已经开票。还好东京场次的票还未售罄，于是马上下单，付款。下单之后我就陷入了迷茫：票我是买到了，可是演出是在东京，我怎么看？我根本就没有去过日本，我身边去日本的人也不多，根本没有人可以参考借鉴的经验。虽然我经常出去玩，但是也都是在中国大陆地区，出去最远的地方可能就是香港了。我根本不知道出国的具体流程。所以之后几天我甚至将票挂上闲鱼，计划转让出手。我本以为这么多年 B 哥没演出，票应该是一票难求。但是没想到，闲鱼上根本无人问津。一些卖家甚至将票降到 200 块钱，我是无法忍受这么大的亏损的，所以又尝试准备去日本。&lt;/p&gt;
+&lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
+&lt;p&gt;在进行准备日本之行前，还有一件事情需要搞定：我的父母。买票之前，我并没有跟父母做过任何沟通，平时也完全没有关于出国的交流，所以是否能得到他们的许可，我心里完全没底。虽然很经常自己一个人在国内玩，但是出国人生地不熟，语言也不通，连我自己都心理没底，更何况我的父母。而且这不仅是我的第一次出国，还是计划不结伴自己独自一个人去。令我感到非常意外的是，我父母居然答应下来了。经过父母的同意之后就是开始准备各种材料了。&lt;/p&gt;
+&lt;p&gt;前几年高考完和同学本来计划去香港玩。但是由于当时香港的一些风波，社会比较动荡，旅游比较危险，所以当时行程被我们取消掉，但是却和同学将港澳通行证和护照办了下来。这也让我这次出行多了更多的可能性。因为开票时间和演出时间并没有相隔太久，而我居住的城市相关部门办理这些证件流程十分繁琐，时间线会拉的特别长。如果我没有护照，在办理签证前还需要搞定护照。但是现在因为护照已经有了，所以只要去办理签证就好了。&lt;/p&gt;
+&lt;p&gt;因为是第一次办理，也是第一次出国，并不知道签证之类的办理流程，所以查阅了很多的资料。日本在中国的几个大使馆的网站基本都被我翻遍了。旅行社说我这是敏感地区，需要一些资金作为资产证明。后来尝试其他旅行社，了解到更多关于签证办理的信息后发现，日本大使馆有一份关于本科学生签证办理的政策，刚好我的本科院校也在其中。之后就是提交各种资料进行签证的办理。&lt;/p&gt;
+&lt;h2 id=&#34;关于李志&#34;&gt;关于李志&lt;/h2&gt;
+&lt;p&gt;在去东京前，我没有做什么旅游攻略，但是却观看了大量的关于李志的一些影片。比如「叁叁肆」巡演纪录片，逼哥夜话等等。&lt;/p&gt;
+&lt;p&gt;在中国巡演路上会因为各种莫名其妙的原因取消演出，比如莫名其妙的演员证（看纪录片后面好像是给有关部门塞钱解决），各种乱七八糟的奇奇怪怪的原因。&lt;/p&gt;
+&lt;p&gt;看着 B 哥戴着帽子出来，我一度有些恍惚。仿佛看到了 18 年音乐节上的 B 哥的影子。还没回过神，他就把帽子扔向观众，也将我从回忆中拉出。&lt;/p&gt;
+&lt;p&gt;这是一种无法言说的感觉，来到这里的人一定都是被相似的东西吸引。&lt;/p&gt;
+&lt;p&gt;那些站立的、坐着的、回首的、相拥的，尽管表面静止，或许内心早已波澜壮阔。台上，李志和他的乐队演奏着他们的音乐；台下，观众脑海里闪过的是各自的人生经历。同样的歌曲，对于不同的人却有不同的感受。&lt;/p&gt;
+&lt;p&gt;这场演出，不知道哭过几回，总是不知不觉就泪流满面。来日本一趟，真的是太过不易；等一场李志的演出，也是相当难得。台上李志眼角含泪在唱，现场我们也是默默流泪。&lt;/p&gt;
+&lt;p&gt;我们是不同的个体，但在这里，我们是同频的人。&lt;/p&gt;
+&lt;p&gt;站在周围的人，都讲着同样的一种语言。观众大多都是从中国内地特地飞来，填满东京这场 8000 人的场地。相信有不少人也同我一样，都是第一次来日本。这一场演出着实给日本当地贡献了不少的 GDP。&lt;/p&gt;
+&lt;p&gt;不过也正是由于观演门槛的提高，才有幸让我抢到一张演出门票。&lt;/p&gt;
+&lt;p&gt;我对日本没有什么好感，但也远远谈不上厌恶。我没有看日漫，不看日剧，也不听日语歌，对日本也没有什么很特殊的情结，并没有什么非去不可的理由。由于过去的爱国教育的影响，所以当我走在街上看到街上悬挂着的的日本国旗，我的内心还是有点紧张，还会回想起小时候电视上播放的那些抗日战争片。如果不是这场演出，或许我多年以后才会来到这片土地。&lt;/p&gt;
+&lt;p&gt;尽管已经尽量在节省，但是这一趟，花费着实不低。真的是那句歌词唱的：「为你我用了半年的积蓄，漂洋过海来看你」。如果相同的演出在大陆，或许我可以看上七八场。
+这场演出中陈岍的口琴，周亮的贝斯，真的是太过惊艳了。这本是两个并不是主角的乐器，但是他们却将它们玩成了主角。&lt;/p&gt;
+&lt;p&gt;一个在胸前纹着中国地图，一个专辑名是「我爱南京」，一个在每场演出散场后，都会向观众鞠躬，并说我们来自南京的人。他可能比大多数人都更热爱这片土地，但是可笑的是，他却无法在这片土地上唱歌。我想起有人问过奥运会的安全总工程师：你为什么不走？他们内心似乎都有一种想唤醒国人的正义，但是这个时代却不允许他们这样的人存在。&lt;/p&gt;
+&lt;p&gt;我们所有人都在说保持理智，相信未来。但是我心里却十分悲观，演出前也是抱着可能是我最后一场看李志演出的心情来看的。但是五年了，至少有了一场巡演，总算有了一点点希望，不是吗。&lt;/p&gt;
+&lt;p&gt;这本是一场应该开在中国大陆的巡演，我们本来可以不用花这么多钱跑去日本看这场演出。但是很无奈，我们却只能在这里相见。&lt;/p&gt;
+&lt;p&gt;这场演出在我心中，并没有李志的跨年演唱会那么出彩。演出结束后，我就在思考，好像我喜欢的不是李志，也不是他的歌。更多的可能是他身上的那种代表着反抗的摇滚精神亦或是认真，专注，勤奋的工作态度。&lt;/p&gt;
+&lt;p&gt;希望这样的演出并不是看一场少一场，希望有天我能抢不到李志的票。&lt;/p&gt;
+&lt;p&gt;我们都在盼望南京跨年，我们都在盼望叁叁肆巡演能到自己的家乡。&lt;/p&gt;
+&lt;p&gt;也常常回想起 19 年第一次参加音乐节的画面，一群人散场后不约而同地唱起「港岛妹妹」。&lt;/p&gt;
+&lt;p&gt;这么多年过去了你看&lt;/p&gt;
+&lt;h2 id=&#34;我遇到的一些人&#34;&gt;我遇到的一些人&lt;/h2&gt;
+&lt;p&gt;我很幸运。&lt;/p&gt;
+&lt;p&gt;如果要问这趟旅程，什么最令我怀念。不是李志的演出，也不是日本。而是我在旅程中遇到的这些人。&lt;/p&gt;
+&lt;p&gt;第二天住在浅草寺附近，我随机漫步走进了一家居酒屋。点了些烧鸟，一小扎生啤。然后发现身边坐着一个台湾的哥们。跟他交流的过程中有一些让我很震惊的话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在台湾同一家公司工作 20 年后是可以退休的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「人生比工作更重要，所以虽然上司不太喜欢我，但是我还是经常出来」（当然这个老哥还是比较有实力的，说是在台积电工作，但是我并不能确认这个信息是否真实）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「台湾日本是免签的，所以他一年会来几次日本玩」。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;同样在这个夜晚，我还碰到了另一群很有意思的人：有 Gap 一年全球旅游并且英语超好的一个妹妹；有请我们一群人喝酒的法国大哥；也有一个我叫不出名字的国家的一家子一起出来玩；还有个台湾的哥们极力撮合我和另一个山东的妹妹。真的是一个很难忘的夜晚。&lt;/p&gt;
+&lt;p&gt;我不知道为什么，每次旅行出去，我总能碰到一些在我计划之外的人或事，而这些事在我看来远比这趟旅程更值得我怀念。&lt;/p&gt;
+&lt;p&gt;我曾在很多地方听说过「人生不是轨道，而是旷野」这句话。但直到那一夜，看过这么多人不同的人生之后，我才真正明白这句话到底意味着什么。没考上好的大学人生不会就完蛋的，没找到好工作人生也不会完蛋。每个人都有每个人自己的活法，每个人都有自己的生活方式。&lt;/p&gt;
+&lt;p&gt;有些感受，可能我这些简单而又匮乏的语言远远不能描述。只有亲身经历过后，才会被深深震撼。&lt;/p&gt;
+&lt;h2 id=&#34;关于日本&#34;&gt;关于日本&lt;/h2&gt;
+&lt;p&gt;由于旅程的时间并不多，前后加起来就只有 9 天。并且中间一天 5 月 2 日我要在东京看演出，所以这次日本之行我并没有安排大阪奈良的行程，只计划在东京周边深度游玩。这里有一些我感觉比我所呆过的一些城市不一样的地方（主要是中国的东南以及中部的城市）。&lt;/p&gt;
+&lt;h3 id=&#34;东京的物价&#34;&gt;东京的物价&lt;/h3&gt;
+&lt;p&gt;个人感觉东京这边的物价并没有高得离谱。因为去年去过香港，被香港的物价震惊过一次，所以心里早就有一些高物价的心理准备。但是工资绝对是要高出国内城市一大截。我看到一个街边小拉面馆，临时工的时薪是 1000 日元，大概相当于人民币 50 元。一天按 8 小时工作时间算的话就是 400 元。这已经超过中国 99% 的人群了。最重要的是，这是路边一家不起眼的小店的临时工的收入。&lt;/p&gt;
+&lt;p&gt;日本的星巴克非常便宜，折算下来一杯基本只要二三十块，感觉比国内便宜多了。在日本喝奶茶和喝咖啡星巴克的价格是差不多的。日本的机场车站里面的星巴克还有其他店铺比如优衣库价格与外面的价格也是相同。外面多少钱，里面的价格照样多少钱。所以可以放心大胆地在里面消费，不用像在国内这样担心被宰。&lt;/p&gt;
+&lt;h3 id=&#34;环境&#34;&gt;环境&lt;/h3&gt;
+&lt;p&gt;东京的街道非常干净，基本没有垃圾（除了每天早上会将垃圾袋放在街边等待被环卫工人收走），甚至没有垃圾桶。这导致我在行程途中，书包旁边的两个袋子一直装满垃圾，找不到扔的地方。并且他们的垃圾分类也做的非常好。我在酒店的时候经常分不清哪个垃圾要放在哪个垃圾桶，还是老板教我怎么放置。&lt;/p&gt;
+&lt;p&gt;经常走在路上发现，街头有鸟类驻足停留，并且不怕人。在城市能有这种和动物相处的画面真的是令人感慨。&lt;/p&gt;
+&lt;h3 id=&#34;交通&#34;&gt;交通&lt;/h3&gt;
+&lt;p&gt;这条其实跟卫生也有关：日本的汽车非常之干净，每辆车崭新的像是从 4S 店刚开出来的。另外虽然我对汽车了解并不算多，但是个人感觉这些汽车的价格都没有特别昂贵。并且观察了这些汽车的品牌，大部分都是日本国内的牌子，比如丰田、本田、日产等等，很少有外国的汽车牌子。像中国满地跑的新能源也基本见不到，当然这可能跟日本岛国的能源结构也有关系。当然到了银座涩谷繁华的一带一圈外国品牌的车就多了，这里也像中国的很多地方那样，跑车轰鸣。也有很多很少见的漂亮的老爷车，很多人成群结队在街上开着。&lt;/p&gt;
+&lt;p&gt;日本的汽车基本不会鸣笛，这一点真的太赞了。回到国内后，每次走在马路上，被周围的汽车鸣笛都会特别难受。所以导致现在在路上基本都是戴着降噪耳机，尽量降低一些嘈杂的声音。&lt;/p&gt;
+&lt;p&gt;日本的马路很窄，但是并没有出现很严重的堵车现象。一回到自己所居住的小城市，从火车站出来，立马感觉马路变得特别宽，但是堵车却要比日本严重得多。街道上的各种乱停的汽车也是相当之多。不过这也能理解，毕竟东京是亚洲最大的城市，城市规划做的好也是理所应当的。&lt;/p&gt;
+&lt;p&gt;中国的马路都很宽，但是都很破。像我所在的福建地区，除了厦门的马路状况好一点，其他所有城市的马路都非常之差劲。包括省会福州，对于一个骑行者来说，我甚至认为福州的马路不如其他的小城市，完全没有考虑行人以及骑行的人的感受。反观东京，经常在街头看见自行车的停放点，也经常看到也有很多日本人骑着自行车出行。回来之后看到一些网友发的日本的骑行的一镜到底的视频，真的是相当羡慕。&lt;/p&gt;
+&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
+&lt;p&gt;关于马桶。在东京基本上所有的厕所都是用的电动化马桶盖。所有的厕所卫生间都非常干净。甚至我在富士山，一个非常之偏僻的厕所，附近基本没有什么人，也是相当干净整洁。&lt;/p&gt;
+&lt;p&gt;日本五一期间连放 9 天，并且没有调休。真是令人羡慕。&lt;/p&gt;
+&lt;h3 id=&#34;生活体验&#34;&gt;生活体验&lt;/h3&gt;
+&lt;p&gt;对一个普通人来说，东京的生活体验应该是相当好。干净的环境，方便的交通出行，不愁的工作，还有许多的节假日。&lt;/p&gt;
+&lt;h2 id=&#34;关于赴日签证的一些信息&#34;&gt;关于赴日签证的一些信息&lt;/h2&gt;
+&lt;p&gt;如果你也想要去日本旅游，以下是一些你可能用得到的资料：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不同的日本大使馆负责不同地区的签证办理，具体可查询这个&lt;a href=&#34;https://www.cn.emb-japan.go.jp/itpr_zh/aboutus.html#kankatsu&#34;&gt;界面&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;大使馆签证的签发时间为签证信息送到大使馆的次日算起的 4 个工作日，大部分旅行社所给的预估时间会高出这个时间。&lt;/li&gt;
+&lt;li&gt;赴日本科签证指定院校可查看这个链接&lt;a href=&#34;https://www.shenyang.cn.emb-japan.go.jp/cn/visa/zhongguojiaoyudaxue1243.pdf&#34;&gt;全国普通大学本科リスト&lt;/a&gt;或者&lt;a href=&#34;https://www.shenyang.cn.emb-japan.go.jp/itpr_zh/cn160930_kankouvisakansoka.html&#34;&gt;关于特定高校的学生等申请单次中国人赴日个人旅游签证的通知&lt;/a&gt;。基本上所有的本科院校都包含在内了。&lt;/li&gt;
+&lt;li&gt;赴日观光旅游业务指定旅行社
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cn.emb-japan.go.jp/itpr_zh/visa_dantai_daili.html&#34;&gt;总馆&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.guangzhou.cn.emb-japan.go.jp/cgjp_cn/visa/forms/ryokousya.pdf&#34;&gt;广州领事馆&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
+    
     <item>
       <title>关于</title>
       <link>http://localhost:1313/zh/about/</link>
       <pubDate>Mon, 27 May 2024 19:19:00 +0800</pubDate>
+      
       <guid>http://localhost:1313/zh/about/</guid>
-      <description>👋 哈喽, 欢迎来到胡一希的个人博客。&#xA;我还有另外两个网站：&#xA;huyixi.com 是我的个人品牌网站。 huyixi.wiki 是我的个人知识库，我利用这个网站来减轻我大脑的记忆负担。 散步周刊 是我的个人周刊，我会在这里分享我每周的一些好玩的事情。 Now（正在开发）我会在这里更新我现在正在做的事情。 我以前做过的博客站点：&#xA;Blue：第二版博客站点，使用 hugo 搭建。很喜欢里面的一些设计。比如首页的侧边栏布局；Like 页面的书籍翻页效果；文章页的目录导航等等。 White：第三版博客站点 第一版的博客站点代码已经消失了。 欢迎与我联系&#xA;📮 Email: hi@huyixi.com&#xA;🧑‍💻 我的 GitHub&#xA;📰 通过 RSS 订阅这个博客</description>
+      <description>&lt;p&gt;👋 哈喽, 欢迎来到胡一希的个人博客。&lt;/p&gt;
+&lt;p&gt;我还有另外两个网站：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://huyixi.com&#34;&gt;huyixi.com&lt;/a&gt; 是我的个人品牌网站。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://huyixi.wiki&#34;&gt;huyixi.wiki&lt;/a&gt; 是我的个人知识库，我利用这个网站来减轻我大脑的记忆负担。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://weekly.huyixi.com&#34;&gt;散步周刊&lt;/a&gt; 是我的个人周刊，我会在这里分享我每周的一些好玩的事情。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://now.huyixi.com&#34;&gt;Now&lt;/a&gt;（正在开发）我会在这里更新我现在正在做的事情。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我以前做过的博客站点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blue.huyixi.com/zh/&#34;&gt;Blue&lt;/a&gt;：第二版博客站点，使用 hugo 搭建。很喜欢里面的一些设计。比如首页的侧边栏布局；Like 页面的书籍翻页效果；文章页的目录导航等等。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://white.huyixi.com&#34;&gt;White&lt;/a&gt;：第三版博客站点
+第一版的博客站点代码已经消失了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;欢迎与我联系&lt;br&gt;
+📮 Email: &lt;a href=&#34;mailto:hi@huyixi.com&#34;&gt;hi@huyixi.com&lt;/a&gt;&lt;br&gt;
+🧑‍💻 我的 &lt;a href=&#34;https://github.com/huyixi&#34;&gt;GitHub&lt;/a&gt;&lt;br&gt;
+📰 通过 &lt;a href=&#34;http://localhost:1313/index.xml&#34;&gt;RSS&lt;/a&gt; 订阅这个博客&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Only Black: 极简黑 Chrome 主题</title>
       <link>http://localhost:1313/zh/only-black/</link>
       <pubDate>Wed, 14 Feb 2024 15:00:29 +0800</pubDate>
+      
       <guid>http://localhost:1313/zh/only-black/</guid>
-      <description>我的第一个 Chrome 主题。已经通过谷歌商店审核。&#xA;灵感来自于 Tw93。颜色模仿自苹果官方文档颜色。&#xA;欢迎试用：链接&#xA;首次上传审核于：2024-02-13。通过审核并发布于：2024-02-14</description>
+      <description>&lt;p&gt;我的第一个 Chrome 主题。已经通过谷歌商店审核。&lt;/p&gt;
+&lt;p&gt;灵感来自于 Tw93。颜色模仿自苹果官方文档颜色。&lt;/p&gt;
+&lt;p&gt;欢迎试用：&lt;a href=&#34;https://chromewebstore.google.com/detail/only-black/imabedafnokpmhinapjjocggchcnfmgo?utm_source=ext_app_menu&#34;&gt;链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;9&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/9.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;首次上传审核于：2024-02-13。通过审核并发布于：2024-02-14&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Minilist Blog</title>
       <link>http://localhost:1313/zh/minilist-blog/</link>
       <pubDate>Sun, 07 Jan 2024 01:23:06 +0800</pubDate>
+      
       <guid>http://localhost:1313/zh/minilist-blog/</guid>
-      <description>2024 年 1 月 7 日星期日 01：44 你好，我的全新极简博客。 主题模仿：egoist</description>
+      <description>&lt;p&gt;2024 年 1 月 7 日星期日 01：44
+你好，我的全新极简博客。
+主题模仿：&lt;a href=&#34;https://egoist.dev/&#34;&gt;egoist&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>在 hugo 中使用 UnoCSS</title>
       <link>http://localhost:1313/zh/hugo-unocss/</link>
       <pubDate>Sat, 06 Jan 2024 17:28:47 +0800</pubDate>
+      
       <guid>http://localhost:1313/zh/hugo-unocss/</guid>
-      <description>这个网站使用了 hugo 静态网站生成器，CSS 方面使用 UnoCSS。以下记录了如何在 hugo 中使用 UnoCSS。&#xA;修改主题文件的 CSS 样式 {{- $cssbundle := resources.Match &amp;#34;css/*.css&amp;#34; | resources.Concat &amp;#34;css/main.css&amp;#34; -}} {{- if hugo.IsProduction }} {{ $cssbundle = $cssbundle | minify | fingerprint }} {{ end -}} &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;{{ $cssbundle.RelPermalink }}&amp;#34; {{ if hugo.IsProduction }} integrity=&amp;#34;{{ $cssbundle.Data.Integrity }}&amp;#34; {{ end }} /&amp;gt; 注意： 代码将会获取你的 assets/css 文件夹中的所有 CSS 文件。如果你喜欢将 CSS 文件放置在其他文件夹中，则需要修改第一行代码。另外，生成的 main.css 文件是存储在 hugo 内存中的，所以无法查看到。&#xA;安装 UnoCSS 依赖 首先如果你没有 package.json 这个文件的话需要先生成。</description>
+      <description>&lt;p&gt;这个网站使用了 hugo 静态网站生成器，CSS 方面使用 UnoCSS。以下记录了如何在 hugo 中使用 UnoCSS。&lt;/p&gt;
+&lt;h2 id=&#34;修改主题文件的-css-样式&#34;&gt;修改主题文件的 CSS 样式&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-HTML&#34; data-lang=&#34;HTML&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{- $cssbundle := resources.Match &amp;#34;css/*.css&amp;#34; | resources.Concat &amp;#34;css/main.css&amp;#34; -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{- if hugo.IsProduction }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ $cssbundle = $cssbundle | minify | fingerprint }} {{ end -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#000080&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;rel&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;{{ $cssbundle.RelPermalink }}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;hugo&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#008080&#34;&gt;IsProduction&lt;/span&gt; &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;}}&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;integrity&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;{{ $cssbundle.Data.Integrity }}&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;}}&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意：
+代码将会获取你的 &lt;code&gt;assets/css&lt;/code&gt; 文件夹中的所有 CSS 文件。如果你喜欢将 CSS 文件放置在其他文件夹中，则需要修改第一行代码。另外，生成的 main.css 文件是存储在 hugo 内存中的，所以无法查看到。&lt;/p&gt;
+&lt;h2 id=&#34;安装-unocss-依赖&#34;&gt;安装 UnoCSS 依赖&lt;/h2&gt;
+&lt;p&gt;首先如果你没有 package.json 这个文件的话需要先生成。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pnpm init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;之后安装 UnoCSS 相关依赖，注意这里安装你需要的即可。具体可以查看 UnoCSS 文档。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pnpm install --save-dev @unocss/cli @unocss/preset-typography @unocss/preset-uno @unocss/preset-wind
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;创建-unoconfigts-并导入预设&#34;&gt;创建 &lt;code&gt;uno.config.ts&lt;/code&gt; 并导入预设&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;import&lt;/span&gt; { defineConfig, presetUno } &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;unocss&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;default&lt;/span&gt; defineConfig({
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  presets&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; [presetUno()],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;添加运行脚本到-packagejson&#34;&gt;添加运行脚本到 package.json&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;scripts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;:&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000080&#34;&gt;&amp;#34;uno-dev&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;unocss \&amp;#34;layouts/**/**/*.html\&amp;#34; --watch -o ./assets/css/uno.css&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000080&#34;&gt;&amp;#34;uno-build&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;unocss \&amp;#34;layouts/**/**/*.html\&amp;#34; -o ./assets/css/uno.css&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;之后运行 &lt;code&gt;pnpm run uno-dev&lt;/code&gt;， UnoCSS 应该就可以正常使用了。&lt;/p&gt;
+&lt;p&gt;另外：
+如果想一行命令同时运行 &lt;code&gt;hugo server&lt;/code&gt; 和 &lt;code&gt;unocss&lt;/code&gt; 的话可以使用 &lt;code&gt;concurrently&lt;/code&gt; 插件。在 &lt;code&gt;package.json&lt;/code&gt; 脚本中添加&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;dev&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;concurrently \&amp;#34;pnpm:dev\&amp;#34; \&amp;#34;pnpm:uno-dev\&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;之后，运行 &lt;code&gt;npm run dev&lt;/code&gt; 便可使用一条命令在一个窗口中运行这两个命令了。&lt;/p&gt;
+&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
+&lt;p&gt;整个导入的过程其实还是踩了不少坑。例如：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;获取 CSS 文件的时候，参考链接中是将 CSS 文件放置在 &lt;code&gt;css/uno/main.css&lt;/code&gt; 路径下，但是使用 &lt;code&gt;resources.Match &amp;quot;css/*.css&amp;quot;&lt;/code&gt; 是无法获取到这个文件的。所以如果你也喜欢将它放置在子目录下，需要将这行代码修改成：&lt;code&gt;resources.Match &amp;quot;css/**/*.css&amp;quot;&lt;/code&gt;。但是如果只修改成 &lt;code&gt;resources.Match &amp;quot;css/**/*.css&amp;quot;&lt;/code&gt;，Hugo 又只会获取 CSS 所有子文件夹中的 CSS 文件，CSS 文件夹下的 CSS 文件是无法获取到的（这里虽然使用了 &lt;code&gt;**&lt;/code&gt; 通配符，但是是没有作用的）。&lt;/li&gt;
+&lt;li&gt;参考链接中使用的版本较低，&lt;code&gt;unocss/preset-typography&lt;/code&gt; 现在需要使用 &lt;code&gt;@unocss/preset-typography&lt;/code&gt; 来安装。&lt;/li&gt;
+&lt;li&gt;参考链接中也没有 &lt;code&gt;scripts&lt;/code&gt;，这还是在作者提供的 &lt;code&gt;hugo + UnoCSS&lt;/code&gt; 模板中找到的。不过这一步由于之前使用 TailwindCSS 的时候在这里踩过坑，所以还算顺利。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/unocss/unocss/discussions/555&#34;&gt;参考链接&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Raycast 插件：Get Time</title>
       <link>http://localhost:1313/zh/get-time/</link>
       <pubDate>Sun, 22 Oct 2023 23:01:03 +0800</pubDate>
+      
       <guid>http://localhost:1313/zh/get-time/</guid>
-      <description>上周在空闲时间做了一个 Sidebar Project。一个 Raycast 插件，可以获取指定格式的时间。&#xA;因为自己在写博客日志的时候，需要获取到一个比较精确的时间（方便以后回忆当时的自己）。因为使用的是苹果自带的输入法，所以不能像 搜狗或者其他国产输入法那样只输入 sj 就可以获取到当前时间。并且查看设置项发现也无法进行这种设置。于是写了这样一个 Raycast 小插件来获取。&#xA;后续发现自己正在使用 Rime 输入法，其实可以通过 Rime 的 lua 插件来输入，体验会更流畅。&#xA;仓库地址：https://github.com/huyixi/get-time.git</description>
+      <description>&lt;p&gt;上周在空闲时间做了一个 Sidebar Project。一个 Raycast 插件，可以获取指定格式的时间。&lt;/p&gt;
+&lt;p&gt;因为自己在写博客日志的时候，需要获取到一个比较精确的时间（方便以后回忆当时的自己）。因为使用的是苹果自带的输入法，所以不能像 搜狗或者其他国产输入法那样只输入 &lt;code&gt;sj&lt;/code&gt; 就可以获取到当前时间。并且查看设置项发现也无法进行这种设置。于是写了这样一个 Raycast 小插件来获取。&lt;/p&gt;
+&lt;p&gt;后续发现自己正在使用 Rime 输入法，其实可以通过 Rime 的 lua 插件来输入，体验会更流畅。&lt;/p&gt;
+&lt;p&gt;仓库地址：https://github.com/huyixi/get-time.git&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;get-time&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/get-time.png&#34;&gt;&lt;/p&gt;
+</description>
     </item>
+    
     <item>
-      <title>我的电子书阅读不完全解决方案</title>
-      <link>http://localhost:1313/zh/ebook-solution/ebook-solution/</link>
+      <title>Ebook-Solutions</title>
+      <link>http://localhost:1313/zh/ebook-solution/</link>
       <pubDate>Sun, 21 May 2023 08:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/zh/ebook-solution/ebook-solution/</guid>
-      <description>个人用法 2024-05-23&#xA;由于本文成文较早，所以有一些内容已经过时，以下是最近个人的一些用法，仅供参考。现在是我自己用的比较舒服的几个方式。&#xA;获取电子书&#xA;互联网直接下载：Zlib + Anna 自制电子书：Web2Book RSS 订阅：QiReader 看到的好文章：保存到 Instapaper 后推送到 Kindle 传输电子书&#xA;Send to Kindle 软件 一些文件内容较大的通过 Caliber 传输 非 Epub 格式的文件，例如 AZW3 或者 MOBI 甚至是 PDF，通过 Convertio 进行格式转换后传输。 开始阅读吧！&#xA;上面所介绍的这些方法以下都会有相关介绍，所以可以继续阅读，当然要辨别一些目前可能无法使用的方法。&#xA;获取电子书 以下不包含从电子书商城购买下载的内容.下面的内容可能涉及到侵权等,如果资金允许,建议从正规渠道购买下载.&#xA;从互联网获取电子书 Z-Library 该组织将自己描述为“世界上最大的电子书图书馆”，以及“世界上最大的科学文章商店”.并作为一个由捐赠维持的非营利组织运营。但是 2022 年 11 月，该网站的域名被美国司法部查封..在 Z-Library 的用户群中,中国用户遥遥领先于其他国家(来自 Z-Library 博客 Worldwide Statistics: How Students and Educators Use Z-Library 中的数据).&#xA;如何访问 Z-Library 通过域名访问&#xA;Web:https://singlelogin.re&#xA;TOR:http://loginzlib2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion&#xA;I2P:http://zlib24th6ptyb4ibzn3tj2cndqafs6rhm4ed4gruxztaaco35lka.b32.i2p&#xA;通过域名访问里面的部分内容可能无法查看,如博客,书单等页面.这些内容可以通过使用个人域名访问&#xA;以上域名随时可能被回收,如果无法访问可以使用电子邮件获取,或者从从官方发布的最新域名中获取.官方频道&#xA;通过电子邮件获取个人 zlib 域名后，通过个人域名访问&#xA;你可以使用任意邮箱,发送任意内容到 blackbox@zlib.se,你将在 3-5 分钟内收到你 Z-Library 个人的域名。如果没有收到邮件,前往被拦截的邮件中查看.</description>
+      
+      <guid>http://localhost:1313/zh/ebook-solution/</guid>
+      <description></description>
     </item>
+    
     <item>
       <title>Windows 装机指南</title>
       <link>http://localhost:1313/zh/the-use-of-windows-computer/</link>
       <pubDate>Mon, 24 Apr 2023 02:49:00 +0800</pubDate>
+      
       <guid>http://localhost:1313/zh/the-use-of-windows-computer/</guid>
-      <description>由于本文内容较长，且个人博客不附带目录导航。更推荐在我的 wiki 网站进行阅读，这是本文的链接。可以通过点击目录进行快速导航跳转。 前情提要：根据本人的多次装机历史记录而成，基本满足本人 Windows 装机需求。&#xA;系统安装 系统镜像下载网站 itellyou：https://msdn.itellyou.cn itellyou 新网站（主要下载系统镜像）：https://next.itellyou.cn/ 制作系统启动盘 需要提前准备一个 16G 以上的 U 盘作为启动盘&#xA;rufus（Windows）官网地址：https://rufus.ie/en/&#xA;UNetbootin（多平台）：https://unetbootin.github.io/&#xA;进入 BIOS 界面将 U 盘设置为启动盘 一些笔记本侧边有 Reset 插口，使用卡针插入即可进入 BIOS 界面&#xA;激活系统 Windows 系统激活参考教程：www.kms.pub&#xA;slmgr -ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D（该激活码为 Windows10 企业版激活码，不同系统版本使用不同的激活码，除本行外下面的命令都一样） slmgr -skms kms.03k.org slmgr -ato slmgr -dlv Windows 激活密钥 通用批量许可证密钥 (GVLK) 在下表中，可找到 Windows 每个版本的 GVLK。 LTSC 是长期服务渠道，而 LTSB 是 Long-Term Servicing Branch 。&#xA;Windows Server（LTSC 版本） Windows Server 2022 操作系统版本 KMS 客户端产品密钥 Windows Server 2022 Datacenter WX4NM-KYWYW-QJJR4-XV3QB-6VM33 Windows Server 2022 Standard VDYBN-27WPP-V4HQT-9VMD4-VMK7H Windows Server 2019 操作系统版本 KMS 客户端产品密钥 Windows Server 2019 Datacenter WMDGN-G9PQG-XVVXX-R3X43-63DFG Windows Server 2019 Standard N69G4-B89J2-4G8F4-WWYCC-J464C Windows Server 2019 Essentials WVDHN-86M7X-466P6-VHXV7-YY726 Windows Server 2016 操作系统版本 KMS 客户端产品密钥 Windows Server 2016 Datacenter CB7KF-BWN84-R7R2Y-793K2-8XDDG Windows Server 2016 Standard WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY Windows Server 2016 Essentials JCKRF-N37P4-C2D82-9YXRT-4M63B Windows Server（半年频道版本） Windows Server，版本 20H2、2004、1909、1903 和 1809 操作系统版本 KMS 客户端产品密钥 Windows Server Datacenter 6NMRW-2C8FM-D24W7-TQWMY-CWH2D Windows Server Standard N2KJX-J94YW-TQVFB-DG9YT-724CC Windows 11 和 Windows 10（半年频道版本） 有关受支持的版本和服务终止日期的信息，请参阅 Windows 生命周期情况说明书。</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;由于本文内容较长，且个人博客不附带目录导航。更推荐在我的 wiki 网站进行阅读，这是本文的&lt;a href=&#34;https://huyixi.wiki/Windows&#34;&gt;链接&lt;/a&gt;。可以通过点击目录进行快速导航跳转。
+前情提要：根据本人的多次装机历史记录而成，基本满足本人 Windows 装机需求。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;系统安装&#34;&gt;系统安装&lt;/h2&gt;
+&lt;h3 id=&#34;系统镜像下载网站&#34;&gt;系统镜像下载网站&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;itellyou：&lt;a href=&#34;https://msdn.itellyou.cn&#34;&gt;https://msdn.itellyou.cn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;itellyou 新网站（主要下载系统镜像）：&lt;a href=&#34;https://next.itellyou.cn/&#34;&gt;https://next.itellyou.cn/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;制作系统启动盘&#34;&gt;制作系统启动盘&lt;/h3&gt;
+&lt;p&gt;需要提前准备一个 16G 以上的 U 盘作为启动盘&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;rufus（Windows）官网地址：&lt;a href=&#34;https://rufus.ie/en/&#34;&gt;https://rufus.ie/en/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UNetbootin（多平台）：&lt;a href=&#34;https://unetbootin.github.io/&#34;&gt;https://unetbootin.github.io/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;进入-bios-界面将-u-盘设置为启动盘&#34;&gt;进入 BIOS 界面将 U 盘设置为启动盘&lt;/h3&gt;
+&lt;p&gt;一些笔记本侧边有 Reset 插口，使用卡针插入即可进入 BIOS 界面&lt;/p&gt;
+&lt;h3 id=&#34;激活系统&#34;&gt;激活系统&lt;/h3&gt;
+&lt;p&gt;Windows 系统激活参考教程：www.kms.pub&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;slmgr -ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D（该激活码为 Windows10 企业版激活码，不同系统版本使用不同的激活码，除本行外下面的命令都一样）
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;slmgr -skms kms.03k.org
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;slmgr -ato
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;slmgr -dlv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;windows-激活密钥&#34;&gt;Windows 激活密钥&lt;/h4&gt;
+&lt;h5 id=&#34;通用批量许可证密钥-gvlk&#34;&gt;通用批量许可证密钥 (GVLK)&lt;/h5&gt;
+&lt;p&gt;在下表中，可找到 Windows 每个版本的 GVLK。 LTSC 是长期服务渠道，而 LTSB 是 Long-Term Servicing Branch 。&lt;/p&gt;
+&lt;h5 id=&#34;windows-serverltsc-版本&#34;&gt;Windows Server（LTSC 版本）&lt;/h5&gt;
+&lt;h6 id=&#34;windows-server-2022&#34;&gt;Windows Server 2022&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2022 Datacenter&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;WX4NM-KYWYW-QJJR4-XV3QB-6VM33&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2022 Standard&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;VDYBN-27WPP-V4HQT-9VMD4-VMK7H&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;windows-server-2019&#34;&gt;Windows Server 2019&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2019 Datacenter&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;WMDGN-G9PQG-XVVXX-R3X43-63DFG&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2019 Standard&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;N69G4-B89J2-4G8F4-WWYCC-J464C&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2019 Essentials&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;WVDHN-86M7X-466P6-VHXV7-YY726&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;windows-server-2016&#34;&gt;Windows Server 2016&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2016 Datacenter&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;CB7KF-BWN84-R7R2Y-793K2-8XDDG&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2016 Standard&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2016 Essentials&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;JCKRF-N37P4-C2D82-9YXRT-4M63B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id=&#34;windows-server半年频道版本&#34;&gt;Windows Server（半年频道版本）&lt;/h5&gt;
+&lt;h6 id=&#34;windows-server版本-20h2200419091903-和-1809&#34;&gt;Windows Server，版本 20H2、2004、1909、1903 和 1809&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server Datacenter&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;6NMRW-2C8FM-D24W7-TQWMY-CWH2D&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server Standard&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;N2KJX-J94YW-TQVFB-DG9YT-724CC&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id=&#34;windows-11-和-windows-10半年频道版本&#34;&gt;Windows 11 和 Windows 10（半年频道版本）&lt;/h5&gt;
+&lt;p&gt;有关受支持的版本和服务终止日期的信息，请参阅 &lt;a href=&#34;https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet&#34;&gt;Windows 生命周期情况说明书&lt;/a&gt;。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 专业版 Windows 10 专业版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;W269N-WFGWX-YVC9B-4J6C9-T83GX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 专业版 N Windows 10 专业版 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;MH37W-N47XK-V7XM9-C7227-GCQG9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 专业工作站版 Windows 10 专业工作站版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 专业工作站版 N Windows 10 专业工作站版 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;9FNHH-K3HBT-3W4TD-6383H-6XYWF&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 专业教育版 Windows 10 专业教育版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;6TP4R-GNPTD-KYYHQ-7B7DP-J447Y&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 专业教育版 N Windows 10 专业教育版 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;YVWGF-BXNMC-HTQYQ-CPQ99-66QFC&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 教育版 Windows 10 教育版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;NW6C2-QMPVW-D7KKK-3GKT6-VCFB2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 教育版 N Windows 10 教育版 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2WH4N-8QGBV-H22JP-CT43Q-MDWWJ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 企业版 Windows 10 企业版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;NPPR9-FWDCX-D2C8J-H872K-2YT43&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 企业版 N Windows 10 企业版 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 企业版 G Windows 10 企业版 G&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;YYVX9-NTFWV-6MDM3-9PT4T-4M68B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 11 企业版 G N Windows 10 企业版 G N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;44RPN-FTY23-9VTTB-MP9BX-T84FV&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id=&#34;windows-10ltscltsb-版本&#34;&gt;Windows 10（LTSC/LTSB 版本）&lt;/h5&gt;
+&lt;h6 id=&#34;windows-10-ltsc-2021-和-2019&#34;&gt;Windows 10 LTSC 2021 和 2019&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 10 企业版 LTSC 2021 Windows 10 企业版 LTSC 2019&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;M7XTQ-FN8P6-TTKYV-9D4CC-J462D&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 10 企业版 N LTSC 2021 Windows 10 企业版 N LTSC 2019&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;92NFX-8DJQP-P6BBQ-THF9C-7CG2H&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;windows-10-ltsb-2016&#34;&gt;Windows 10 LTSB 2016&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 10 企业版 LTSB 2016&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 10 企业版 N LTSB 2016&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;QFFDN-GRT3P-VKWWX-X7T3R-8B639&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;windows-10-ltsb-2015&#34;&gt;Windows 10 LTSB 2015&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 10 企业版 2015 LTSB&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;WNMTR-4C88C-JK8YV-HQ7T2-76DF9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 10 企业版 2015 LTSB N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2F77B-TNFGY-69QQF-B8YKP-D69TJ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id=&#34;早期版本的-windows-server&#34;&gt;早期版本的 Windows Server&lt;/h5&gt;
+&lt;h6 id=&#34;windows-server-版本-1803&#34;&gt;Windows Server 版本 1803&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server Datacenter&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server Standard&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;PTXN8-JFHJM-4WC78-MPCBR-9W4KR&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;windows-server-版本-1709&#34;&gt;Windows Server 版本 1709&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server Datacenter&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;6Y6KB-N82V8-D8CQV-23MJW-BWTG6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server Standard&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;windows-server-2012-r2&#34;&gt;Windows Server 2012 R2&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2012 R2 Standard&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;D2N9P-3P6X9-2R39C-7RTCD-MDVJX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2012 R2 Datacenter&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2012 R2 Essentials&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;KNC87-3J2TX-XB4WP-VCPJV-M4FWM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;windows-server-2012&#34;&gt;Windows Server 2012&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2012&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;BN3D2-R7TKB-3YPBD-8DRP2-27GG4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2012 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;8N2M2-HWPGY-7PGT9-HGDD8-GVGGY&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2012 单语言版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2WN2H-YGCQR-KFX6K-CD6TF-84YXQ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2012 特定国家/地区版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;4K36P-JN4VD-GDC6V-KDT89-DYFKP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2012 Standard&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;XC9B7-NBPP2-83J2H-RHMBY-92BT4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2012 MultiPoint 标准版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;HM7DN-YVMH3-46JC3-XYTG7-CYQJJ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2012 MultiPoint 高级版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2012 Datacenter&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;48HP8-DN98B-MYWDG-T2DCC-8W83P&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;windows-server-2008-r2&#34;&gt;Windows Server 2008 R2&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2008 R2 Web 版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;6TPJF-RBVHG-WBW2R-86QPH-6RTM4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2008 R2 HPC 版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;TT8MH-CG224-D3D7Q-498W2-9QCTX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2008 R2 标准版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;YC6KT-GKW9T-YTKYR-T4X34-R7VHC&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2008 R2 企业版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;489J6-VHDMP-X63PK-3K798-CPX3Y&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2008 R2 Datacenter&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;74YFP-3QFB3-KQT8W-PMXWJ-7M648&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;面向基于 Itanium 系统的 Windows Server 2008 R2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;GT63C-RJFQ3-4GMB6-BRFB9-CB83V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;windows-2008-server&#34;&gt;Windows 2008 Server&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Web Server 2008&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;WYR28-R7TFJ-3X2YQ-YCY4H-M249D&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2008 标准版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;TM24T-X9RMF-VWXK6-X8JC9-BFGM2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;不带 Hyper-V 的 Windows Server 2008 标准版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2008 企业版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;YQGMW-MPWTJ-34KDK-48M3W-X4Q6V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;不带 Hyper-V 的 Windows Server 2008 企业版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;39BXF-X8Q23-P2WWT-38T2F-G3FPG&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2008 HPC&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;RCTX3-KWVHP-BR6TB-RB6DM-6X7HP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows Server 2008 Datacenter&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;7M67G-PC374-GR742-YH8V4-TCBY3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;不带 Hyper-V 的 Windows Server 2008 数据中心版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;22XQ2-VRXRG-P8D42-K34TD-G3QQC&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;面向基于 Itanium 系统的 Windows Server 2008&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;4DWFP-JF3DJ-B7DTH-78FJB-PDRHK&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;早期版本的-windows&#34;&gt;早期版本的 Windows&lt;/h4&gt;
+&lt;h5 id=&#34;windows-81&#34;&gt;Windows 8.1&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 8.1 专业版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;GCRJD-8NW9H-F2CDX-CCM8D-9D6T9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 8.1 专业版 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;HMCNV-VVBFX-7HMBH-CTY9B-B4FXY&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 8.1 企业版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;MHF9N-XY6XB-WVXMC-BTDCT-MKKG7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 8.1 企业版 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;TT4HM-HN7YT-62K67-RGRQJ-JFFXW&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;windows-8&#34;&gt;Windows 8&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 8 专业版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;NG4HW-VH26C-733KW-K6F98-J8CK4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 8 专业版 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;XCVCF-2NXM9-723PB-MHCB7-2RYQQ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 8 企业版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;32JNW-9KQ84-P47T8-D8GGY-CWCK7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 8 企业版 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;JMNMF-RHW7P-DMY6X-RF3DR-X2BQT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;windows-7&#34;&gt;Windows 7&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作系统版本&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;KMS 客户端产品密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 7 专业版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 7 专业版 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;MRPKT-YTG23-K7D7T-X2JMM-QY7MG&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 7 专业版 E&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;W82YF-2Q76Y-63HXB-FGJG9-GF7QX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 7 企业版&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;33PXH-7Y6KF-2VJC9-XBBR8-HVTHH&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 7 企业版 N&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;YDRBP-3D83W-TY26F-D46B2-XCKRJ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Windows 7 企业版 E&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;C29WB-22CC8-VJ326-GHFJW-H9DH4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;推荐使用-windows10-企业版-ltsc&#34;&gt;推荐使用 Windows10 企业版 LTSC&lt;/h4&gt;
+&lt;p&gt;参考链接：&lt;a href=&#34;https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys&#34;&gt;https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;检测系统&#34;&gt;检测系统&lt;/h3&gt;
+&lt;p&gt;如果是全新的电脑系统安装完毕后安装 &lt;strong&gt;AIDA&lt;/strong&gt; 或者 &lt;strong&gt;图吧工具箱&lt;/strong&gt; 测试系统是否能正常运行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;AIDA64 Extreme：至尊版
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;FUUJ1-E3YDB-HTDTK-2D894-4BVAQ
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;4U12U-SDWD6-8WDNH-HDAM4-W3MZW
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;F5R3D-XUPD6-4TD9B-2D2L4-354AX
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;3H39D-ZFQD6-1ED96-UD274-RD44G
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;4U12U-SDWD6-8WDNH-HDAM4-W3MZW
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;AIDA64 Engineer：工程版
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;YHDZ3-91UD6-ZUDN3-QDSS4-RXPDC
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;FNU14-63KD6-XSD9N-VDV14-4VRN1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;4X1DF-KDTD6-9EDNY-DDGD4-W7N4Q
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;F9U44-B3ID6-THD98-6DV44-4Z6U2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;4T1HF-WDPD6-3FD99-3DGH4-WGFPJ
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;AIDA64 Business：商业版
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;DCYPF-G4UD6-7DDNF-KDGS4-HXPVI
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;1U4S4-2Y3D6-55D9E-PD5Z4-CF5C9
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RRFGY-PUQD6-KFD9Z-1DP74-3DKWB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;USUB4-4FAD6-UTD9Q-2D8H4-42DZA
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;3QRDD-KF6D6-J6D9V-IDPU4-3MJ45
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;dll-缺失&#34;&gt;dll 缺失&lt;/h4&gt;
+&lt;p&gt;下载缺失的 dll 文件后&lt;a href=&#34;https://www.dll-files.com&#34;&gt;https://www.dll-files.com&lt;/a&gt; ，放置到 C:/System/Windows32/&lt;/p&gt;
+&lt;h4 id=&#34;win11-下应用程序无法正确启动0xc000007b解决方法&#34;&gt;Win11 下“应用程序无法正确启动(0xc000007b)”解决方法&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.howtogeek.com/874113/how-to-fix-the-0xc000007b-error-on-windows/&#34;&gt;链接&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;windows-系统设置&#34;&gt;Windows 系统设置&lt;/h2&gt;
+&lt;h3 id=&#34;磁盘分区&#34;&gt;磁盘分区&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;win + R&lt;/code&gt; 调出运行窗口&lt;/li&gt;
+&lt;li&gt;在窗口中输入 &lt;code&gt;diskmgmt.msc&lt;/code&gt; 调出磁盘管理界面&lt;/li&gt;
+&lt;li&gt;根据自己的需要建立分区&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;关闭用户账户控制提醒&#34;&gt;关闭用户账户控制提醒&lt;/h3&gt;
+&lt;p&gt;防止每次安装软件或者修改系统设置时候弹出提醒窗口&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Win + R 打开运行&lt;/li&gt;
+&lt;li&gt;在输入窗口输入 &lt;code&gt;msconfig&lt;/code&gt; 调出 系统配置 System Configuration Utility&lt;/li&gt;
+&lt;li&gt;点击上方的工具菜单 -&amp;gt; 找到 更改 UAC 用户账户控制 设置 -&amp;gt; 启动设置&lt;/li&gt;
+&lt;li&gt;将通知杆往下拉,修改为从不通知,点击确定&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;关闭系统版本的自动检查与更新&#34;&gt;关闭系统版本的自动检查与更新&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;win + R&lt;/code&gt; 调出运行窗口,输入 &lt;code&gt;gpedit.msc&lt;/code&gt; Group Policy Editor 调出组策略编辑器&lt;/li&gt;
+&lt;li&gt;本地计算机策略 - 计算机配置 - 管理模板 - Windows 组件 - Windows 更新 - 指定 Intranet Microsoft 更新位置服务 - 双击打开&lt;/li&gt;
+&lt;li&gt;可以看到默认的配置是已启用,修改 &lt;code&gt;设置检测更新的 Intranet 更新服务&lt;/code&gt; 以及下方的 &lt;code&gt;设置 Intranet 统计服务器&lt;/code&gt; 将两者的输入框都修改为 &lt;code&gt;127.0.0.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;点击应用即可&lt;/li&gt;
+&lt;li&gt;验证:打开系统更新界面查看是否已经禁用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;修改桌面存储桌面文件的文件夹下载文档等文件夹的存储位置&#34;&gt;修改桌面（存储桌面文件的文件夹）、下载、文档等文件夹的存储位置&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;该文件夹一般存储在 C://Users/{{ username }} 下&lt;/li&gt;
+&lt;li&gt;修改存储位置：右键 -&amp;gt; 属性 -&amp;gt; 位置 -&amp;gt; 修改文件存储位置 -&amp;gt; 移动&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;添加开机启动项&#34;&gt;添加开机启动项&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 &lt;code&gt;:\Users\:\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup&lt;/code&gt; 文件夹（上述的 &lt;code&gt;:user&lt;/code&gt; 为你当前使用的系统的用户名），或者使用 Win + R 打开 Windows 系统的运行窗口，键入 &lt;code&gt;shell:startup&lt;/code&gt; 点击确定，打开启动文件夹&lt;/li&gt;
+&lt;li&gt;将需要启动的应用的快捷方式添加到该文件夹&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;修改应用程序的默认安装位置&#34;&gt;修改应用程序的默认安装位置&lt;/h3&gt;
+&lt;p&gt;⚠️ 修改该设置后无法自动修改快捷方式的指向位置，目前我暂未找到解决方案&lt;/p&gt;
+&lt;p&gt;修改该设置后应用程序的默认安装位置将从默认位置即 C:/Program Files 或 C:/Program Files (x86) 移动到你所设定的位置&lt;/p&gt;
+&lt;p&gt;在我的硬盘驱动器上创建一个文件夹名称 Program Files (x86)：D
+然后而不是去 &amp;lsquo;&amp;lsquo;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion&amp;rsquo;&amp;rsquo;
+我必须去这里&amp;raquo;&amp;lsquo;HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion&amp;rsquo;&amp;rsquo;
+然后修改 &amp;lsquo;&amp;lsquo;ProgramFilesDir (x86)&amp;rsquo;&amp;rsquo; 和 &amp;lsquo;&amp;lsquo;ProgramFilesDir&amp;rsquo;&amp;rsquo; 的数值&lt;/p&gt;
+&lt;h4 id=&#34;修改-cuser-文件夹的存储位置&#34;&gt;修改 C:/User 文件夹的存储位置&lt;/h4&gt;
+&lt;p&gt;⚠️ 该操作有风险,操作前注意备份自己的数据!&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;创建一个 relocate.xml 文件,文件内容如下,并根据下列提示修改文件内容&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#999;font-weight:bold;font-style:italic&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;lt;unattend&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;xmlns=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;urn:schemas-microsoft-com:unattend&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;lt;settings&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;pass=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;oobeSystem&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;lt;component&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;Microsoft-Windows-Shell-Setup&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;processorArchitecture=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;amd64&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;publicKeyToken=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;31bf3856ad364e35&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;language=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;neutral&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;versionScope=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;nonSxS&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;xmlns:wcm=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;http://schemas.microsoft.com/WMIConfig/2002/State&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;xmlns:xsi=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;lt;FolderLocations&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;lt;ProfilesDirectory&amp;gt;&lt;/span&gt;D:\Users&lt;span style=&#34;color:#000080&#34;&gt;&amp;lt;/ProfilesDirectory&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;lt;/FolderLocations&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;lt;/component&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;lt;/settings&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000080&#34;&gt;&amp;lt;/unattend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;⚠️ 如果你的操作系统是 32 位则将 &lt;code&gt;processorArchitecture=&amp;quot;amd64&amp;quot;&lt;/code&gt; 更改为 &lt;code&gt;processorArchitecture=&amp;quot;x86&lt;/code&gt;.如果是 64 位则无需更改&lt;/p&gt;
+&lt;p&gt;⚠️ 修改 &lt;code&gt;&amp;lt;ProfilesDirectory&amp;gt;D:\Users&amp;lt;/ProfilesDirectory&amp;gt;&lt;/code&gt; 中 &lt;code&gt;D:\Users&lt;/code&gt; 的值为你想要保存文件夹的位置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登陆到你的电脑管理员账户&lt;/p&gt;
+&lt;p&gt;从 Windows 设置 - 账户 - 账户信息/家庭和其他用户 查看当前的账户权限&lt;/p&gt;
+&lt;p&gt;如果为管理员账户会显示管理员字样&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用管理员权限打开 cmd 并进行以下操作&lt;/p&gt;
+&lt;p&gt;输入 net user Administrator /active:yes 并回车 激活系统管理员账户&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注销当前账户:&lt;/p&gt;
+&lt;p&gt;开始菜单 - {{你的用户名}} -注销&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登陆 Administrator 管理员账户&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;停用系统除了 Administrator 管理员账户以外的所有账户:&lt;/p&gt;
+&lt;p&gt;使用管理员模式打开 CMD - 输入 &lt;code&gt;net user 你的账户名 /active:no&lt;/code&gt;,将 &lt;code&gt;你的账户名&lt;/code&gt; 修改为你系统所使用的账户名,有几个账户名执行几次改命令&lt;/p&gt;
+&lt;p&gt;执行完命令后从 &lt;code&gt;Windows 设置&lt;/code&gt; - &lt;code&gt;账户&lt;/code&gt; - &lt;code&gt;家庭和其他用户&lt;/code&gt; 中查看是否完全停用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CMD 切换到 sysprep 文件夹&lt;/p&gt;
+&lt;p&gt;该文件夹的绝对路径为 &lt;code&gt;C:\Windows\System32\Sysprep&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;执行 cmd 命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysprep /oobe /reboot /unattend:D:&lt;span style=&#34;color:#d14&#34;&gt;\r&lt;/span&gt;elocate.xml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中 unattend 命令后的内容为第一步所保存的 xml 文件的绝对路径,根据自己的存储位置修改即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统将自动重启并创建新的用户,根据系统提示进行操作即可&lt;/p&gt;
+&lt;p&gt;需要提醒的是,新创建的账户名称不能与之前的账户名称相同,你可以随意设置一个,之后再进行更改&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入系统后查看 Users 文件夹是否已经移动到你所设置的位置&lt;/p&gt;
+&lt;p&gt;此时已经成功迁移 Users 文件夹&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;激活在第 6 步停用的账户&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;net user {{你的账户名}} /active:yes&lt;/code&gt; 与之前相同,有多少个账户就执行多少次命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注销临时账户,登陆你自己的管理员账户(不是 Administrator )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 Windows 设置 中删除你在第 9 步所设置的临时账户&lt;/p&gt;
+&lt;p&gt;参考教程 &lt;a href=&#34;https://www.tenforums.com/tutorials/1964-move-users-folder-location-windows-10-a.html&#34;&gt;https://www.tenforums.com/tutorials/1964-move-users-folder-location-windows-10-a.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;删除文件资源管理器中左侧菜单栏的此电脑下的-3d-对象等文件夹&#34;&gt;删除文件资源管理器中左侧菜单栏的此电脑下的 3D 对象等文件夹&lt;/h3&gt;
+&lt;p&gt;1.打开注册表编辑器（键盘 Win+R 中输入 regedit 并回车）&lt;/p&gt;
+&lt;p&gt;2.定位到：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace**&lt;/p&gt;
+&lt;p&gt;3.右键删除&lt;strong&gt;DelegateFolders&lt;/strong&gt;以上的注册表项，刷新资源管理器后就生效了。&lt;/p&gt;
+&lt;p&gt;下载：{088e3905-0323-4b02-9826-5d99428e115f}&lt;/p&gt;
+&lt;p&gt;图片：{24ad3ad4-a569-4530-98e1-ab02f9417aa8}&lt;/p&gt;
+&lt;p&gt;音乐：{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}&lt;/p&gt;
+&lt;p&gt;桌面：{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}&lt;/p&gt;
+&lt;p&gt;文档：{d3162b92-9365-467a-956b-92703aca08af}&lt;/p&gt;
+&lt;p&gt;视频：{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}&lt;/p&gt;
+&lt;p&gt;3D 对象：{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}&lt;/p&gt;
+&lt;h3 id=&#34;隐藏桌面上的回收站我的电脑等图标&#34;&gt;隐藏桌面上的回收站、我的电脑等图标&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;桌面空白处右键 - 个性化&lt;/li&gt;
+&lt;li&gt;打开设置主页 - 选择主题 - 右侧边栏 - 相关的设置 - 桌面图标设置&lt;/li&gt;
+&lt;li&gt;根据需要隐藏桌面图标的勾选状态并点击应用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;默认展开资源管理器中文件夹&#34;&gt;默认展开资源管理器中文件夹&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;打开资源管理器&lt;/li&gt;
+&lt;li&gt;左上方菜单栏 查看&lt;/li&gt;
+&lt;li&gt;打开查看菜单栏 - 点击选项打开文件夹选项&lt;/li&gt;
+&lt;li&gt;查看 - 导航窗格下的展开到打开的文件夹&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;修改文件的显示路径为绝对路径&#34;&gt;修改文件的显示路径为绝对路径&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;打开资源管理器&lt;/li&gt;
+&lt;li&gt;左上方菜单栏 查看&lt;/li&gt;
+&lt;li&gt;打开查看菜单栏 - 点击选项打开文件夹选项&lt;/li&gt;
+&lt;li&gt;在标题栏中显示完整路径&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;关闭-windows-安全中心&#34;&gt;关闭 Windows 安全中心&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;win + R&lt;/code&gt; 打开 运行窗口 输入 gpedit.msc 打开组策略编辑器&lt;/li&gt;
+&lt;li&gt;本地计算机策略 - 计算机配置 - 管理模板 - Windows 组件 - Microsoft Defender 防病毒 - 双击 - 右侧找到 - 关闭 Microsoft Defender 防病毒&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;关闭诊断和反馈&#34;&gt;关闭诊断和反馈&lt;/h3&gt;
+&lt;p&gt;打开 &lt;code&gt;Windows设置&lt;/code&gt; 面板 - 隐私 - 诊断和反馈 -勾选必需诊断数据 &amp;amp; 反馈频率修改为 从不&lt;/p&gt;
+&lt;h3 id=&#34;关闭活动历史记录&#34;&gt;关闭活动历史记录&lt;/h3&gt;
+&lt;p&gt;打开 &lt;code&gt;Windows设置&lt;/code&gt; 面板 - 隐私 - 活动历史记录 - 取消勾选 在此设备上存储我的活动历史记录 向 Microsoft 发送我的活动历史记录&lt;/p&gt;
+&lt;h3 id=&#34;如何优化-windows-的性能&#34;&gt;如何优化 Windows 的性能&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tenforums.com/tutorials/26120-optimize-performance-windows-10-a.html&#34;&gt;https://www.tenforums.com/tutorials/26120-optimize-performance-windows-10-a.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;软件推荐&#34;&gt;软件推荐&lt;/h2&gt;
+&lt;h3 id=&#34;输入法&#34;&gt;输入法&lt;/h3&gt;
+&lt;h4 id=&#34;输入法方案推荐&#34;&gt;输入法方案推荐&lt;/h4&gt;
+&lt;p&gt;进行中文输入推荐使用双拼输入法，熟练使用后可以极大提高输入效率&lt;/p&gt;
+&lt;p&gt;双拼输入法有多种方案，根据需要进行选择，我自己使用过 &lt;strong&gt;自然码双拼&lt;/strong&gt; 与 &lt;strong&gt;小鹤双拼&lt;/strong&gt; 。熟练使用后两者的输入速度没有很大差距。目前使用小鹤双拼的原因是 iOS 上自带的输入法不支持自然码双拼。&lt;/p&gt;
+&lt;p&gt;注意选择输入方案的时候尽量不要选择使用标点符号当作输入按键的方案（如搜狗双拼等），否则在手机上显示键盘与平时有差异。&lt;/p&gt;
+&lt;p&gt;学习双拼第一周可以背一下键位表，忘记的键位尽量先回想，回想不起来再去看键位图。&lt;/p&gt;
+&lt;p&gt;一周过后基本可以熟练使用双拼，一个月后基本已经变成肌肉记忆，不用再去想键位分布就可马上打出来。&lt;/p&gt;
+&lt;h4 id=&#34;rime-输入法&#34;&gt;Rime 输入法&lt;/h4&gt;
+&lt;p&gt;首选的开源输入法。但是配置较为繁琐，且软件是繁体中文，设置起来相对不是很舒服。软件的配置可以使用 github 上一些配置好的直接导入即可。可以根据需要自己去研究官方的配置文件&lt;/p&gt;
+&lt;p&gt;官网地址：&lt;a href=&#34;https://rime.im/&#34;&gt;https://rime.im/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Rime 是跨平台的輸入法軟件，Rime 輸入方案可通用於以下發行版：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;【中州韻】 ibus-rime → Linux&lt;/li&gt;
+&lt;li&gt;【小狼毫】 Weasel → Windows&lt;/li&gt;
+&lt;li&gt;【鼠鬚管】 Squirrel → Mac OS X&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Rime 的各种配置，均是由 .yaml 文件所定义。 yaml 是一种标记语言。 .yaml 文件实际上是文本文档。可使用记事本、或 Emeditor 等进行编辑&lt;/p&gt;
+&lt;h5 id=&#34;文件夹&#34;&gt;文件夹&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/rime/home/wiki/UserData&#34;&gt;&lt;strong&gt;用户资料文件夹&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;只修改用户文件夹，修改系统文件夹后更新软件会自动重新下载，所以修改也没用&lt;/p&gt;
+&lt;p&gt;可以在程序图标上右键，点击用户文件夹打开&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;【中州韻】 &lt;code&gt;~/.config/ibus/rime/&lt;/code&gt; （0.9.1 以下版本爲 &lt;code&gt;~/.ibus/rime/&lt;/code&gt;；fcitx5 为 &lt;code&gt;~/.local/share/fcitx5/rime/&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;【小狼毫】 &lt;code&gt;%APPDATA%\Rime&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;【鼠鬚管】 &lt;code&gt;~/Library/Rime/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;内容&#34;&gt;内容&lt;/h5&gt;
+&lt;p&gt;用家下載或定製的文件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;输入方案代号&amp;gt;.schema.yaml&lt;/code&gt; - 用户下载或自定义的&lt;em&gt;输入方案&lt;/em&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;韵书代号&amp;gt;.dict.yaml&lt;/code&gt; - 用户下载或自定义的 &lt;em&gt;词典&lt;/em&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;词典名称代号&amp;gt;.txt&lt;/code&gt; - 文本格式的词典，如预设词典表、用戶 &lt;em&gt;自定义词组&lt;/em&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;配置代号&amp;gt;.custom.yaml&lt;/code&gt; - 应用于配置文件 &lt;code&gt;&amp;lt;配置代号&amp;gt;.schema.yaml&lt;/code&gt; 或 &lt;code&gt;&amp;lt;配置代号&amp;gt;.yaml&lt;/code&gt; 的 &lt;em&gt;补丁&lt;/em&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;opencc/*&lt;/code&gt; - &lt;a href=&#34;https://github.com/BYVoid/OpenCC&#34;&gt;OpenCC&lt;/a&gt; 字形转换配置及字典文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;输入法程序记录的使用习惯等信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;输入法语言代号&amp;gt;.userdb/&lt;/code&gt; - 输入法程序为保存用户的输入习惯而创建的 &lt;em&gt;用户词典&lt;/em&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;installation.yaml&lt;/code&gt; - 安装信息。输入法程序在首次运行及升级后写入安装、升级时间、程序版本等。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;user.yaml&lt;/code&gt; - 用户状态信息。包括在 &lt;em&gt;方案选单&lt;/em&gt; 选取的输入方案、输入法选项状态如「中／西」「简／繁」等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;部署时生成的文件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;build/*&lt;/code&gt; - 快取文件。为使输入法高效运行，在部署过程中将配置、词典等编译为机读格式。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;trash/*&lt;/code&gt; - 失效的文件。因 Rime 升級而不再使用的文件会自动移入这个文件夾。用户确认不再需要后可以删除。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一套输入方案，通常包含「方案定义」和「词典」文件。&lt;/p&gt;
+&lt;p&gt;方案定义，命名为 &lt;code&gt;&amp;lt;方案定义&amp;gt;.schema.yaml&lt;/code&gt;，是一份包含输入方案配置信息的 YAML 文档。&lt;/p&gt;
+&lt;h5 id=&#34;共享文件夹&#34;&gt;共享文件夹&lt;/h5&gt;
+&lt;p&gt;存放由本机多个用户共享的文件，通常由输入法安装程序写入。&lt;/p&gt;
+&lt;p&gt;Rime 输入法在查找一项资源的時候，会优先访问 &lt;a href=&#34;https://github.com/rime/home/wiki/UserData&#34;&gt;用户文件夹&lt;/a&gt; 中的文件。 用户文件不存在时，再到共享文件夾中寻找。&lt;/p&gt;
+&lt;p&gt;之前使用其他输入法的同学可以使用深蓝词库转换输出原输入法导出的词库&lt;/p&gt;
+&lt;p&gt;深蓝词库下载地址：&lt;a href=&#34;https://github.com/studyzy/imewlconverter/releases&#34;&gt;https://github.com/studyzy/imewlconverter/releases&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;系统自带的输入法&#34;&gt;系统自带的输入法&lt;/h4&gt;
+&lt;p&gt;如果觉得 Rime 的配置太繁琐可以使用系统自带的输入法&lt;/p&gt;
+&lt;p&gt;Mac 与 Windows （微软拼音）都有自带的输入法，安卓手机上可以使用 GBoard。&lt;/p&gt;
+&lt;h5 id=&#34;添加小鹤双拼到微软拼音输入法&#34;&gt;添加小鹤双拼到微软拼音输入法&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;win + R，输入 regedit，打开注册表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到 &lt;code&gt;计算机\HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS&lt;/code&gt; 项&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新建一个名为 UserDefinedDoublePinyinScheme0 的字符串值，值为 &lt;code&gt;小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开控制面板&amp;ndash;微软拼音输入法设置，把 小鹤双拼 设置为双拼的默认选择即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;避免使用一些会搜集个人信息的输入法软件。&lt;/p&gt;
+&lt;h3 id=&#34;浏览器&#34;&gt;浏览器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Google Chrome（市场占有率最高的浏览器）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Firefox（开源软件）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Safari（MacOS 优化较好）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Microsoft Edge&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;科学上网&#34;&gt;科学上网&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Clash（ PC 端全平台，Mac 上是 ClashX）&lt;/p&gt;
+&lt;p&gt;网址：&lt;a href=&#34;https://github.com/Dreamacro/clash.git&#34;&gt;https://github.com/Dreamacro/clash.git&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Shadowrocket（ iOS 外区应用商店可购买下载）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;办公软件&#34;&gt;办公软件&lt;/h3&gt;
+&lt;h4 id=&#34;office-全家桶&#34;&gt;Office 全家桶&lt;/h4&gt;
+&lt;p&gt;Windows 平台安装&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载安装镜像&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://msdn.itelleyou.com&#34;&gt;https://msdn.itelleyou.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;需要下载 VL 版本的 Office&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据提示安装软件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开管理员模式下的命令行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;跳转到软件的安装文件夹
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;32 位执行如下命令:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd &amp;#34;C:\Program Files (x86)\Microsoft Office\Office16&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;64 位执行如下命令:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd &amp;#34;C:\Program Files\Microsoft Office\Office16
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入文件夹后执行以下两个命令，期间电脑需要联网&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cscript ospp.vbs /sethst:win.kms.pub
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cscript ospp.vbs /act
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果提示看到 successful 的字样，那么就是激活成功了，重新打开 office 就好。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参考教程：www.kms.pub&lt;/p&gt;
+&lt;h3 id=&#34;虚拟机&#34;&gt;虚拟机&lt;/h3&gt;
+&lt;h4 id=&#34;vmware-workstation-pro&#34;&gt;VMware Workstation Pro&lt;/h4&gt;
+&lt;p&gt;序列码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;VM 16.1.1 build-17801498:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ZF3R0-FHED2-M80TY-8QYGC-NPKYF
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;YF390-0HF8P-M81RQ-2DXQE-M2UT6
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ZF71R-DMX85-08DQY-8YMNC-PPHV8
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;VM 16.2.0 build-18760230:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ZF3R0-FHED2-M80TY-8QYGC-NPKYF
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;VM 17
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JU090-6039P-08409-8J0QH-2YR7F
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;在-vmware-虚拟机上安装-macos&#34;&gt;在 VMware 虚拟机上安装 MacOS&lt;/h5&gt;
+&lt;p&gt;MacOS 系统在虚拟机上使用并不稳定，不推荐在虚拟机上安装使用，如果有需要可以按照下面的步骤进行安装&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;解锁 VMware&lt;/p&gt;
+&lt;p&gt;VMware 不支持直接安装 MacOS ，所以需要先对 VMware 进行解锁。&lt;/p&gt;
+&lt;p&gt;使用 unlocker 对 VMware 打补丁解锁，如果不打补丁，安装系统是无法选择 MacOS 的选项的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下载补丁文件：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone git@github.com:BDisp/unlocker.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在安装补丁前，打开任务管理器关掉所有 VMware 程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开 unlocker 文件架，找到 win-install.cmd 文件，右键以管理员身份运行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开 安装虚拟机的文件夹，找到后缀为 &lt;code&gt;.vmx&lt;/code&gt; 的 文件。例如： &lt;code&gt;macOS 10.14.vmx&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在该文件的最后一行添加以下代码，并保存文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;smc.version &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重新打开 VMware 虚拟机软件&lt;/p&gt;
+&lt;p&gt;安装虚拟机，导入镜像，系统等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统设置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进入系统后先进入磁盘管理器，抹掉 VMware 开头的磁盘，并重命名为自己想要的名字。&lt;/li&gt;
+&lt;li&gt;根据引导正常进入系统。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入系统后安装 VMware tools&lt;/p&gt;
+&lt;p&gt;如果提示无法安装或者未找到 VMware tools&lt;/p&gt;
+&lt;p&gt;进入这个网址，找到最新的 darwin.iso 并下载&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/&#34;&gt;http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关闭 Mac 虚拟机&lt;/li&gt;
+&lt;li&gt;设置 - CD/DVD（sata） - 连接 - 使用 iso 镜像，导入下载的 darwin.iso&lt;/li&gt;
+&lt;li&gt;重启虚拟机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;文本编辑器&#34;&gt;文本编辑器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Notepad++&lt;/li&gt;
+&lt;li&gt;Vim&lt;/li&gt;
+&lt;li&gt;Typora（md 文件编辑器）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;idea&#34;&gt;IDEA&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;VSCode&lt;/li&gt;
+&lt;li&gt;JetBrains 全家桶&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;流媒体编辑&#34;&gt;流媒体编辑&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Adobe 全家桶&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://weibo.com/vposy&#34;&gt;@Vposy&lt;/a&gt; 在新浪微博上更新他的破解版，可以根据需要下载&lt;/p&gt;
+&lt;p&gt;网址：&lt;a href=&#34;https://weibo.com/vposy&#34;&gt;https://weibo.com/vposy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;百度网盘下载链接：&lt;a href=&#34;https://pan.baidu.com/s/1Z4_iJNcq7koRt3vN7KxB3w?pwd=6g8x#list/path=%2F&#34;&gt;https://pan.baidu.com/s/1Z4_iJNcq7koRt3vN7KxB3w?pwd=6g8x#list/path=%2F&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;百度网盘密码为：6g8x。默认解压缩密码为：@vposy&lt;/p&gt;
+&lt;p&gt;链接可能会失效，如果失效可去其主页获取&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;密码管理器&#34;&gt;密码管理器&lt;/h3&gt;
+&lt;p&gt;只需要记住一个主密码甚至不需要记住密码，不用再记住每个应用或者网站的密码了！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bitwarden（开源全平台，基础功能免费够用）&lt;/li&gt;
+&lt;li&gt;1Password&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;笔记软件&#34;&gt;笔记软件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;flomo （全平台，需分类无压力的笔记软件，作者也是 Notion 软件的作者）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;待办事项&#34;&gt;待办事项&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Microsoft Todo （免费，全平台，使用帐号进行平台同步，但有时候同步会失败）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;通讯软件&#34;&gt;通讯软件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Telegram（功能强大，不只是通讯软件，但是此软件只能进行私聊的加密）&lt;/p&gt;
+&lt;p&gt;使用技巧可参考这篇文章：&lt;a href=&#34;https://tingtalk.me/telegram/&#34;&gt;https://tingtalk.me/telegram/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Singal（全开源，更强大的加密通讯软件）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tim （ QQ 的替代品，更为简洁，但是 Tim 与 QQ 曾经被报道过收集用户资料）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rss-信息获取&#34;&gt;RSS 信息获取&lt;/h3&gt;
+&lt;h4 id=&#34;软件&#34;&gt;软件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Reeder 5（Apple 全平台，交互更优雅，可以在软件内直接浏览内容）&lt;/li&gt;
+&lt;li&gt;NetNewsWire（开源全平台）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;rss-源&#34;&gt;RSS 源&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;RSS Hub（可以给各种网站生成 RSS）：&lt;a href=&#34;https://docs.rsshub.app/&#34;&gt;https://docs.rsshub.app/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;中文博客列表推荐：&lt;a href=&#34;https://github.com/timqian/chinese-independent-blogs.git&#34;&gt;https://github.com/timqian/chinese-independent-blogs.git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;邮箱客户端&#34;&gt;邮箱客户端&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Spark（Apple 全平台，交互更优雅）&lt;/li&gt;
+&lt;li&gt;Thunderbird（全平台，Mozilla 社区的作品）：&lt;a href=&#34;https://www.thunderbird.net/&#34;&gt;https://www.thunderbird.net/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;翻译软件&#34;&gt;翻译软件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DeepL&lt;/li&gt;
+&lt;li&gt;欧陆词典&lt;/li&gt;
+&lt;li&gt;谷歌网页翻译：translate.google.com （可以翻译文件）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;图书管理器&#34;&gt;图书管理器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Calibre&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;分布式网盘同步软件&#34;&gt;分布式网盘同步软件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;BT Sync / Resilio Sync 适用于广播式同步，一人发，多人收&lt;/li&gt;
+&lt;li&gt;rsync 跨硬盘备份工具，适用于一个人多台机器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;网址： &amp;lt;www.getsync.com&amp;gt;&lt;/p&gt;
+&lt;h3 id=&#34;视频播放器&#34;&gt;视频播放器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;VLC media player（开源全平台）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;图片查看器&#34;&gt;图片查看器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ImageGlass&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在线音乐播放器&#34;&gt;在线音乐播放器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Spotify&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;pdf-阅读器&#34;&gt;PDF 阅读器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SumatraPDF(Windows)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;电脑文件搜索&#34;&gt;电脑文件搜索&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Alfred（MacOS，不只是文件搜索）&lt;/li&gt;
+&lt;li&gt;PowerToys（Windows）&lt;/li&gt;
+&lt;li&gt;Listra（Windows）&lt;/li&gt;
+&lt;li&gt;everything（Windows）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;解压缩软件&#34;&gt;解压缩软件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;7-zip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;磁盘空间分析&#34;&gt;磁盘空间分析&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;WizTree：&lt;a href=&#34;https://diskanalyzer.com/&#34;&gt;https://diskanalyzer.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SpaceSniffer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;屏幕截图&#34;&gt;屏幕截图&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Snipaste（全平台）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;百度云加速&#34;&gt;百度云加速&lt;/h3&gt;
+&lt;p&gt;pandownload（下载大文件可能会碰到下载一半无法下载的问题）：www.pandownload.net&lt;/p&gt;
+&lt;h3 id=&#34;软件设置&#34;&gt;软件设置&lt;/h3&gt;
+&lt;p&gt;如何设置谷歌的国别重定向&lt;/p&gt;
+&lt;p&gt;Google 搜索通常会根据“发起搜索的 IP 地址”来进行“国别重定向”。
+比如：内地的网友不翻墙直接进行 Google 搜索，会被重定向到 Google 的香港站点；
+比如：通过翻墙到美国访问 Google 搜索，可能会被重定美国的 Google
+　要想禁止国别重定向，可以点击如下网址，然后 Google 会在你本地保存一个 cookie 设置，下次再访问，就不会被重定向了。
+&lt;a href=&#34;https://www.google.com/ncr&#34;&gt;http://www.google.com/ncr&lt;/a&gt;（No Country Redirect）&lt;/p&gt;
+&lt;h3 id=&#34;网盘&#34;&gt;网盘&lt;/h3&gt;
+&lt;p&gt;重要的资料必须在自己手上有备份。&lt;/p&gt;
+&lt;p&gt;任何网盘都有信息泄漏的风险，想要资料不被泄漏就不要使用网盘，只使用本地硬盘存储！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Google Driver（推荐）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;百度网盘（网上分享的大部分文件资料都在百度网盘上，不得不用的软件）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果在网盘上上传图片等信息，网盘会压缩图片，如果只有网盘上一个备份，之后下载的图片不会是原来的清晰度。&lt;/p&gt;
+&lt;p&gt;另外大部分人都有过网盘资料被删除的经历，服务提供商可以查看你的网盘文件并且决定是否删除。可以上传一些 H 图片或者视频到网盘上过几天看看还能否访问。但是网盘在我们的生活中又不可或缺。&lt;/p&gt;
+&lt;h4 id=&#34;解决方法&#34;&gt;解决方法&lt;/h4&gt;
+&lt;p&gt;网盘 + 加密盘&lt;/p&gt;
+&lt;p&gt;使用加密软件加密你的数据之后再上传到网盘上。此方法可以避免文件被删或者压缩&lt;/p&gt;
+&lt;h4 id=&#34;加密软件veracrypt&#34;&gt;加密软件：VeraCrypt&lt;/h4&gt;
+&lt;p&gt;下载地址：&lt;a href=&#34;https://veracrypt.fr/en/Home.html&#34;&gt;https://veracrypt.fr/en/Home.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;快捷键&#34;&gt;快捷键&lt;/h2&gt;
+&lt;p&gt;Windows 系统快捷键&lt;/p&gt;
+&lt;p&gt;MacOS 系统快捷键&lt;/p&gt;
+&lt;h2 id=&#34;使用技巧&#34;&gt;使用技巧&lt;/h2&gt;
+&lt;h3 id=&#34;寻找最近的电脑文件&#34;&gt;寻找最近的电脑文件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Win + R 打开运行窗口&lt;/li&gt;
+&lt;li&gt;输入 recent 并确定&lt;/li&gt;
+&lt;li&gt;点击修改日期,寻找变动过的文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;隐藏文件或文件夹&#34;&gt;隐藏文件或文件夹&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;不易寻找的方法
+&lt;ol&gt;
+&lt;li&gt;在文件或文件夹目录上打开运行窗口&lt;/li&gt;
+&lt;li&gt;输入 &lt;code&gt;attrib +s +h {filename}&lt;/code&gt; ，其中将 {filename} 改为需要隐藏的文件或者文件名&lt;/li&gt;
+&lt;li&gt;取消隐藏：重新在该目录上打开运行窗口输入同样的命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;常规方法
+&lt;ol&gt;
+&lt;li&gt;文件或文件夹右键，属性&lt;/li&gt;
+&lt;li&gt;打开属性窗口，选择 －＞ 常规 －＞ 属性 －＞ 隐藏 －&amp;gt; 确定&lt;/li&gt;
+&lt;li&gt;取消隐藏：文件夹菜单栏－＞查看－＞隐藏的项目&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;隐私与安全&#34;&gt;隐私与安全&lt;/h3&gt;
+&lt;p&gt;棱镜粉碎网站: &lt;a href=&#34;https://prism-break.org/&#34;&gt;https://prism-break.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果你很在意安全性，就【不要】基于移动设备（手机、平板）进行各种【敏感操作】&lt;/p&gt;
+&lt;h3 id=&#34;操作系统的选择&#34;&gt;操作系统的选择&lt;/h3&gt;
+&lt;p&gt;Linux &amp;gt; MacOS &amp;gt; Windows&lt;/p&gt;
+&lt;h3 id=&#34;浏览器的设置&#34;&gt;浏览器的设置&lt;/h3&gt;
+&lt;p&gt;使用 &lt;strong&gt;Startpage&lt;/strong&gt; 或者 &lt;strong&gt;DuckDuckGo&lt;/strong&gt; 代替谷歌或其他搜索引擎&lt;/p&gt;
+&lt;h4 id=&#34;设置为-https&#34;&gt;设置为 HTTPS?&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;互联网技术人员一直都知道 HTTP 是不安全的，给用户带来很多风险。由于 HTTP 流量是未加密的，任何通过 HTTP 发送的数据都可以被任何有权访问网络的人读取和修改。正如斯诺登 NSA 监控文件所揭示的那样，政府机构也可以在不通知用户或网站管理员的情况下收集和搜索 HTTP 流量。鉴于这些风险，EFF 认为每个网站都应该尽快在所有页面上&lt;a href=&#34;https://www.eff.org/encrypt-the-web&#34;&gt;支持 HTTPS 。&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Chrome&lt;/strong&gt;
+设置&amp;gt;隐私和安全&amp;gt;安全&amp;gt;&lt;em&gt;滚动到底部&lt;/em&gt;&amp;gt;&lt;em&gt;切换&lt;/em&gt;“始终使用安全连接”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;火狐&lt;/strong&gt;
+设置&amp;gt;隐私和安全&amp;gt;&lt;em&gt;滚动到底&lt;/em&gt;部&amp;gt;&lt;em&gt;启用&lt;/em&gt;仅 HTTPS 模式&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tor-洋葱浏览器&#34;&gt;TOR 洋葱浏览器&lt;/h3&gt;
+&lt;p&gt;“TOR”传说中的暗网，是老牌的翻墙工具，并且是“开源项目”。它的主要用途是“隐匿身份”，翻墙只是顺带的附加用途。&lt;/p&gt;
+&lt;p&gt;官方网站是 &lt;a href=&#34;https://www.torproject.org/&#34;&gt;https://www.torproject.org/&lt;/a&gt;
+（必须翻墙才能访问,注意进入的网址。直接搜索得到的是蜜罐网站,无法翻墙）&lt;/p&gt;
+&lt;h4 id=&#34;如何判断自己的浏览器是否在走-tor-的线路&#34;&gt;如何判断自己的浏览器是否在走 Tor 的线路？&lt;/h4&gt;
+&lt;p&gt;Tor 官网提供了一个测试界面，网址是 &lt;a href=&#34;https://check.torproject.org/&#34;&gt;https://check.torproject.org/&lt;/a&gt; 猛击该超链接，会打开一个界面。
+　　如果你的浏览器已经在使用 Tor 的线路，会出现一个【绿色】洋葱头，以及一行绿色的洋文提示。
+　　如果你的浏览器没有走 Tor 的线路，会出现一个【带红色打叉】的洋葱头，同时还有一行红色的洋文警告。&lt;/p&gt;
+&lt;h2 id=&#34;隐私安全观念普及&#34;&gt;隐私安全观念普及&lt;/h2&gt;
+&lt;h3 id=&#34;effelectronic-frontier-foundation&#34;&gt;EFF(ELECTRONIC FRONTIER FOUNDATION)&lt;/h3&gt;
+&lt;p&gt;捍卫数字隐私、言论自由和创新的领先非营利组织。&lt;/p&gt;
+&lt;p&gt;网址: &amp;lt;www.eff.org&amp;gt;&lt;/p&gt;
+&lt;h2 id=&#34;实用的网站&#34;&gt;实用的网站&lt;/h2&gt;
+&lt;p&gt;&amp;lt;www.52pj.com：分享一些安全技术，破解软件等&amp;gt;&lt;/p&gt;
+&lt;h3 id=&#34;参考链接&#34;&gt;参考链接&lt;/h3&gt;
+&lt;p&gt;Win10 使用技巧论坛：www.tenforums.com&lt;/p&gt;
+&lt;p&gt;StackOverFlow 旗下的电脑使用论坛：www.superuser.com&lt;/p&gt;
+&lt;p&gt;庭说的装机指南：&lt;a href=&#34;https://tingtalk.me/windows/&#34;&gt;https://tingtalk.me/windows/&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
+    
   </channel>
 </rss>

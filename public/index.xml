@@ -1,68 +1,264 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>huyixi&#39;s Blog</title>
     <link>http://localhost:1313/</link>
     <description>Recent content on huyixi&#39;s Blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 30 Jul 2024 15:46:06 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>WebTOC Browser Extension Development Journey</title>
       <link>http://localhost:1313/webtoc/</link>
       <pubDate>Tue, 30 Jul 2024 15:46:06 +0800</pubDate>
+      
       <guid>http://localhost:1313/webtoc/</guid>
-      <description>This is a browser extension that can fetch the outline of the current web page.&#xA;The initial idea for this extension came from the book How to Read a Book, which mentions using a book&amp;rsquo;s table of contents and outline to quickly grasp its content.&#xA;When browsing online, it&amp;rsquo;s common to encounter websites without a quick navigation outline. For example, on my blog site, I believe a good blog post should be engaging and narrative, rather than having a clear, structured hierarchy like Wikimedia.</description>
+      <description>&lt;p&gt;This is a browser extension that can fetch the outline of the current web page.&lt;/p&gt;
+&lt;p&gt;The initial idea for this extension came from the book &lt;em&gt;How to Read a Book&lt;/em&gt;, which mentions using a book&amp;rsquo;s table of contents and outline to quickly grasp its content.&lt;/p&gt;
+&lt;p&gt;When browsing online, it&amp;rsquo;s common to encounter websites without a quick navigation outline. For example, on my blog site, I believe a good blog post should be engaging and narrative, rather than having a clear, structured hierarchy like Wikimedia. So, I removed the table of contents from my blog.&lt;/p&gt;
+&lt;p&gt;However, there are times when we want to quickly assess whether an article is worth reading further or locate a solution without delving into the details. A browser extension that fetches the outline of any web page would be an excellent solution.&lt;/p&gt;
+&lt;p&gt;Initially, I designed a floating window for the current page. Users could freely move and resize this window, ensuring that the outline doesn&amp;rsquo;t obstruct the web content, thus maintaining a good reading experience.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20240730153439315&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/image-20240730153439315.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s a screenshot of the first MVP.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20240730153720721&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/image-20240730153720721.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20240730153641546&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/image-20240730153658676.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The control bar at the top was initially inspired by the MacOS system, featuring a close button. Later, the close button was moved to the badge.&lt;/p&gt;
+&lt;p&gt;This is a demo of the control bar during the development phase, hosted on CodePen: &lt;a href=&#34;https://codepen.io/huyixi/pen/OJeVyYE&#34;&gt;https://codepen.io/huyixi/pen/OJeVyYE&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Additionally, the extension&amp;rsquo;s background was optimized. It adapts to the background color of the current web page, ensuring a better visual experience. The approach involves extracting the page&amp;rsquo;s RGB color, converting it to HSL, and then reducing the lightness (L). The background lightness is decreased by 4%, and the control bar by another 4%, resulting in a more pleasant color scheme.&lt;/p&gt;
+&lt;p&gt;At this point, the extension was nearly complete and met my needs.&lt;/p&gt;
+&lt;p&gt;However, while browsing at home over the weekend, I came across a &lt;a href=&#34;https://x.com/galala_eth/status/1816277009707983071&#34;&gt;tweet&lt;/a&gt; from a user named galala_eth:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;835shots_so&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/835shots_so.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The tweet mentioned a tool called Uniswap, which piqued my curiosity. I checked it out and found that the first pinned tweet described their browser extension, which now displays content in a sidebar.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;656shots_so&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/656shots_so.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;183shots_so&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/183shots_so.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;It was the first wallet extension to use this method. It struck me as a great display method, prompting me to scrap the previous code and start over.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;SCR-20240730-keqi&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/SCR-20240730-keqi.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is the current display effect. The screenshot is taken from &lt;a href=&#34;https://www.norvig.com/&#34;&gt;Peter Norvig&lt;/a&gt;&amp;rsquo;s famous article &lt;a href=&#34;https://www.norvig.com/21-days.html&#34;&gt;&lt;em&gt;Teach Yourself Programming in Ten Years&lt;/em&gt;&lt;/a&gt;, with some distracting elements removed.&lt;/p&gt;
+&lt;p&gt;The project is currently under review in the Google Store.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20240730152626771&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/image-20240730152626771.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Once the review is approved, a download link for the extension will be provided.&lt;/p&gt;
+&lt;h2 id=&#34;pitfalls-encountered&#34;&gt;Pitfalls Encountered&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Incomplete Documentation Review&lt;/strong&gt;: Initially, I didn&amp;rsquo;t thoroughly go through the Chrome Extension developer documentation. As a result, the use of badge and sidepanel APIs was added later in the development process.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Overemphasis on Clean Code and Project Structure&lt;/strong&gt;: In pursuit of clean code and a well-organized project structure, I spent a significant amount of time stuck on certain aspects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;roadmap&#34;&gt;Roadmap&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Resizable text in the outline&lt;/li&gt;
+&lt;li&gt;Highlighting the current title&lt;/li&gt;
+&lt;li&gt;Using the current webpage&amp;rsquo;s link colors&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
+    
     <item>
       <title>Lizhi Tokyo Memories</title>
       <link>http://localhost:1313/lizhi-tokyo-memories/</link>
       <pubDate>Tue, 18 Jun 2024 00:14:24 +0800</pubDate>
+      
       <guid>http://localhost:1313/lizhi-tokyo-memories/</guid>
-      <description>It&amp;rsquo;s been many days since I returned from Japan, and I still often think back to the night of Li Zhi&amp;rsquo;s concert on May 2nd. Before and after the performance, I had many thoughts and feelings. I&amp;rsquo;m afraid I&amp;rsquo;ll forget them over time, so I&amp;rsquo;m writing them down.&#xA;I can&amp;rsquo;t remember where I first saw the news about Li Zhi&amp;rsquo;s tour in Japan. I just remember that at that time, Twitter was full of friends talking about going to see the concert.</description>
+      <description>&lt;p&gt;It&amp;rsquo;s been many days since I returned from Japan, and I still often think back to the night of Li Zhi&amp;rsquo;s concert on May 2nd. Before and after the performance, I had many thoughts and feelings. I&amp;rsquo;m afraid I&amp;rsquo;ll forget them over time, so I&amp;rsquo;m writing them down.&lt;/p&gt;
+&lt;p&gt;I can&amp;rsquo;t remember where I first saw the news about Li Zhi&amp;rsquo;s tour in Japan. I just remember that at that time, Twitter was full of friends talking about going to see the concert. I was very excited because I hadn&amp;rsquo;t been a fan of Li Zhi for long, and unfortunately, after I started liking him, he was banned from performing in China. So, for many years, seeing Li Zhi&amp;rsquo;s live performance became a small wish of mine.&lt;/p&gt;
+&lt;p&gt;Due to a mistake in remembering the ticket sale time, I only found out tickets were on sale in the afternoon on the day of the sale. Fortunately, the Tokyo tickets hadn&amp;rsquo;t sold out yet, so I immediately placed an order and paid. After buying the ticket, I fell into confusion: I had the ticket, but how would I watch the performance in Tokyo? I had never been to Japan, and there weren&amp;rsquo;t many people around me who had been there, so I had no reference for their experiences. Although I often travel, it&amp;rsquo;s always within mainland China, and the farthest I&amp;rsquo;ve been is Hong Kong. I had no idea about the process of traveling abroad. So, for a few days, I even put the ticket up for sale on Xianyu, planning to transfer it. I thought Li Zhi&amp;rsquo;s tickets would be hard to come by since he hadn&amp;rsquo;t performed in years. But unexpectedly, there was no interest on Xianyu. Some sellers even lowered their ticket prices to 200 yuan. I couldn&amp;rsquo;t bear such a loss, so I decided to try to go to Japan.&lt;/p&gt;
+&lt;h2 id=&#34;preparation&#34;&gt;Preparation&lt;/h2&gt;
+&lt;p&gt;Before preparing for the trip to Japan, there was one more thing to settle: my parents. I hadn&amp;rsquo;t communicated with them about this before buying the ticket, and there had been no discussions about going abroad. So, I had no idea if they would permit it. Although I often travel alone within China, going abroad to an unfamiliar place with a different language was daunting for me, let alone my parents. Additionally, this would be my first trip abroad, and I planned to go alone. Surprisingly, my parents agreed. After getting their approval, I started preparing various materials.&lt;/p&gt;
+&lt;p&gt;A few years ago, after the college entrance exam, I had planned to go to Hong Kong with my classmates. However, due to the social unrest in Hong Kong at that time, we canceled the trip, but we did get our Hong Kong and Macau travel permits and passports. This made this trip more feasible. Since there wasn&amp;rsquo;t much time between the ticket sale and the concert, and the process for these documents in my city is cumbersome and time-consuming, it was fortunate that I already had a passport, so I only needed to apply for a visa.&lt;/p&gt;
+&lt;p&gt;Since it was my first time applying and my first trip abroad, I researched a lot. I browsed through the websites of several Japanese embassies in China. Being unfamiliar with the visa process, I was initially told by a travel agency that I needed to provide financial proof due to coming from a &amp;ldquo;sensitive area.&amp;rdquo; After trying other travel agencies and learning more about the visa process, I discovered that the Japanese embassy had a policy for undergraduate students, and my university was on the list. Then, I submitted all the necessary documents for the visa application.&lt;/p&gt;
+&lt;h2 id=&#34;about-li-zhi&#34;&gt;About Li Zhi&lt;/h2&gt;
+&lt;p&gt;Before going to Tokyo, I didn&amp;rsquo;t do much travel planning, but I watched a lot of Li Zhi&amp;rsquo;s videos, such as the &amp;ldquo;334&amp;rdquo; tour documentary and B Brother&amp;rsquo;s Night Talk. On his tour in China, performances were often canceled for various inexplicable reasons, like the mysterious actor certificate (which seemed to be resolved by bribing relevant departments in the documentary) and other strange reasons.&lt;/p&gt;
+&lt;p&gt;Seeing Li Zhi come out wearing a hat, I was momentarily disoriented, as if I was seeing the shadow of Li Zhi from the 2018 music festival. Before I could collect myself, he threw his hat into the audience, pulling me out of my reverie.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s an indescribable feeling; everyone here is attracted by something similar. Those standing, sitting, looking back, embracing, although seemingly still on the surface, may have tumultuous feelings inside. On stage, Li Zhi and his band played their music; off stage, the audience&amp;rsquo;s minds flashed with their own life experiences. The same song can evoke different feelings in different people.&lt;/p&gt;
+&lt;p&gt;During this concert, I lost count of how many times I cried. Tears flowed unconsciously. It wasn&amp;rsquo;t easy to come to Japan; waiting for a Li Zhi concert was rare. Li Zhi sang with tears in his eyes, and we in the audience silently cried as well.&lt;/p&gt;
+&lt;p&gt;We are different individuals, but here, we are people on the same wavelength. People around me were all speaking the same language. Most of the audience flew in from mainland China, filling the 8,000-seat venue in Tokyo. I believe many, like me, were visiting Japan for the first time. This concert significantly contributed to Japan&amp;rsquo;s GDP.&lt;/p&gt;
+&lt;p&gt;However, the higher threshold for attending this concert allowed me to get a ticket. I don&amp;rsquo;t have a strong liking or dislike for Japan. I don&amp;rsquo;t watch anime, dramas, or listen to Japanese music, and I don&amp;rsquo;t have any special feelings towards Japan. Due to patriotic education, seeing Japanese flags on the streets made me a bit nervous, recalling the anti-Japanese war films I watched as a child. If not for this concert, I might not have visited Japan for many years.&lt;/p&gt;
+&lt;p&gt;Despite trying to save money, this trip was costly. The lyrics &amp;ldquo;I spent half a year&amp;rsquo;s savings to come see you&amp;rdquo; felt true. If the same concert were in mainland China, I could have attended seven or eight shows.&lt;/p&gt;
+&lt;p&gt;During the concert, Chen Qian&amp;rsquo;s harmonica and Zhou Liang&amp;rsquo;s bass were truly amazing. These instruments, usually not the main focus, were played brilliantly. Li Zhi, who has a Chinese map tattooed on his chest, whose album is titled &amp;ldquo;I Love Nanjing,&amp;rdquo; bows to the audience after each concert, saying they are from Nanjing. He probably loves this land more than most people, but it&amp;rsquo;s ironic that he can&amp;rsquo;t sing here. I recall someone asking the chief engineer of the Olympic security: &amp;ldquo;Why don&amp;rsquo;t you leave?&amp;rdquo; They seem to have an inner desire to awaken the righteousness of the people, but this era doesn&amp;rsquo;t allow such people to exist.&lt;/p&gt;
+&lt;p&gt;We all talk about staying rational and believing in the future, but I am very pessimistic. I watched this concert with the feeling it might be my last Li Zhi concert. But after five years, there was at least one tour, giving a glimmer of hope, right?&lt;/p&gt;
+&lt;p&gt;This tour should have been in mainland China, and we wouldn&amp;rsquo;t have to spend so much money to see it in Japan. But we had no choice but to meet here.&lt;/p&gt;
+&lt;p&gt;In my heart, this concert wasn&amp;rsquo;t as brilliant as Li Zhi&amp;rsquo;s New Year&amp;rsquo;s Eve concert. After the concert, I thought, maybe what I like isn&amp;rsquo;t Li Zhi or his songs, but the rebellious rock spirit he represents, or his serious, dedicated, and diligent work attitude.&lt;/p&gt;
+&lt;p&gt;I hope such concerts won&amp;rsquo;t become rarer. I hope one day I won&amp;rsquo;t be able to get a ticket to Li Zhi&amp;rsquo;s concert. We all look forward to the Nanjing New Year&amp;rsquo;s Eve concert and the 334 tour coming to our hometown.&lt;/p&gt;
+&lt;p&gt;I often think back to my first music festival in 2019, where after the concert, a group of people spontaneously sang &amp;ldquo;Port Island Girl.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Years have passed, you see.&lt;/p&gt;
+&lt;h2 id=&#34;the-people-i-met&#34;&gt;The People I Met&lt;/h2&gt;
+&lt;p&gt;I am very lucky.&lt;/p&gt;
+&lt;p&gt;If you ask what I miss most about this trip, it&amp;rsquo;s not Li Zhi&amp;rsquo;s concert or Japan, but the people I met during the journey.&lt;/p&gt;
+&lt;p&gt;The next day, staying near Sensoji Temple, I randomly walked into an izakaya. I ordered some yakitori and a small mug of draft beer. Then I found myself sitting next to a guy from Taiwan. He said some things during our conversation that shocked me:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In Taiwan, you can retire after working in the same company for 20 years.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Life is more important than work, so although my boss doesn&amp;rsquo;t like me, I still often go out&amp;rdquo; (of course, this guy seemed quite capable; he said he worked at TSMC, but I couldn&amp;rsquo;t verify if it was true)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Taiwan and Japan have visa exemptions, so he comes to Japan several times a year.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That same night, I met another interesting group of people: a girl who took a gap year to travel the world and speaks excellent English; a French guy who bought drinks for all of us; a family from a country whose name I couldn&amp;rsquo;t recall; and another guy from Taiwan who tried to match me with a girl from Shandong. It was a truly unforgettable night.&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t know why, but every time I travel, I always encounter unplanned people or events, and these things are often more memorable than the trip itself.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve heard the saying &amp;ldquo;Life is not a track, but a wilderness&amp;rdquo; many times in different places. But until that night, after seeing so many different lives, I truly understood what it meant. Not getting into a good university or finding a good job doesn&amp;rsquo;t mean life is over. Everyone has their own way of living and their own lifestyle.&lt;/p&gt;
+&lt;p&gt;Some feelings are difficult to describe with my simple and limited words. Only by experiencing them firsthand can one be deeply moved.&lt;/p&gt;
+&lt;h2 id=&#34;about-japan&#34;&gt;About Japan&lt;/h2&gt;
+&lt;p&gt;Since the trip was short, only nine days in total, and I had to watch the concert on May 2nd in Tokyo, I didn&amp;rsquo;t plan to visit Osaka or Nara. Instead, I focused on exploring the Tokyo area. Here are some differences I noticed compared to the cities I&amp;rsquo;ve been to (mainly in southeastern and central China).&lt;/p&gt;
+&lt;h3 id=&#34;prices-in-tokyo&#34;&gt;Prices in Tokyo&lt;/h3&gt;
+&lt;p&gt;I felt that prices in Tokyo weren&amp;rsquo;t outrageously high. Having been shocked by Hong Kong&amp;rsquo;s prices last year, I was mentally prepared for high costs. But salaries are much higher than in Chinese cities. I saw a small ramen shop where part-time workers earn 1,000 yen per hour, equivalent to about 50 yuan. An 8-hour workday would be 400 yuan, which is more than 99% of the people in China. And this is the income of a part-time worker at a small, inconspicuous roadside shop.&lt;/p&gt;
+&lt;p&gt;Starbucks in Japan is very cheap, costing only about 20-30 yuan per cup, which feels cheaper than in China. In Japan, the price of milk tea and Starbucks coffee is similar. The prices at Starbucks and other shops in Japanese airports and stations are the same as outside. Whatever it costs outside, it costs the same inside, so you can shop without worrying about being overcharged like in China.&lt;/p&gt;
+&lt;h3 id=&#34;environment&#34;&gt;Environment&lt;/h3&gt;
+&lt;p&gt;The streets of Tokyo are very clean, with almost no litter (except for trash bags left on the street in the morning waiting to be collected by sanitation workers) and hardly any trash cans. This meant my backpack&amp;rsquo;s side pockets were always full of garbage, as I couldn&amp;rsquo;t find a place to dispose of it. Their garbage sorting is also very good. At the hotel, I often couldn&amp;rsquo;t figure out where to put certain types of trash, and the owner had to teach me.&lt;/p&gt;
+&lt;p&gt;Often, while walking, I would see birds perched on the street, not afraid of people. Seeing such harmonious scenes between humans and animals in the city is truly touching.&lt;/p&gt;
+&lt;h3 id=&#34;transportation&#34;&gt;Transportation&lt;/h3&gt;
+&lt;p&gt;This is also related to cleanliness: cars in Japan are incredibly clean, looking like they just came out of a showroom. Although I don&amp;rsquo;t know much about cars, these cars didn&amp;rsquo;t seem particularly expensive. Most of the cars were Japanese brands like Toyota, Honda, and Nissan, with few foreign brands. Unlike China, where electric vehicles are everywhere, you hardly see them in Japan, likely due to the country&amp;rsquo;s energy structure. Of course, in bustling areas like Ginza and Shibuya, you see more foreign brands and hear the roar of sports cars, just like in many places in China. There are also many rare, beautiful vintage cars, often driven in groups on the streets.&lt;/p&gt;
+&lt;p&gt;Japanese cars hardly ever honk, which is fantastic. Back in China, walking on the street with cars honking around me is very distressing. Now, I usually wear noise-canceling headphones on the road to reduce the noise.&lt;/p&gt;
+&lt;p&gt;Japanese roads are very narrow, but there are no severe traffic jams. When I returned to my small city, I immediately felt the roads were much wider but with worse traffic congestion. There were also many illegally parked cars. But this is understandable, as Tokyo is Asia&amp;rsquo;s largest city, and good urban planning is expected.&lt;/p&gt;
+&lt;p&gt;Chinese roads are wide but in poor condition. In Fujian, where I live, except for Xiamen, roads in other cities are in terrible condition. Even in the capital, Fuzhou, the roads are worse than in smaller cities for cyclists, with no consideration for pedestrians or cyclists. In contrast, Tokyo has many bike parking spots, and I often saw people cycling. After returning, I saw some videos of cycling in Japan, and I was really envious.&lt;/p&gt;
+&lt;h3 id=&#34;others&#34;&gt;Others&lt;/h3&gt;
+&lt;p&gt;About toilets: almost all toilets in Tokyo use electric toilet seats and are very clean. Even in a remote toilet near Mount Fuji, where there were hardly any people, it was still very clean and tidy.&lt;/p&gt;
+&lt;p&gt;During Golden Week, Japan has a 9-day holiday without needing to make up for workdays, which is enviable.&lt;/p&gt;
+&lt;h3 id=&#34;living-experience&#34;&gt;Living Experience&lt;/h3&gt;
+&lt;p&gt;For an ordinary person, life in Tokyo should be very good: clean environment, convenient transportation, job security, and many holidays.&lt;/p&gt;
+&lt;h2 id=&#34;information-about-japanese-visas&#34;&gt;Information About Japanese Visas&lt;/h2&gt;
+&lt;p&gt;If you also want to travel to Japan, here is some information you might find useful:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Different Japanese embassies are responsible for different areas&amp;rsquo; visa processing. You can check this &lt;a href=&#34;https://www.cn.emb-japan.go.jp/itpr_zh/aboutus.html#kankatsu&#34;&gt;interface&lt;/a&gt; for details.&lt;/li&gt;
+&lt;li&gt;The issuance time for embassy visas is four working days from the day the visa information is sent to the embassy. Most travel agencies&amp;rsquo; estimated times are longer.&lt;/li&gt;
+&lt;li&gt;You can check the list of specified universities for Japanese student visas &lt;a href=&#34;https://www.shenyang.cn.emb-japan.go.jp/cn/visa/zhongguojiaoyudaxue1243.pdf&#34;&gt;here&lt;/a&gt; or the notification about student visas for specific universities &lt;a href=&#34;https://www.shenyang.cn.emb-japan.go.jp/itpr_zh/cn160930_kankouvisakansoka.html&#34;&gt;here&lt;/a&gt;. Most undergraduate institutions are included.&lt;/li&gt;
+&lt;li&gt;Designated travel agencies for Japan tourism:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cn.emb-japan.go.jp/itpr_zh/visa_dantai_daili.html&#34;&gt;Main Embassy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.guangzhou.cn.emb-japan.go.jp/cgjp_cn/visa/forms/ryokousya.pdf&#34;&gt;Guangzhou Consulate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
+    
     <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 27 May 2024 19:19:00 +0800</pubDate>
+      
       <guid>http://localhost:1313/about/</guid>
-      <description>👋 Hello, welcome to huyixi&amp;rsquo;s personal blog.&#xA;I also have two other websites:&#xA;huyixi.com is my personal brand website. huyixi.wiki is my personal knowledge base, where I use this site to lighten the memory load on my brain. Walk Weekly is my personal weekly newsletter where I share some fun things each week. Now (under development) is where I will update what I am currently working on. Blogs I Have Previously Created:</description>
+      <description>&lt;p&gt;👋 Hello, welcome to huyixi&amp;rsquo;s personal blog.&lt;/p&gt;
+&lt;p&gt;I also have two other websites:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://huyixi.com&#34;&gt;huyixi.com&lt;/a&gt; is my personal brand website.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://huyixi.wiki&#34;&gt;huyixi.wiki&lt;/a&gt; is my personal knowledge base, where I use this site to lighten the memory load on my brain.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://weekly.huyixi.com&#34;&gt;Walk Weekly&lt;/a&gt; is my personal weekly newsletter where I share some fun things each week.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://now.huyixi.com&#34;&gt;Now&lt;/a&gt; (under development) is where I will update what I am currently working on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Blogs I Have Previously Created:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blue.huyixi.com/zh/&#34;&gt;Blue&lt;/a&gt;: The second version of my blog, built with Hugo. I really like some of the designs in this version, such as the sidebar layout on the homepage, the book page-turning effect on the Like page, and the table of contents navigation on the article pages.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://white.huyixi.com&#34;&gt;White&lt;/a&gt;: The third version of my blog.
+The code for the first version of the blog has already been lost.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Feel free to contact me&lt;br&gt;
+📮 Email: &lt;a href=&#34;mailto:hi@huyixi.com&#34;&gt;hi@huyixi.com&lt;/a&gt;&lt;br&gt;
+🧑‍💻 My &lt;a href=&#34;https://github.com/huyixi&#34;&gt;GitHub&lt;/a&gt;&lt;br&gt;
+📰 Subscribe to this blog via &lt;a href=&#34;http://localhost:1313/index.xml&#34;&gt;RSS&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Only Black: Minimist Black Chrome Theme</title>
       <link>http://localhost:1313/only-black/</link>
       <pubDate>Wed, 14 Feb 2024 15:00:29 +0800</pubDate>
+      
       <guid>http://localhost:1313/only-black/</guid>
-      <description>My first Chrome theme has been approved by the Google Store.&#xA;Inspired by Tw93, the colors are modeled after Apple&amp;rsquo;s official documentation colors.&#xA;Feel free to try it out: Link&#xA;First submitted for review on: 2024-02-13. Approved and published on: 2024-02-14</description>
+      <description>&lt;p&gt;My first Chrome theme has been approved by the Google Store.&lt;/p&gt;
+&lt;p&gt;Inspired by Tw93, the colors are modeled after Apple&amp;rsquo;s official documentation colors.&lt;/p&gt;
+&lt;p&gt;Feel free to try it out: &lt;a href=&#34;https://chromewebstore.google.com/detail/only-black/imabedafnokpmhinapjjocggchcnfmgo?utm_source=ext_app_menu&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;9&#34; src=&#34;https://raw.githubusercontent.com/huyixi/Pics/main/uPic/9.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;First submitted for review on: 2024-02-13. Approved and published on: 2024-02-14&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Minilist Blog</title>
       <link>http://localhost:1313/minilist-blog/</link>
       <pubDate>Sun, 07 Jan 2024 01:23:06 +0800</pubDate>
+      
       <guid>http://localhost:1313/minilist-blog/</guid>
-      <description>Sun Jan 7 01:44, 2024&#xA;Hello huyixi.org.&#xA;My new minilist blog. Imitation: egoist</description>
+      <description>&lt;p&gt;Sun Jan 7 01:44, 2024&lt;br&gt;
+Hello huyixi.org.&lt;br&gt;
+My new minilist blog.
+Imitation: &lt;a href=&#34;https://egoist.dev/&#34;&gt;egoist&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Using UnoCSS in Hugo</title>
       <link>http://localhost:1313/hugo-unocss/</link>
       <pubDate>Sat, 06 Jan 2024 17:28:47 +0800</pubDate>
+      
       <guid>http://localhost:1313/hugo-unocss/</guid>
-      <description>This website uses the Hugo static site generator and UnoCSS for CSS. Below is a record of how to use UnoCSS in Hugo.&#xA;Modifying the Theme File&amp;rsquo;s CSS Styles {{- $cssbundle := resources.Match &amp;#34;css/*.css&amp;#34; | resources.Concat &amp;#34;css/main.css&amp;#34; -}} {{- if hugo.IsProduction }} {{ $cssbundle = $cssbundle | minify | fingerprint }} {{ end -}} &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;{{ $cssbundle.RelPermalink }}&amp;#34; {{ if hugo.IsProduction }} integrity=&amp;#34;{{ $cssbundle.Data.Integrity }}&amp;#34; {{ end }} /&amp;gt; Note: This code will retrieve all CSS files from your assets/css folder.</description>
+      <description>&lt;p&gt;This website uses the Hugo static site generator and UnoCSS for CSS. Below is a record of how to use UnoCSS in Hugo.&lt;/p&gt;
+&lt;h2 id=&#34;modifying-the-theme-files-css-styles&#34;&gt;Modifying the Theme File&amp;rsquo;s CSS Styles&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-HTML&#34; data-lang=&#34;HTML&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{- $cssbundle := resources.Match &amp;#34;css/*.css&amp;#34; | resources.Concat &amp;#34;css/main.css&amp;#34; -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{- if hugo.IsProduction }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ $cssbundle = $cssbundle | minify | fingerprint }} {{ end -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#000080&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;rel&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;{{ $cssbundle.RelPermalink }}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;hugo&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#008080&#34;&gt;IsProduction&lt;/span&gt; &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;}}&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;integrity&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;{{ $cssbundle.Data.Integrity }}&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color:#008080&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;}}&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Note:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;This code will retrieve all CSS files from your assets/css folder. If you prefer to place CSS files in other folders, you need to modify the first line of code. Additionally, the generated main.css file is stored in Hugo’s memory, so it cannot be viewed directly.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;## Installing UnoCSS Dependencies
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;First, if you don’t have a package.json file, you need to generate one.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;```bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pnpm init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then install the necessary UnoCSS dependencies. Install only what you need. You can refer to the UnoCSS documentation for details.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pnpm install --save-dev @unocss/cli @unocss/preset-typography @unocss/preset-uno @unocss/preset-wind
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;creating-unoconfigts-and-importing-presets&#34;&gt;Creating uno.config.ts and Importing Presets&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;import&lt;/span&gt; { defineConfig, presetUno } &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;unocss&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;default&lt;/span&gt; defineConfig({
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  presets&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; [presetUno()],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;adding-run-scripts-to-packagejson&#34;&gt;Adding Run Scripts to package.json&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;scripts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;:&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000080&#34;&gt;&amp;#34;uno-dev&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;unocss \&amp;#34;layouts/**/**/*.html\&amp;#34; --watch -o ./assets/css/uno.css&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000080&#34;&gt;&amp;#34;uno-build&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;unocss \&amp;#34;layouts/**/**/*.html\&amp;#34; -o ./assets/css/uno.css&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Afterwards, run pnpm run uno-dev, and UnoCSS should work properly.&lt;/p&gt;
+&lt;p&gt;Additionally:
+If you want to run hugo server and unocss with a single command, you can use the concurrently plugin. Add the following to the scripts section in package.json:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;dev&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;concurrently \&amp;#34;pnpm:dev\&amp;#34; \&amp;#34;pnpm:uno-dev\&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then, you can run both commands in one window with npm run dev.&lt;/p&gt;
+&lt;h2 id=&#34;final-thoughts&#34;&gt;Final Thoughts&lt;/h2&gt;
+&lt;p&gt;There were quite a few pitfalls during the integration process, such as:
+1.When retrieving CSS files, the reference link placed CSS files in the css/uno/main.css path, but using resources.Match &amp;ldquo;css/&lt;em&gt;.css&amp;rdquo; couldn’t retrieve this file. So, if you also prefer to place it in a subdirectory, you need to modify this line to resources.Match &amp;ldquo;css/**/&lt;/em&gt;.css&amp;rdquo;. However, if you only change it to resources.Match &amp;ldquo;css/**/*.css&amp;rdquo;, Hugo will only retrieve CSS files from all subfolders, and CSS files in the root CSS folder won’t be retrieved (even though the ** wildcard is used, it doesn’t work here).
+2.The reference link used an older version, and now you need to use @unocss/preset-typography instead of unocss/preset-typography for installation.
+3.The reference link also didn’t include scripts; this was found in the author’s provided hugo + UnoCSS template. However, this step went smoothly since I had encountered a similar issue when using TailwindCSS before.&lt;/p&gt;
+&lt;p&gt;Then run pnpm run dev to start both Hugo and UnoCSS.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Raycast Plugin: Get Time</title>
       <link>http://localhost:1313/get-time/</link>
       <pubDate>Sun, 22 Oct 2023 23:01:03 +0800</pubDate>
+      
       <guid>http://localhost:1313/get-time/</guid>
-      <description>Last week, during some spare time, I worked on a Sidebar Project: a Raycast plugin that allows you to get the current time in a specified format.&#xA;When writing blog entries, I often need to get a precise timestamp (to help recall my thoughts later). However, since I use Apple’s built-in input method, I can’t simply type sj to get the current time like with Sogou or other Chinese input methods.</description>
+      <description>&lt;p&gt;Last week, during some spare time, I worked on a Sidebar Project: a Raycast plugin that allows you to get the current time in a specified format.&lt;/p&gt;
+&lt;p&gt;When writing blog entries, I often need to get a precise timestamp (to help recall my thoughts later). However, since I use Apple’s built-in input method, I can’t simply type sj to get the current time like with Sogou or other Chinese input methods. I also discovered that there’s no setting available for this feature. So, I created this small Raycast plugin to achieve it.&lt;/p&gt;
+&lt;p&gt;Later, I realized that the Rime input method I’m using can actually input time through Rime’s Lua plugins, providing an even smoother experience.&lt;/p&gt;
+&lt;p&gt;Repository: &lt;a href=&#34;https://github.com/huyixi/get-time.git&#34;&gt;https://github.com/huyixi/get-time.git&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Windows Installation Guide</title>
       <link>http://localhost:1313/the-use-of-windows-computer/</link>
       <pubDate>Mon, 24 Apr 2023 02:49:00 +0800</pubDate>
+      
       <guid>http://localhost:1313/the-use-of-windows-computer/</guid>
-      <description>Due to the length of this article and the lack of a table of contents in my personal blog, I recommend reading it on my wiki site. Here is the link. You can quickly navigate using the table of contents on that site. Background: This guide is based on my extensive experience with multiple Windows installations, designed to meet my Windows installation needs.</description>
+      <description>&lt;p&gt;Due to the length of this article and the lack of a table of contents in my personal blog, I recommend reading it on my wiki site. Here is the &lt;a href=&#34;https://huyixi.wiki/Windows&#34;&gt;link&lt;/a&gt;. You can quickly navigate using the table of contents on that site.
+Background: This guide is based on my extensive experience with multiple Windows installations, designed to meet my Windows installation needs.&lt;/p&gt;
+</description>
     </item>
+    
   </channel>
 </rss>
