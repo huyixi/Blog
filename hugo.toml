@@ -38,7 +38,7 @@ weight = 4
 
 [languages]
 [languages.en]
-languageName = "Switch to English"
+languageName = "English"
 weight = 1
 [languages.en.menus]
 [[languages.en.menu.main]]
@@ -71,7 +71,7 @@ url = "/about"
 weight = 5
 
 [languages.zh]
-languageName = "切换为简体中文"
+languageName = "简体中文"
 weight = 2
 [languages.zh.menus]
 
